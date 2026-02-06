@@ -508,13 +508,6 @@ export default function RootLayout() {
                     );
                   }
                 })}
-                <Link
-                  to="/admissions"
-                  className="block mt-2.5 px-2.5 py-1.5 bg-red-600 text-white text-sm font-medium text-center rounded-sm hover:bg-red-700 transition-colors"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  Apply for Admissions
-                </Link>
               </div>
             </motion.div>
           )}
@@ -575,193 +568,204 @@ export default function RootLayout() {
       </main>
 
       {/* Footer */}
-      <footer className="bg-primary text-white relative rounded-t-2xl">
-        <div className="container mx-auto px-2.5 sm:px-4 lg:px-5 py-8 lg:py-12">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2.5 lg:gap-4">
-            <div className="space-y-4">
-              <Link to="/" className="inline-flex items-center gap-2.5 group">
-                <div className="w-12 h-12 border-2 border-white/20 flex items-center justify-center bg-white/10 backdrop-blur-sm group-hover:bg-white/20 transition-all duration-300">
-                  <img
-                    src={logo}
-                    alt="Kathmandu National School Logo"
-                    className="w-10 h-10 object-contain"
-                  />
-                </div>
-                <div>
-                  <div className="font-light text-white/90 text-sm">Kathmandu</div>
-                  <div className="font-bold text-white text-lg font-[Cambria]">National School</div>
-                </div>
+{/* Footer */}
+<footer className="bg-primary text-white relative rounded-t-2xl mt-12">
+  <div className="container mx-auto px-3 sm:px-4 lg:px-6 py-6 sm:py-8 lg:py-12">
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 lg:gap-6">
+      {/* School Info */}
+      <div className="space-y-4 sm:space-y-5">
+        <Link to="/" className="inline-flex items-center gap-3 sm:gap-4 group">
+          <div className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 border-2 border-white/20 flex items-center justify-center bg-white/10 backdrop-blur-sm group-hover:bg-white/20 transition-all duration-300 rounded-lg">
+            <img
+              src={logo}
+              alt="Kathmandu National School Logo"
+              className="w-10 h-10 sm:w-12 sm:h-12 lg:w-14 lg:h-14 object-contain"
+            />
+          </div>
+          <div>
+            <div className="font-light text-white/90 text-xs sm:text-sm">Kathmandu</div>
+            <div className="font-bold text-white text-base sm:text-lg lg:text-xl font-[Cambria]">National School</div>
+          </div>
+        </Link>
+        
+        <div className="space-y-2.5 sm:space-y-3">
+          <div className="flex items-center justify-center sm:justify-start gap-1.5 sm:gap-2">
+            <div className="h-px w-4 sm:w-6 bg-red-500"></div>
+            <p className="text-white/90 text-xs sm:text-sm italic font-serif text-center sm:text-left">
+              Education · Civilization · Humanization
+            </p>
+            <div className="h-px w-4 sm:w-6 bg-red-500"></div>
+          </div>
+          
+          <div className="flex items-center justify-center sm:justify-start gap-2 sm:gap-3">
+            <a 
+              href="https://www.facebook.com/KathmanduNationalSchool" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="w-8 h-8 sm:w-9 sm:h-9 lg:w-10 lg:h-10 rounded-md bg-white/10 backdrop-blur-sm flex items-center justify-center hover:bg-white/20 transition-all duration-300 border border-white/20 hover:border-white/40"
+              aria-label="Visit our Facebook page"
+            >
+              <Facebook className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-white" />
+            </a>
+            <a 
+              href="https://instagram.com" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="w-8 h-8 sm:w-9 sm:h-9 lg:w-10 lg:h-10 rounded-md bg-white/10 backdrop-blur-sm flex items-center justify-center hover:bg-white/20 transition-all duration-300 border border-white/20 hover:border-white/40"
+              aria-label="Visit our Instagram"
+            >
+              <Instagram className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-white" />
+            </a>
+            <a 
+              href="https://youtube.com" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="w-8 h-8 sm:w-9 sm:h-9 lg:w-10 lg:h-10 rounded-md bg-white/10 backdrop-blur-sm flex items-center justify-center hover:bg-white/20 transition-all duration-300 border border-white/20 hover:border-white/40"
+              aria-label="Visit our YouTube channel"
+            >
+              <Youtube className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-white" />
+            </a>
+          </div>
+        </div>
+      </div>
+
+      {/* Quick Links */}
+      <div className="sm:mx-auto lg:mx-0">
+        <div className="flex items-center gap-2 mb-3 sm:mb-4">
+          <div className="h-6 w-0.5 sm:w-1 bg-red-500 rounded-full"></div>
+          <h3 className="text-white font-bold text-sm sm:text-base font-[Cambria]">
+            Quick Links
+          </h3>
+        </div>
+        
+        <ul className="space-y-1.5 sm:space-y-2">
+          {navItems.map((item) => (
+            <li key={item.path}>
+              <Link
+                to={item.path}
+                className="group flex items-center gap-2 text-white/80 hover:text-white text-xs sm:text-sm transition-all duration-300 py-1 sm:py-1.5"
+              >
+                <ChevronRight className="w-2 h-2 sm:w-2.5 sm:h-2.5 text-red-400 opacity-0 group-hover:opacity-100 transition-all duration-300" />
+                <span>{item.title}</span>
               </Link>
-              
-              <div className="space-y-2.5">
-                <div className="flex items-center gap-1">
-                  <div className="h-px w-4 bg-red-500"></div>
-                  <p className="text-white/90 text-xs italic font-serif">
-                    Education · Civilization · Humanization
-                  </p>
-                  <div className="h-px w-4 bg-red-500"></div>
-                </div>
-                
-                <p className="text-white/80 text-xs leading-relaxed">
-                  Since 1980 AD (2036 BS) - A Legacy of Excellence<br />
-                  Cultivating holistic education and character development
-                </p>
-                
-                <div className="flex items-center gap-2">
-                  <a 
-                    href="https://www.facebook.com/KathmanduNationalSchool" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="w-8 h-8 rounded-md bg-white/10 backdrop-blur-sm flex items-center justify-center hover:bg-white/20 transition-all duration-300 border border-white/20 hover:border-white/40"
-                  >
-                    <Facebook className="w-3.5 h-3.5 text-white" />
-                  </a>
-                  <a 
-                    href="https://instagram.com" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="w-8 h-8 rounded-md bg-white/10 backdrop-blur-sm flex items-center justify-center hover:bg-white/20 transition-all duration-300 border border-white/20 hover:border-white/40"
-                  >
-                    <Instagram className="w-3.5 h-3.5 text-white" />
-                  </a>
-                  <a 
-                    href="https://youtube.com" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="w-8 h-8 rounded-md bg-white/10 backdrop-blur-sm flex items-center justify-center hover:bg-white/20 transition-all duration-300 border border-white/20 hover:border-white/40"
-                  >
-                    <Youtube className="w-3.5 h-3.5 text-white" />
-                  </a>
-                </div>
-              </div>
-            </div>
+            </li>
+          ))}
+        </ul>
+      </div>
 
-            <div className="w-3/5 mx-auto md:mx-auto">
-              <div className="flex items-center gap-2 mb-4">
-                <div className="h-6 w-1 bg-red-500 rounded-full"></div>
-                <h3 className="text-white font-bold text-sm font-[Cambria]">
-                  Quick Links
-                </h3>
-              </div>
-              
-              <ul className="space-y-1.5">
-                {navItems.map((item) => (
-                  <li key={item.path}>
-                    <Link
-                      to={item.path}
-                      className="group flex items-center gap-2 text-white/80 hover:text-white text-xs transition-all duration-300 py-1"
-                    >
-                      <ChevronRight className="w-2 h-2 text-red-400 opacity-0 group-hover:opacity-100 transition-all duration-300" />
-                      <span>{item.title}</span>
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
+      {/* Academics */}
+      <div>
+        <div className="flex items-center gap-2 mb-3 sm:mb-4">
+          <div className="h-6 w-0.5 sm:w-1 bg-blue-500 rounded-full"></div>
+          <h3 className="text-white font-bold text-sm sm:text-base font-[Cambria]">
+            Academics
+          </h3>
+        </div>
+        
+        <ul className="space-y-1.5 sm:space-y-2">
+          {['Montessori', 'Primary Education (1-5)', 'Basic Education (6-8)', 'Secondary Education (9-10)', 'Extra Curricular Activities'].map((program, index) => (
+            <li key={program}>
+              <a 
+                href="#" 
+                className="group flex items-center gap-2 text-white/80 hover:text-white text-xs sm:text-sm transition-all duration-300 py-1 sm:py-1.5"
+              >
+                <Award className="w-2 h-2 sm:w-2.5 sm:h-2.5 text-red-400 opacity-70 group-hover:opacity-100 flex-shrink-0" />
+                <span>{program}</span>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
 
-            <div>
-              <div className="flex items-center gap-2 mb-4">
-                <div className="h-6 w-1 bg-blue-500 rounded-full"></div>
-                <h3 className="text-white font-bold text-sm font-[Cambria]">
-                  Academics
-                </h3>
-              </div>
-              
-              <ul className="space-y-1.5">
-                {['Montessori', 'Primary Education (1-5)', 'Basic Education (6-8)', 'Secondary Education (9-10)', 'Extra Curricular Activities'].map((program) => (
-                  <li key={program}>
-                    <a 
-                      href="#" 
-                      className="group flex items-center gap-2 text-white/80 hover:text-white text-xs transition-all duration-300 py-1"
-                    >
-                      <Award className="w-2 h-2 text-red-400 opacity-70 group-hover:opacity-100" />
-                      <span>{program}</span>
-                    </a>
-                  </li>
-                ))}
-              </ul>
+      {/* Contact Info */}
+      <div>
+        <div className="flex items-center gap-2 mb-3 sm:mb-4">
+          <div className="h-6 w-0.5 sm:w-1 bg-green-500 rounded-full"></div>
+          <h3 className="text-white font-bold text-sm sm:text-base font-[Cambria]">
+            Contact Us
+          </h3>
+        </div>
+        
+        <div className="space-y-3 sm:space-y-4">
+          <div className="flex items-start gap-2 sm:gap-3">
+            <div className="w-8 h-8 sm:w-9 sm:h-9 lg:w-10 lg:h-10 rounded-md bg-white/10 backdrop-blur-sm flex items-center justify-center flex-shrink-0 mt-0.5">
+              <MapPin className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-white" />
             </div>
-
-            <div>
-              <div className="flex items-center gap-2 mb-4">
-                <div className="h-6 w-1 bg-green-500 rounded-full"></div>
-                <h3 className="text-white font-bold text-sm font-[Cambria]">
-                  Contact Us
-                </h3>
-              </div>
-              
-              <div className="space-y-4">
-                <div className="flex items-start gap-2">
-                  <div className="w-8 h-8 rounded-md bg-white/10 backdrop-blur-sm flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <MapPin className="w-3.5 h-3.5 text-white" />
-                  </div>
-                  <div>
-                    <div className="font-medium text-white mb-0.5 text-xs">Address</div>
-                    <div className="text-white/80 text-xs leading-relaxed">
-                      {contactDetails.name}<br />
-                      {contactDetails.address}
-                    </div>
-                  </div>
-                </div>
-                
-                <div className="flex items-start gap-2">
-                  <div className="w-8 h-8 rounded-md bg-white/10 backdrop-blur-sm flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <Phone className="w-3.5 h-3.5 text-white" />
-                  </div>
-                  <div>
-                    <div className="font-medium text-white mb-0.5 text-xs">Phone & Fax</div>
-                    <a href={`tel:${contactDetails.telephone}`} className="text-white/80 hover:text-white text-xs transition-colors block">
-                      Telephone: {contactDetails.telephone}
-                    </a>
-                    <div className="text-white/80 text-xs">FAX: {contactDetails.fax}</div>
-                  </div>
-                </div>
-                
-                <div className="flex items-start gap-2">
-                  <div className="w-8 h-8 rounded-md bg-white/10 backdrop-blur-sm flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <Mail className="w-3.5 h-3.5 text-white" />
-                  </div>
-                  <div>
-                    <div className="font-medium text-white mb-0.5 text-xs">Email</div>
-                    <a href={`mailto:${contactDetails.email}`} className="text-white/80 hover:text-white text-xs transition-colors">
-                      {contactDetails.email}
-                    </a>
-                  </div>
-                </div>
-                
-                <div className="flex items-start gap-2">
-                  <div className="w-8 h-8 rounded-md bg-white/10 backdrop-blur-sm flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <Clock className="w-3.5 h-3.5 text-white" />
-                  </div>
-                  <div>
-                    <div className="font-medium text-white mb-0.5 text-xs">Office Hours</div>
-                    <div className="text-white/80 text-xs">{contactDetails.officeHours}</div>
-                  </div>
-                </div>
+            <div className="flex-1">
+              <div className="font-medium text-white mb-0.5 sm:mb-1 text-xs sm:text-sm">Address</div>
+              <div className="text-white/80 text-xs sm:text-sm leading-relaxed">
+                {contactDetails.name}<br />
+                {contactDetails.address}
               </div>
             </div>
           </div>
-
-          <div className="mt-8 pt-5 border-t border-white/20">
-            <div className="flex flex-col lg:flex-row justify-between items-center gap-4">
-              <div className="text-center lg:text-left">
-                <div className="flex items-center justify-center lg:justify-start gap-1 text-white/80 text-xs mb-1">
-                  <span>Proudly serving the community since 1980</span>
-                </div>
-                <div className="text-white/60 text-xs">
-                  © 2023 Kathmandu National School. All rights reserved.
-                </div>
-              </div>
+          
+          <div className="flex items-start gap-2 sm:gap-3">
+            <div className="w-8 h-8 sm:w-9 sm:h-9 lg:w-10 lg:h-10 rounded-md bg-white/10 backdrop-blur-sm flex items-center justify-center flex-shrink-0 mt-0.5">
+              <Phone className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-white" />
+            </div>
+            <div className="flex-1">
+              <div className="font-medium text-white mb-0.5 sm:mb-1 text-xs sm:text-sm">Phone & Fax</div>
+              <a href={`tel:${contactDetails.telephone}`} className="text-white/80 hover:text-white text-xs sm:text-sm transition-colors block mb-0.5">
+                Telephone: {contactDetails.telephone}
+              </a>
+              <div className="text-white/80 text-xs sm:text-sm">FAX: {contactDetails.fax}</div>
+            </div>
+          </div>
+          
+          <div className="flex items-start gap-2 sm:gap-3">
+            <div className="w-8 h-8 sm:w-9 sm:h-9 lg:w-10 lg:h-10 rounded-md bg-white/10 backdrop-blur-sm flex items-center justify-center flex-shrink-0 mt-0.5">
+              <Mail className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-white" />
+            </div>
+            <div className="flex-1">
+              <div className="font-medium text-white mb-0.5 sm:mb-1 text-xs sm:text-sm">Email</div>
+              <a href={`mailto:${contactDetails.email}`} className="text-white/80 hover:text-white text-xs sm:text-sm transition-colors break-all">
+                {contactDetails.email}
+              </a>
+            </div>
+          </div>
+          
+          <div className="flex items-start gap-2 sm:gap-3">
+            <div className="w-8 h-8 sm:w-9 sm:h-9 lg:w-10 lg:h-10 rounded-md bg-white/10 backdrop-blur-sm flex items-center justify-center flex-shrink-0 mt-0.5">
+              <Clock className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-white" />
+            </div>
+            <div className="flex-1">
+              <div className="font-medium text-white mb-0.5 sm:mb-1 text-xs sm:text-sm">Office Hours</div>
+              <div className="text-white/80 text-xs sm:text-sm">{contactDetails.officeHours}</div>
             </div>
           </div>
         </div>
+      </div>
+    </div>
 
-        <div className="absolute inset-0 -z-10 opacity-5">
-          <div className="absolute inset-0" style={{
-            backgroundImage: `url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='32' height='32' fill='none' stroke='white'%3e%3cpath d='M0 .5H31.5V32'/%3e%3c/svg%3e")`,
-          }} />
+    {/* Copyright Section */}
+    <div className="mt-6 sm:mt-8 lg:mt-10 pt-4 sm:pt-5 border-t border-white/20">
+      <div className="flex flex-col sm:flex-row justify-between items-center gap-3 sm:gap-4">
+        <div className="text-center sm:text-left">
+          <div className="flex items-center justify-center sm:justify-start gap-1 text-white/80 text-xs mb-1">
+            <span>Proudly serving the community since 1980</span>
+          </div>
+          <div className="text-white/60 text-xs">
+            © 2023 Kathmandu National School. All rights reserved.
+          </div>
         </div>
-      </footer>
+        
+        <div className="text-center sm:text-right">
+          <div className="text-white/60 text-xs">
+            Affiliated with Government of Nepal, Ministry of Education
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {/* Background Pattern */}
+  <div className="absolute inset-0 -z-10 opacity-3 sm:opacity-5">
+    <div className="absolute inset-0" style={{
+      backgroundImage: `url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='32' height='32' fill='none' stroke='white'%3e%3cpath d='M0 .5H31.5V32'/%3e%3c/svg%3e")`,
+    }} />
+  </div>
+</footer>
 
       <AnimatePresence>
         {scrolled && (

@@ -5,6 +5,7 @@ import sara3 from '../assets/saraswati-puja/Saraswati-Puja3.jpg';
 import ann1 from '../assets/annual-day/annual-day1.jpg';
 
 import { motion } from 'framer-motion';
+import { Link } from 'react-router'; // Import Link from react-router-dom
 
 const GallerySection = () => {
   const galleryItems = [
@@ -39,85 +40,240 @@ const GallerySection = () => {
   ];
 
   return (
-    <section className="relative py-12 lg:py-16 bg-white overflow-hidden">
+    <section className="relative py-6 sm:py-8 lg:py-12 bg-gray-50 overflow-hidden">
       {/* Background Pattern */}
-      <div className="absolute inset-0 z-0 opacity-5">
+      <div className="absolute inset-0 -z-10 opacity-3 sm:opacity-5">
         <div className="absolute inset-0" style={{
-          backgroundImage: `url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='32' height='32' fill='none' stroke='%23000000'%3e%3cpath d='M0 .5H31.5V32'/%3e%3c/svg%3e")`,
+          backgroundImage: `url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='32' height='32' fill='none' stroke='%23006699'%3e%3cpath d='M0 .5H31.5V32'/%3e%3c/svg%3e")`,
         }} />
       </div>
 
       {/* Section Header */}
-      <div className="container mx-auto px-3 sm:px-5 lg:px-6 relative z-10">
+      <div className="container mx-auto px-3 sm:px-4 lg:px-6 relative z-10">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-10 lg:mb-12"
+          viewport={{ once: true, margin: "-50px" }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-6 sm:mb-8"
         >
-          <div className="flex items-center justify-center gap-3 mb-4 flex-col sm:flex-row">
-            <div className="hidden sm:block h-px w-6 md:w-10 bg-primary/50" />
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-4xl font-bold text-blue font-[Cambria]">
-              Our Gallery
-            </h2>
-            <div className="hidden sm:block h-px w-6 md:w-10 bg-primary/50" />
+          <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 font-[Cambria] mb-2 sm:mb-3">
+            Our Gallery
+          </h2>
+          
+          <div className="flex items-center justify-center gap-2 sm:gap-3 mb-3 sm:mb-4">
+            <div className="h-px w-6 sm:w-8 md:w-10 bg-primary/50" />
+            <p className="text-xs sm:text-sm md:text-base text-gray-600 font-serif italic">
+              Capturing Memories of Excellence & Innovation
+            </p>
+            <div className="h-px w-6 sm:w-8 md:w-10 bg-primary/50" />
           </div>
         </motion.div>
 
-        {/* Gallery Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 lg:gap-6">
-          {galleryItems.map((item, index) => (
-            <motion.div
-              key={item.id}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="group relative overflow-hidden rounded-lg bg-white border border-gray-200 shadow-md hover:shadow-lg transition-all duration-300"
-            >
-              {/* Image Container */}
-              <div className="relative h-48 md:h-56 overflow-hidden">
-                <img 
-                  src={item.image} 
-                  alt={item.title}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                />
-                
-                {/* Category Badge */}
-                <div className="absolute top-2 left-2">
-                  <span className="px-2 py-1 bg-primary/90 backdrop-blur-sm text-white text-xs font-semibold rounded-md">
-                    {item.category}
-                  </span>
+        {/* Mobile: Single Column Layout */}
+        <div className="block lg:hidden">
+          <div className="space-y-3 sm:space-y-4">
+            {galleryItems.map((item, index) => (
+              <motion.div
+                key={item.id}
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ duration: 0.5, delay: index * 0.05 }}
+                className="group"
+              >
+                <div className="bg-white rounded-lg border border-gray-200 shadow-sm overflow-hidden hover:shadow-md transition-all duration-300">
+                  {/* Image Container */}
+                  <div className="relative h-40 sm:h-48 overflow-hidden">
+                    <img 
+                      src={item.image} 
+                      alt={item.title}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                    
+                    {/* Category Badge */}
+                    <div className="absolute top-2 left-2">
+                      <span className="px-2 py-0.5 bg-primary/90 backdrop-blur-sm text-white text-xs font-semibold rounded-md">
+                        {item.category}
+                      </span>
+                    </div>
+                    
+                    {/* Gradient Overlay */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  </div>
+                  
+                  {/* Content Card */}
+                  <div className="p-3 sm:p-4">
+                    <div className="flex items-center gap-2 mb-1.5">
+                      <div className="h-4 w-0.5 bg-red-500 rounded-full"></div>
+                      <h3 className="text-sm sm:text-base font-bold text-gray-900 font-[Cambria]">
+                        {item.title}
+                      </h3>
+                    </div>
+                    
+                    <p className="text-gray-600 text-xs sm:text-sm leading-relaxed">
+                      {item.description}
+                    </p>
+                  </div>
+                  
+                  {/* Hover Effect Border */}
+                  <div className="h-0.5 w-full bg-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </div>
-                
-                {/* Gradient Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              </div>
-              
-              {/* Content Card */}
-              <div className="p-4 lg:p-5">
-                <div className="flex items-center gap-2 mb-2">
-                  <div className="h-6 w-0.5 bg-red-500 rounded-full"></div>
-                  <h3 className="text-base lg:text-lg font-bold text-gray-900 font-[Cambria]">
-                    {item.title}
-                  </h3>
-                </div>
-                
-                <p className="text-gray-600 text-xs lg:text-sm leading-relaxed mb-3">
-                  {item.description}
-                </p>
-              </div>
-              
-              {/* Hover Effect Border */}
-              <div className="absolute inset-0 border border-transparent group-hover:border-primary/20 rounded-lg transition-all duration-300 pointer-events-none" />
-            </motion.div>
-          ))}
+              </motion.div>
+            ))}
+          </div>
         </div>
+
+        {/* Desktop: Grid Layout */}
+        <div className="hidden lg:grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
+          {/* Left Column - Main Content */}
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="space-y-4"
+          >
+            {galleryItems.slice(0, 2).map((item, index) => (
+              <motion.div
+                key={item.id}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="group"
+              >
+                <div className="bg-white rounded-lg border border-gray-200 shadow-sm hover:shadow-md transition-all duration-300 overflow-hidden">
+                  {/* Image Container */}
+                  <div className="relative h-48 overflow-hidden">
+                    <img 
+                      src={item.image} 
+                      alt={item.title}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                    
+                    {/* Category Badge */}
+                    <div className="absolute top-2 left-2">
+                      <span className="px-2 py-1 bg-primary/90 backdrop-blur-sm text-white text-xs font-semibold rounded-md">
+                        {item.category}
+                      </span>
+                    </div>
+                    
+                    {/* Gradient Overlay */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  </div>
+                  
+                  {/* Content Card */}
+                  <div className="p-4">
+                    <div className="flex items-center gap-2 mb-2">
+                      <div className="h-5 w-0.5 bg-red-500 rounded-full"></div>
+                      <h3 className="text-lg font-bold text-gray-900 font-[Cambria]">
+                        {item.title}
+                      </h3>
+                    </div>
+                    
+                    <p className="text-gray-600 text-sm leading-relaxed">
+                      {item.description}
+                    </p>
+                  </div>
+                  
+                  {/* Hover Effect Border */}
+                  <div className="h-0.5 w-full bg-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </div>
+              </motion.div>
+            ))}
+          </motion.div>
+
+          {/* Right Column - Secondary Content */}
+          <motion.div
+            initial={{ opacity: 0, x: 20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="space-y-4"
+          >
+            {galleryItems.slice(2, 4).map((item, index) => (
+              <motion.div
+                key={item.id}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="group"
+              >
+                <div className="bg-white rounded-lg border border-gray-200 shadow-sm hover:shadow-md transition-all duration-300 overflow-hidden">
+                  {/* Image Container */}
+                  <div className="relative h-48 overflow-hidden">
+                    <img 
+                      src={item.image} 
+                      alt={item.title}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                    
+                    {/* Category Badge */}
+                    <div className="absolute top-2 left-2">
+                      <span className="px-2 py-1 bg-primary/90 backdrop-blur-sm text-white text-xs font-semibold rounded-md">
+                        {item.category}
+                      </span>
+                    </div>
+                    
+                    {/* Gradient Overlay */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  </div>
+                  
+                  {/* Content Card */}
+                  <div className="p-4">
+                    <div className="flex items-center gap-2 mb-2">
+                      <div className="h-5 w-0.5 bg-red-500 rounded-full"></div>
+                      <h3 className="text-lg font-bold text-gray-900 font-[Cambria]">
+                        {item.title}
+                      </h3>
+                    </div>
+                    
+                    <p className="text-gray-600 text-sm leading-relaxed">
+                      {item.description}
+                    </p>
+                  </div>
+                  
+                  {/* Hover Effect Border */}
+                  <div className="h-0.5 w-full bg-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </div>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+
+        {/* View All Button - Responsive */}
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-50px" }}
+          transition={{ delay: 0.3, duration: 0.6 }}
+          className="mt-6 sm:mt-8 lg:mt-10 text-center"
+        >
+          {/* Updated: Link to gallery page */}
+          <Link 
+            to="/gallery" 
+            className="inline-flex items-center justify-center gap-1.5 px-4 sm:px-5 py-1.5 sm:py-2 bg-primary text-white font-medium rounded-lg hover:bg-primary/90 transition-all duration-300 text-xs sm:text-sm group"
+          >
+            View Complete Gallery
+            <svg 
+              className="w-3 h-3 sm:w-3.5 sm:h-3.5 group-hover:translate-x-1 transition-transform duration-300" 
+              fill="none" 
+              stroke="currentColor" 
+              viewBox="0 0 24 24"
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </Link>
+          <p className="text-gray-600 text-xs mt-2">
+            Explore more photos and videos from school events
+          </p>
+        </motion.div>
       </div>
 
-      {/* Decorative Elements */}
-      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-gray-50 to-transparent -z-10" />
+      {/* Bottom Gradient Fade */}
+      <div className="absolute bottom-0 left-0 right-0 h-12 sm:h-16 bg-gradient-to-t from-gray-50 to-transparent -z-10" />
     </section>
   );
 };

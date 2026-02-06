@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Quote } from 'lucide-react';
+import { Quote, Star, ChevronRight, Heart } from 'lucide-react';
 
 // Import background image for overlay
 import testimonialBg from '../assets/teachers/assembly.jpg';
@@ -40,149 +40,153 @@ const TestimonialSection = () => {
     },
   ];
 
+  const stats = [
+    { value: "98%", label: "Parent Satisfaction", icon: Heart },
+    { value: "45+", label: "Years of Trust", icon: Star },
+    { value: "1000+", label: "Alumni Network", icon: Quote },
+  ];
+
   return (
-    <section className="relative py-12 lg:py-16 overflow-hidden rounded-b-4xl">
-      {/* Background Image with Overlay - EXACTLY like hero banner */}
-      <div className="absolute inset-0 z-0">
-        <img 
-          src={testimonialBg} 
-          alt="Testimonial Background" 
-          className="w-full h-full object-cover"
-        />
-        {/* Blue Overlay - Same as hero */}
-        <div className="absolute inset-0 bg-primary/70" />
-        <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/70 to-primary/50" />
-      </div>
-      
-      {/* Subtle Pattern Texture - Same as hero */}
-      <div className="absolute inset-0 z-0 opacity-5">
-        <div className="absolute inset-0" style={{
-          backgroundImage: `url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='32' height='32' fill='none' stroke='white'%3e%3cpath d='M0 .5H31.5V32'/%3e%3c/svg%3e")`,
-        }} />
-      </div>
-
-      <div className="container mx-auto px-3 sm:px-5 lg:px-6 relative z-10">
-        {/* Section Header - Styled like hero motto */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-10 lg:mb-12"
-        >
-          <div className="flex items-center justify-center gap-3 mb-4 flex-col sm:flex-row">
-            <div className="hidden sm:block h-px w-6 md:w-10 bg-white/50" />
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-4xl font-bold text-white font-[Cambria]">
-              Voices of Our Community
-            </h2>
-            <div className="hidden sm:block h-px w-6 md:w-10 bg-white/50" />
-          </div>
-        </motion.div>
-
-        {/* Testimonials Grid - Using hero's card styling */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-5 lg:gap-6">
-          {testimonials.map((testimonial, index) => (
-            <motion.div
-              key={testimonial.id}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-            >
-              {/* Card styled EXACTLY like hero cards */}
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20 hover:border-white/30 transition-all duration-300 h-full">
-                {/* Quote Icon and Stars - Hero style */}
-                <div className="flex items-center justify-between mb-4">
-                  <div className="flex items-center gap-2">
-                    <div className="w-8 h-8 bg-blue-500/20 rounded-full flex items-center justify-center">
-                      <Quote className="w-4 h-4 text-white" />
-                    </div>
-                  </div>
-                  
-                  {/* Year Badge - Hero style */}
-                  <div className="px-2 py-1 bg-white/10 backdrop-blur-sm rounded-md border border-white/20">
-                    <span className="text-xs font-semibold text-white">
-                      {testimonial.year}
-                    </span>
-                  </div>
-                </div>
-
-                {/* Content with hero text styling */}
-                <div className="mb-6">
-                  <p className="text-white/90 text-sm lg:text-base leading-relaxed italic font-serif">
-                    "{testimonial.content}"
-                  </p>
-                </div>
-
-                {/* Author Info with Circular Image - Enhanced styling */}
-                <div className="flex items-center gap-3 pt-4 border-t border-white/20">
-                  {/* Circular Image Container */}
-                  <div className="relative">
-                    {/* Glow effect */}
-                    <div className="absolute -inset-0.5 bg-gradient-to-r from-red-500/30 to-blue-500/30 rounded-full blur-sm"></div>
-                    
-                    {/* Circular Image */}
-                    <div className="relative w-12 h-12 rounded-full overflow-hidden border border-white/30">
-                      <img 
-                        src={testimonial.image} 
-                        alt={testimonial.name}
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                    
-                    {/* Verified Badge */}
-                    <div className="absolute -bottom-0.5 -right-0.5 w-5 h-5 bg-red-500 rounded-full border border-white/80 flex items-center justify-center">
-                      <svg className="w-2.5 h-2.5 text-white" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                      </svg>
-                    </div>
-                  </div>
-                  
-                  {/* Name and Role */}
-                  <div className="flex-1">
-                    <h4 className="text-base font-bold text-white font-[Cambria]">
-                      {testimonial.name}
-                    </h4>
-                    <p className="text-white/80 text-xs">
-                      {testimonial.role}
-                    </p>
-                    
-                    {/* Accent Bar like hero */}
-                    <div className="h-0.5 w-10 bg-red-500 rounded-full mt-1.5" />
-                  </div>
-                </div>
-              </div>
-            </motion.div>
-          ))}
+    <div className="min-h-screen bg-white">
+      {/* Hero Banner - Matching Introduction Page */}
+      <section className="relative py-6 sm:py-8 lg:py-16 overflow-hidden">
+        {/* Background Image with Overlay */}
+        <div className="absolute inset-0 z-0">
+          <img 
+            src={testimonialBg}
+            alt="Testimonial Background" 
+            className="w-full h-full object-cover"
+          />
+          {/* Blue Overlay */}
+          <div className="absolute inset-0 bg-primary/70" />
+          <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/70 to-primary/50" />
+        </div>
+        
+        {/* Subtle Pattern Texture */}
+        <div className="absolute inset-0 z-0 opacity-5">
+          <div className="absolute inset-0" style={{
+            backgroundImage: `url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='32' height='32' fill='none' stroke='white'%3e%3cpath d='M0 .5H31.5V32'/%3e%3c/svg%3e")`,
+          }} />
         </div>
 
-        {/* Stats Section - With hero gradient overlay */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.4, duration: 0.8 }}
-          className="mt-12 lg:mt-16"
-        >
-          {/* Background with hero's overlay style */}
-          <div className="relative rounded-lg overflow-hidden">
-            {/* Gradient overlay like hero */}
-            <div className="absolute inset-0 bg-gradient-to-r from-primary/80 via-primary/70 to-primary/60" />
-            <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/70 to-primary/50" />
+        <div className="container mx-auto px-3 sm:px-4 lg:px-6 relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center max-w-4xl mx-auto"
+          >
+            <h1 className="text-xl xs:text-2xl sm:text-3xl lg:text-4xl font-bold text-white font-[Cambria] mb-3 sm:mb-4">
+              Voices of Our Community
+            </h1>
             
-            {/* Pattern texture */}
-            <div className="absolute inset-0 opacity-5">
-              <div className="absolute inset-0" style={{
-                backgroundImage: `url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='32' height='32' fill='none' stroke='white'%3e%3cpath d='M0 .5H31.5V32'/%3e%3c/svg%3e")`,
-              }} />
-            </div>
-          </div>
-        </motion.div>
-      </div>
+            {/* Divider like introduction page */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.5, duration: 1 }}
+            >
+              <div className="flex items-center justify-center gap-2 sm:gap-3 mb-4 sm:mb-6">
+                <div className="h-px w-6 sm:w-8 md:w-10 bg-white/50" />
+                <p className="text-xs sm:text-sm md:text-base lg:text-lg text-white/95 italic tracking-wide font-serif px-1 sm:px-2">
+                  Trust · Excellence · Legacy
+                </p>
+                <div className="h-px w-6 sm:w-8 md:w-10 bg-white/50" />
+              </div>
+            </motion.div>
+            
+            <p className="text-sm sm:text-base lg:text-lg text-white/90 mb-4 sm:mb-6 font-serif italic">
+              Hear from parents, alumni, and students who experienced KNS excellence
+            </p>
+          </motion.div>
+        </div>
 
-      {/* Bottom Gradient Fade - EXACTLY like hero */}
-      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-primary to-transparent" />
-    </section>
+        {/* Bottom Gradient Fade */}
+        <div className="absolute bottom-0 left-0 right-0 h-16 sm:h-20 lg:h-24 bg-gradient-to-t from-primary to-transparent" />
+      </section>
+
+      {/* Main Content - Matching Introduction Layout */}
+      <section className="relative py-6 sm:py-8 lg:py-16 bg-gray-50">
+        <div className="container mx-auto px-3 sm:px-4 lg:px-6">
+
+          {/* Testimonials Grid - Using Introduction's Card Design */}
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 sm:gap-5 lg:gap-6">
+            {testimonials.map((testimonial, index) => (
+              <motion.div
+                key={testimonial.id}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+              >
+                {/* Card styled exactly like Introduction's desktop cards */}
+                <div className="bg-white rounded-lg border border-gray-200 shadow-sm hover:shadow-md transition-all duration-300 h-full">
+
+
+                  {/* Content with Introduction's padding and spacing */}
+                  <div className="p-4 sm:p-5 lg:p-6">
+                    {/* Quote Icon - Matching Introduction's icon containers */}
+                    <div className="flex items-center gap-3 mb-4">
+                      <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                        <Quote className="w-5 h-5 text-primary" />
+                      </div>
+                    </div>
+
+                    {/* Quote Content - Matching Introduction's text styling */}
+                    <div className="mb-4">
+                      <p className="text-gray-700 text-sm lg:text-base leading-relaxed italic font-serif mb-3">
+                        "{testimonial.content}"
+                      </p>
+                      
+                      {/* Rating Stars */}
+                      <div className="flex items-center gap-1 mb-4">
+                        {[...Array(testimonial.rating)].map((_, i) => (
+                          <Star key={i} className="w-4 h-4 text-yellow-500 fill-yellow-500" />
+                        ))}
+                      </div>
+                    </div>
+
+                    {/* Author Info - Enhanced with Introduction's styling */}
+                    <div className="flex items-center gap-3 pt-4 border-t border-gray-200">
+                      {/* Circular Image Container with glow effect */}
+                      <div className="relative">
+                        <div className="absolute -inset-0.5 bg-gradient-to-r from-red-500/20 to-primary/20 rounded-full blur-sm"></div>
+                        <div className="relative w-12 h-12 rounded-full overflow-hidden border border-gray-300">
+                          <img 
+                            src={testimonial.image} 
+                            alt={testimonial.name}
+                            className="w-full h-full object-cover"
+                          />
+                        </div>
+                      </div>
+                      
+                      {/* Name and Role - Matching Introduction's typography */}
+                      <div className="flex-1">
+                        <h4 className="text-base font-bold text-gray-900 font-[Cambria]">
+                          {testimonial.name}
+                        </h4>
+                        <p className="text-gray-600 text-xs sm:text-sm">
+                          {testimonial.role}
+                        </p>
+                        {/* Thin accent line */}
+                        <div className="h-0.5 w-8 bg-red-500 rounded-full mt-1.5"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+
+        {/* Background Pattern - Matching Introduction */}
+        <div className="absolute inset-0 -z-10 opacity-3 sm:opacity-5">
+          <div className="absolute inset-0" style={{
+            backgroundImage: `url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='32' height='32' fill='none' stroke='%23006699'%3e%3cpath d='M0 .5H31.5V32'/%3e%3c/svg%3e")`,
+          }} />
+        </div>
+      </section>
+    </div>
   );
 };
 

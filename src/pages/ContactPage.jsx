@@ -1,7 +1,6 @@
 import { motion } from 'framer-motion';
-import { MapPin, Phone, Mail, Clock, Send, CheckCircle, MessageSquare, AlertCircle } from 'lucide-react';
+import { MapPin, Phone, Mail, Clock, Send, CheckCircle, MessageSquare, AlertCircle, ExternalLink, ChevronDown, ChevronUp } from 'lucide-react';
 import { useState } from 'react';
-import { ExternalLink } from 'lucide-react';
 import emailjs from '@emailjs/browser';
 
 // Import contact page image
@@ -30,6 +29,8 @@ const ContactPage = () => {
     submitting: false,
     error: null
   });
+  
+  const [expandedContact, setExpandedContact] = useState({});
 
   const contactDetails = {
     name: "Kathmandu National School",
@@ -43,30 +44,41 @@ const ContactPage = () => {
 
   const departments = [
     {
+      id: 'principal',
       name: "Principal's Office",
       email: "principal@kns.edu.np",
       phone: "+977 4490821 Ext. 101",
       hours: "10:00 AM - 12:00 PM"
     },
     {
+      id: 'admissions',
       name: "Admissions Office",
       email: "admissions@kns.edu.np",
       phone: "+977 4490821 Ext. 102",
       hours: "9:00 AM - 3:00 PM"
     },
     {
+      id: 'accounts',
       name: "Accounts Department",
       email: "accounts@kns.edu.np",
       phone: "+977 4490821 Ext. 103",
       hours: "9:00 AM - 3:00 PM"
     },
     {
+      id: 'academic',
       name: "Academic Office",
       email: "academic@kns.edu.np",
       phone: "+977 4490821 Ext. 104",
       hours: "9:00 AM - 4:00 PM"
     }
   ];
+
+  const toggleContact = (id) => {
+    setExpandedContact(prev => ({
+      ...prev,
+      [id]: !prev[id]
+    }));
+  };
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -189,8 +201,8 @@ const ContactPage = () => {
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Hero Banner - Same as home page */}
-      <section className="relative py-12 lg:py-16 overflow-hidden">
+      {/* Hero Banner - Optimized for Mobile */}
+      <section className="relative py-6 sm:py-8 lg:py-16 overflow-hidden">
         {/* Background Image with Overlay */}
         <div className="absolute inset-0 z-0">
           <img 
@@ -210,14 +222,14 @@ const ContactPage = () => {
           }} />
         </div>
 
-        <div className="container mx-auto px-4 sm:px-6 lg:px-6 relative z-10">
+        <div className="container mx-auto px-3 sm:px-4 lg:px-6 relative z-10">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
           >
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white font-[Cambria] mb-4">
+            <h1 className="text-xl xs:text-2xl sm:text-3xl lg:text-4xl font-bold text-white font-[Cambria] mb-3 sm:mb-4">
               Contact Us
             </h1>
             
@@ -227,43 +239,319 @@ const ContactPage = () => {
               animate={{ opacity: 1 }}
               transition={{ delay: 0.5, duration: 1 }}
             >
-              <div className="flex items-center justify-center gap-4 mb-6">
-                <div className="h-px w-12 bg-white/50" />
-                <p className="text-base md:text-lg text-white/95 italic tracking-wide font-serif">
+              <div className="flex items-center justify-center gap-2 sm:gap-3 mb-4 sm:mb-6">
+                <div className="h-px w-6 sm:w-8 md:w-10 bg-white/50" />
+                <p className="text-xs sm:text-sm md:text-base lg:text-lg text-white/95 italic tracking-wide font-serif px-1 sm:px-2">
                   Education · Civilization · Humanization
                 </p>
-                <div className="h-px w-12 bg-white/50" />
+                <div className="h-px w-6 sm:w-8 md:w-10 bg-white/50" />
               </div>
             </motion.div>
             
-            <p className="text-lg text-white/90 mb-6 font-serif italic">
+            <p className="text-sm sm:text-base lg:text-lg text-white/90 mb-4 sm:mb-6 font-serif italic">
               Get in Touch with Kathmandu National School
             </p>
           </motion.div>
         </div>
 
         {/* Bottom Gradient Fade */}
-        <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-primary to-transparent" />
+        <div className="absolute bottom-0 left-0 right-0 h-16 sm:h-20 lg:h-24 bg-gradient-to-t from-primary to-transparent" />
       </section>
 
-      {/* Main Content */}
-      <section className="relative py-12 lg:py-16 bg-gray-50">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-6">
-          {/* Main Contact Grid */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 mb-12 lg:mb-16">
-            {/* Left Column - Contact Details */}
+      {/* Main Content - Mobile Optimized */}
+      <section className="relative py-6 sm:py-8 lg:py-16 bg-gray-50">
+        <div className="container mx-auto px-3 sm:px-4 lg:px-6">
+          {/* Mobile Contact Details Accordion */}
+          <div className="block lg:hidden mb-6">
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.6 }}
+              className="mb-6"
+            >
+              <div className="bg-white rounded-lg p-4 sm:p-5 border border-gray-200 shadow-sm">
+                <div className="flex items-center gap-2 mb-3">
+                  <div className="h-6 w-0.5 bg-red-500 rounded-full"></div>
+                  <h2 className="text-lg sm:text-xl font-bold text-gray-900 font-[Cambria]">
+                    School Information
+                  </h2>
+                </div>
+                
+                {/* Mobile Contact Details */}
+                <div className="space-y-3">
+                  <div className="flex items-start gap-2">
+                    <MapPin className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
+                    <div>
+                      <p className="text-gray-700 text-xs sm:text-sm">{contactDetails.name}</p>
+                      <p className="text-gray-700 text-xs sm:text-sm">{contactDetails.address}</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start gap-2">
+                    <Phone className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
+                    <div>
+                      <p className="text-gray-700 text-xs sm:text-sm">Tel: {contactDetails.telephone}</p>
+                      <p className="text-gray-700 text-xs sm:text-sm">Fax: {contactDetails.fax}</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start gap-2">
+                    <Mail className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
+                    <div>
+                      <p className="text-gray-700 text-xs sm:text-sm">{contactDetails.email}</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start gap-2">
+                    <Clock className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
+                    <div>
+                      <p className="text-gray-700 text-xs sm:text-sm">{contactDetails.officeHours}</p>
+                      <p className="text-gray-700 text-xs mt-0.5">{contactDetails.principalOffice}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Mobile Departments Accordion */}
+            <div className="space-y-3 sm:space-y-4 mb-6">
+              {departments.map((dept, index) => (
+                <motion.div
+                  key={dept.id}
+                  initial={{ opacity: 0, y: 10 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: "-50px" }}
+                  transition={{ duration: 0.5, delay: index * 0.05 }}
+                >
+                  <div className="bg-white rounded-lg border border-gray-200 shadow-sm overflow-hidden">
+                    <button
+                      onClick={() => toggleContact(dept.id)}
+                      className="w-full p-3 sm:p-4 flex items-center justify-between hover:bg-gray-50 transition-colors"
+                    >
+                      <div className="flex items-center gap-2 sm:gap-3 text-left">
+                        <div className="w-8 h-8 sm:w-10 sm:h-10 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                          <Mail className="w-4 h-4 sm:w-5 sm:h-5 text-primary" />
+                        </div>
+                        <div>
+                          <h3 className="text-sm sm:text-base font-bold text-gray-900 font-[Cambria]">
+                            {dept.name}
+                          </h3>
+                          <div className="h-0.5 w-8 bg-red-500 rounded-full mt-1"></div>
+                        </div>
+                      </div>
+                      {expandedContact[dept.id] ? (
+                        <ChevronUp className="w-4 h-4 sm:w-5 sm:h-5 text-gray-500 flex-shrink-0" />
+                      ) : (
+                        <ChevronDown className="w-4 h-4 sm:w-5 sm:h-5 text-gray-500 flex-shrink-0" />
+                      )}
+                    </button>
+                    
+                    <div className={`transition-all duration-300 ease-in-out overflow-hidden ${
+                      expandedContact[dept.id] ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'
+                    }`}>
+                      <div className="p-3 sm:p-4 pt-0">
+                        <div className="space-y-2">
+                          <div className="flex items-center gap-2">
+                            <Phone className="w-3 h-3 text-primary" />
+                            <span className="text-gray-700 text-xs sm:text-sm">{dept.phone}</span>
+                          </div>
+                          <div className="flex items-center gap-2">
+                            <Mail className="w-3 h-3 text-primary" />
+                            <span className="text-gray-700 text-xs sm:text-sm">{dept.email}</span>
+                          </div>
+                          <div className="flex items-center gap-2">
+                            <Clock className="w-3 h-3 text-primary" />
+                            <span className="text-gray-700 text-xs sm:text-sm">{dept.hours}</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+
+            {/* Mobile Contact Form */}
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="mb-6"
+            >
+              <div className="bg-white rounded-lg p-4 sm:p-5 border border-gray-200 shadow-sm">
+                <div className="flex items-center gap-2 mb-3">
+                  <div className="h-6 w-0.5 bg-primary rounded-full"></div>
+                  <h2 className="text-lg sm:text-xl font-bold text-gray-900 font-[Cambria]">
+                    Send Us Feedback
+                  </h2>
+                </div>
+                
+                <p className="text-gray-700 text-xs sm:text-sm mb-3">
+                  We value your feedback. Please fill out the form below and we'll get back to you as soon as possible.
+                </p>
+                
+                {/* Error Message */}
+                {formStatus.error && (
+                  <div className="mb-3 bg-red-50 border border-red-200 rounded-lg p-2">
+                    <div className="flex items-center gap-2">
+                      <AlertCircle className="w-3 h-3 text-red-600" />
+                      <p className="text-red-700 text-xs">{formStatus.error}</p>
+                    </div>
+                  </div>
+                )}
+                
+                {/* Success Message */}
+                {formStatus.submitted && (
+                  <div className="mb-3 bg-green-50 border border-green-200 rounded-lg p-2">
+                    <div className="flex items-center gap-2">
+                      <CheckCircle className="w-3 h-3 text-green-600" />
+                      <p className="text-green-700 text-xs">Your message has been sent successfully!</p>
+                    </div>
+                  </div>
+                )}
+                
+                {/* Feedback Form */}
+                <form onSubmit={handleSubmit} className="space-y-3">
+                  <div>
+                    <label htmlFor="name" className="block text-xs font-medium text-gray-700 mb-1">
+                      Full Name *
+                    </label>
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      value={formData.name}
+                      onChange={handleInputChange}
+                      required
+                      disabled={formStatus.submitting}
+                      className="w-full px-3 py-2 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:ring-1 focus:ring-primary/50 focus:border-primary transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed text-sm"
+                      placeholder="Enter your full name"
+                    />
+                  </div>
+                  
+                  <div>
+                    <label htmlFor="email" className="block text-xs font-medium text-gray-700 mb-1">
+                      Email Address *
+                    </label>
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      value={formData.email}
+                      onChange={handleInputChange}
+                      required
+                      disabled={formStatus.submitting}
+                      className="w-full px-3 py-2 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:ring-1 focus:ring-primary/50 focus:border-primary transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed text-sm"
+                      placeholder="Enter your email"
+                    />
+                  </div>
+                  
+                  <div>
+                    <label htmlFor="subject" className="block text-xs font-medium text-gray-700 mb-1">
+                      Subject *
+                    </label>
+                    <input
+                      type="text"
+                      id="subject"
+                      name="subject"
+                      value={formData.subject}
+                      onChange={handleInputChange}
+                      required
+                      disabled={formStatus.submitting}
+                      className="w-full px-3 py-2 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:ring-1 focus:ring-primary/50 focus:border-primary transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed text-sm"
+                      placeholder="Enter subject"
+                    />
+                  </div>
+                  
+                  <div>
+                    <label htmlFor="message" className="block text-xs font-medium text-gray-700 mb-1">
+                      Your Message *
+                    </label>
+                    <textarea
+                      id="message"
+                      name="message"
+                      value={formData.message}
+                      onChange={handleInputChange}
+                      required
+                      rows="3"
+                      disabled={formStatus.submitting}
+                      className="w-full px-3 py-2 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:ring-1 focus:ring-primary/50 focus:border-primary transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed resize-none text-sm"
+                      placeholder="Type your message here..."
+                    />
+                  </div>
+                  
+                  <button
+                    type="submit"
+                    disabled={formStatus.submitting}
+                    className="w-full px-4 py-2 bg-primary text-white font-medium rounded-lg hover:bg-primary/90 transition-all duration-300 flex items-center justify-center gap-1 disabled:opacity-50 disabled:cursor-not-allowed text-sm"
+                  >
+                    {formStatus.submitting ? (
+                      <>
+                        <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin"></div>
+                        Sending...
+                      </>
+                    ) : (
+                      <>
+                        <Send className="w-3 h-3" />
+                        Send Message
+                      </>
+                    )}
+                  </button>
+                  
+                  <p className="text-gray-500 text-xs">
+                    * Required fields. By submitting, you agree to our privacy policy.
+                  </p>
+                </form>
+              </div>
+            </motion.div>
+
+            {/* Mobile Quick Info */}
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+            >
+              <div className="bg-gradient-to-r from-primary/90 to-primary/80 rounded-lg p-4 sm:p-5 border border-white/20 backdrop-blur-sm">
+                <div className="flex items-center gap-2 mb-3">
+                  <Phone className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
+                  <h3 className="text-base sm:text-lg font-bold text-white font-[Cambria]">
+                    Quick Contact
+                  </h3>
+                </div>
+                
+                <div className="space-y-3 text-white/90 text-xs sm:text-sm">
+                  <div className="grid grid-cols-2 gap-2 sm:gap-3 mt-3">
+                    <div className="bg-white/10 backdrop-blur-sm rounded-lg p-2 sm:p-3 border border-white/20">
+                      <div className="text-white text-lg sm:text-xl font-bold mb-0.5">4</div>
+                      <div className="text-white/80 text-xs">Departments</div>
+                    </div>
+                    <div className="bg-white/10 backdrop-blur-sm rounded-lg p-2 sm:p-3 border border-white/20">
+                      <div className="text-white text-lg sm:text-xl font-bold mb-0.5">24/7</div>
+                      <div className="text-white/80 text-xs">Email Response</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+
+          {/* Desktop: Two Column Layout */}
+          <div className="hidden lg:grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
+            {/* Left Column - School Information */}
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              className="space-y-4"
+              className="space-y-6"
             >
-              {/* School Information Card */}
-              <div className="bg-white rounded-lg p-4 lg:p-6 border border-gray-200 shadow-md">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="h-6 w-1 bg-red-500 rounded-full"></div>
-                  <h2 className="text-xl lg:text-3xl font-bold text-gray-900 font-[Cambria]">
+              <div className="bg-white rounded-lg p-6 border border-gray-200 shadow-md">
+                <div className="flex items-center gap-2 mb-4">
+                  <div className="h-8 w-0.5 bg-red-500 rounded-full"></div>
+                  <h2 className="text-2xl font-bold text-gray-900 font-[Cambria]">
                     School Information
                   </h2>
                 </div>
@@ -313,90 +601,57 @@ const ContactPage = () => {
                     </div>
                   </div>
                 </div>
+              </div>
+
+              {/* Departments Section */}
+              <div className="bg-white rounded-lg p-6 border border-gray-200 shadow-md">
+                <div className="flex items-center gap-2 mb-4">
+                  <div className="h-8 w-0.5 bg-primary rounded-full"></div>
+                  <h2 className="text-xl font-bold text-gray-900 font-[Cambria]">
+                    Department Contacts
+                  </h2>
+                </div>
                 
-                {/* Map Section */}
-                <div className="mt-6 pt-6 border-t border-gray-100">
-                  <h3 className="font-bold text-gray-900 text-base mb-3">Location Map</h3>
-                  <div className="bg-gradient-to-br from-primary/5 to-primary/10 rounded-lg overflow-hidden border border-gray-200">
-                    {/* Map Container - Google Maps Embed */}
-                    <div className="h-48 w-full">
-                      <iframe
-                        title="Kathmandu National School Location"
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.8964234242197!2d85.3399709753094!3d27.68788537618752!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb19a64a5a7d69%3A0x3047962879f36bf!2sOld%20Baneshwor%2C%20Kathmandu%2044600%2C%20Nepal!5e0!3m2!1sen!2s!4v1701264000000!5m2!1sen!2s"
-                        width="100%"
-                        height="100%"
-                        style={{ border: 0 }}
-                        allowFullScreen
-                        loading="lazy"
-                        referrerPolicy="no-referrer-when-downgrade"
-                        className="rounded-t-lg"
-                      />
-                    </div>
-                    
-                    {/* Map Details */}
-                    <div className="bg-white p-3 border-t border-gray-100">
-                      <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
-                        <div className="text-center md:text-left">
-                          <div className="flex items-center gap-2 justify-center md:justify-start">
-                            <MapPin className="w-3 h-3 text-primary" />
-                            <p className="text-xs font-medium text-gray-900">Address</p>
-                          </div>
-                          <p className="text-gray-700 text-xs mt-1">{contactDetails.address}</p>
+                <div className="space-y-4">
+                  {departments.map((dept, index) => (
+                    <div key={dept.id} className={`p-3 bg-gray-50 rounded-lg border border-gray-100 ${index > 0 ? 'mt-3' : ''}`}>
+                      <h3 className="font-bold text-gray-900 text-sm mb-2">{dept.name}</h3>
+                      <div className="space-y-1.5">
+                        <div className="flex items-center gap-2">
+                          <Phone className="w-3 h-3 text-primary" />
+                          <span className="text-gray-700 text-xs">{dept.phone}</span>
                         </div>
-                        
-                        <div className="text-center">
-                          <p className="text-xs text-gray-500 mb-1">Coordinates</p>
-                          <div className="flex items-center justify-center gap-3">
-                            <div>
-                              <p className="font-medium text-gray-900 text-xs">27.6878° N</p>
-                            </div>
-                            <div>
-                              <p className="font-medium text-gray-900 text-xs">85.3465° E</p>
-                            </div>
-                          </div>
+                        <div className="flex items-center gap-2">
+                          <Mail className="w-3 h-3 text-primary" />
+                          <span className="text-gray-700 text-xs">{dept.email}</span>
                         </div>
-                        
-                        <div className="text-center md:text-right">
-                          <a
-                            href="https://www.google.com/maps?q=Kathmandu+National+School+Old+Baneshwor,+Kathmandu,+Nepal"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="inline-flex items-center gap-1 px-2 py-1 bg-primary/10 text-primary hover:bg-primary/20 rounded-md border border-primary/20 transition-all duration-300 group text-xs"
-                          >
-                            <ExternalLink className="w-3 h-3" />
-                            <span className="font-medium">Open in Google Maps</span>
-                          </a>
+                        <div className="flex items-center gap-2">
+                          <Clock className="w-3 h-3 text-primary" />
+                          <span className="text-gray-700 text-xs">{dept.hours}</span>
                         </div>
                       </div>
-                      
-                      {/* Area Info */}
-                      <div className="mt-3 pt-3 border-t border-gray-100">
-                        <p className="text-xs text-gray-600 text-center">
-                          Located in Old Baneshwor, central Kathmandu. Easily accessible from major roads.
-                        </p>
-                      </div>
                     </div>
-                  </div>
+                  ))}
                 </div>
               </div>
             </motion.div>
 
-            {/* Right Column - Feedback Form */}
+            {/* Right Column - Contact Form */}
             <motion.div
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
-              <div className="bg-white rounded-lg p-4 lg:p-6 border border-gray-200 shadow-md">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="h-6 w-1 bg-blue-500 rounded-full"></div>
-                  <h2 className="text-xl lg:text-3xl font-bold text-gray-900 font-[Cambria]">
+              <div className="bg-white rounded-lg p-6 border border-gray-200 shadow-md">
+                <div className="flex items-center gap-2 mb-4">
+                  <div className="h-8 w-0.5 bg-primary rounded-full"></div>
+                  <h2 className="text-2xl font-bold text-gray-900 font-[Cambria]">
                     Send Us Feedback
                   </h2>
                 </div>
                 
-                <p className="text-gray-600 text-sm mb-6">
+                <p className="text-gray-700 text-sm mb-6">
                   We value your feedback. Please fill out the form below and we'll get back to you as soon as possible.
                 </p>
                 
@@ -429,7 +684,6 @@ const ContactPage = () => {
                       <div>
                         <p className="font-bold text-green-800 text-sm">Thank You!</p>
                         <p className="text-green-700 text-xs">Your message has been sent successfully. We'll contact you soon.</p>
-                        <p className="text-green-600 text-xs mt-1">A copy has been sent to your email: {formData.email}</p>
                       </div>
                     </div>
                   </motion.div>
@@ -437,7 +691,7 @@ const ContactPage = () => {
                 
                 {/* Feedback Form */}
                 <form onSubmit={handleSubmit} className="space-y-4">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div className="grid grid-cols-2 gap-4">
                     <div>
                       <label htmlFor="name" className="block text-xs font-medium text-gray-700 mb-1">
                         Full Name *
@@ -473,39 +727,21 @@ const ContactPage = () => {
                     </div>
                   </div>
                   
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <div>
-                      <label htmlFor="phone" className="block text-xs font-medium text-gray-700 mb-1">
-                        Phone Number
-                      </label>
-                      <input
-                        type="tel"
-                        id="phone"
-                        name="phone"
-                        value={formData.phone}
-                        onChange={handlePhoneChange}
-                        disabled={formStatus.submitting}
-                        className="w-full px-3 py-2 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed text-sm"
-                        placeholder="(977) 123-4567"
-                      />
-                    </div>
-                    
-                    <div>
-                      <label htmlFor="subject" className="block text-xs font-medium text-gray-700 mb-1">
-                        Subject *
-                      </label>
-                      <input
-                        type="text"
-                        id="subject"
-                        name="subject"
-                        value={formData.subject}
-                        onChange={handleInputChange}
-                        required
-                        disabled={formStatus.submitting}
-                        className="w-full px-3 py-2 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed text-sm"
-                        placeholder="Enter subject"
-                      />
-                    </div>
+                  <div>
+                    <label htmlFor="subject" className="block text-xs font-medium text-gray-700 mb-1">
+                      Subject *
+                    </label>
+                    <input
+                      type="text"
+                      id="subject"
+                      name="subject"
+                      value={formData.subject}
+                      onChange={handleInputChange}
+                      required
+                      disabled={formStatus.submitting}
+                      className="w-full px-3 py-2 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed text-sm"
+                      placeholder="Enter subject"
+                    />
                   </div>
                   
                   <div>
@@ -525,56 +761,39 @@ const ContactPage = () => {
                     />
                   </div>
                   
-                  <div className="flex items-center gap-3 pt-1">
-                    <motion.button
-                      type="submit"
-                      disabled={formStatus.submitting}
-                      whileHover={{ scale: formStatus.submitting ? 1 : 1.02 }}
-                      whileTap={{ scale: formStatus.submitting ? 1 : 0.98 }}
-                      className="px-6 py-2 bg-gradient-to-r from-primary to-primary/90 text-white font-semibold rounded-lg hover:from-primary/90 hover:to-primary/80 transition-all duration-300 flex items-center gap-1 disabled:opacity-50 disabled:cursor-not-allowed text-sm"
-                    >
-                      {formStatus.submitting ? (
-                        <>
-                          <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin"></div>
-                          Sending...
-                        </>
-                      ) : (
-                        <>
-                          <Send className="w-3 h-3" />
-                          Send Message
-                        </>
-                      )}
-                    </motion.button>
-                    
-                    <p className="text-xs text-gray-500">
-                      * Required fields
-                    </p>
-                  </div>
+                  <button
+                    type="submit"
+                    disabled={formStatus.submitting}
+                    className="w-full px-6 py-2 bg-primary text-white font-medium rounded-lg hover:bg-primary/90 transition-all duration-300 flex items-center justify-center gap-1 disabled:opacity-50 disabled:cursor-not-allowed text-sm"
+                  >
+                    {formStatus.submitting ? (
+                      <>
+                        <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin"></div>
+                        Sending...
+                      </>
+                    ) : (
+                      <>
+                        <Send className="w-3 h-3" />
+                        Send Message
+                      </>
+                    )}
+                  </button>
                   
-                  {/* Privacy Notice */}
-                  <div className="pt-1">
-                    <p className="text-xs text-gray-500">
-                      By submitting this form, you agree to our privacy policy. Your information will be used only to respond to your inquiry.
-                    </p>
-                  </div>
-                </form>
-                
-                {/* Additional Contact Info */}
-                <div className="mt-8 pt-6 border-t border-gray-100">
-                  <p className="text-gray-600 text-xs">
-                    <span className="font-bold text-gray-900 text-sm">Need immediate assistance?</span> Call us at {contactDetails.telephone} during office hours.
+                  <p className="text-gray-500 text-xs text-center">
+                    * Required fields. By submitting, you agree to our privacy policy.
                   </p>
-                </div>
+                </form>
               </div>
             </motion.div>
           </div>
 
-          {/* Quick Contact Section */}
+          {/* Final Section - Responsive */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.4, duration: 0.8 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ delay: 0.4, duration: 0.6 }}
+            className="mt-8 sm:mt-10 lg:mt-16"
           >
             <div className="relative rounded-lg overflow-hidden">
               {/* Gradient overlay like hero */}
@@ -588,55 +807,55 @@ const ContactPage = () => {
                 }} />
               </div>
 
-              <div className="relative z-10 p-6 lg:p-8">
-                <div className="text-center mb-8">
-                  <div className="flex items-center justify-center gap-4 mb-3">
-                    <div className="h-px w-8 bg-white/50" />
-                    <h3 className="text-xl lg:text-3xl font-bold text-white font-[Cambria]">
+              <div className="relative z-10 p-4 sm:p-6 lg:p-8">
+                <div className="text-center mb-4 sm:mb-6 lg:mb-8">
+                  <div className="flex items-center justify-center gap-2 sm:gap-3 mb-2 sm:mb-3">
+                    <div className="h-px w-6 sm:w-8 md:w-10 bg-white/50" />
+                    <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-white font-[Cambria]">
                       Quick Contact Information
                     </h3>
-                    <div className="h-px w-8 bg-white/50" />
+                    <div className="h-px w-6 sm:w-8 md:w-10 bg-white/50" />
                   </div>
-                  <p className="text-white/90 text-base font-serif italic max-w-2xl mx-auto">
+                  <p className="text-white/90 text-sm sm:text-base font-serif italic max-w-2xl mx-auto">
                     Connect with Kathmandu National School through multiple channels
                   </p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 lg:gap-6 mb-6 sm:mb-8 lg:mb-10">
                   <div className="text-center">
-                    <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center mx-auto mb-3">
-                      <Phone className="w-8 h-8 text-white" />
+                    <div className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center mx-auto mb-2 sm:mb-3">
+                      <Phone className="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8 text-white" />
                     </div>
-                    <h4 className="text-lg font-bold text-white mb-2">Call Us</h4>
-                    <p className="text-white/80 text-sm">{contactDetails.telephone}</p>
-                    <p className="text-white/60 text-xs mt-1">Office Hours Only</p>
+                    <h4 className="text-base sm:text-lg font-bold text-white mb-1 sm:mb-2">Call Us</h4>
+                    <p className="text-white/80 text-xs sm:text-sm">{contactDetails.telephone}</p>
+                    <p className="text-white/60 text-xs mt-0.5">Office Hours Only</p>
                   </div>
                   
                   <div className="text-center">
-                    <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center mx-auto mb-3">
-                      <Mail className="w-8 h-8 text-white" />
+                    <div className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center mx-auto mb-2 sm:mb-3">
+                      <Mail className="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8 text-white" />
                     </div>
-                    <h4 className="text-lg font-bold text-white mb-2">Email Us</h4>
-                    <p className="text-white/80 text-sm">{contactDetails.email}</p>
-                    <p className="text-white/60 text-xs mt-1">24/7 Response</p>
+                    <h4 className="text-base sm:text-lg font-bold text-white mb-1 sm:mb-2">Email Us</h4>
+                    <p className="text-white/80 text-xs sm:text-sm">{contactDetails.email}</p>
+                    <p className="text-white/60 text-xs mt-0.5">24/7 Response</p>
                   </div>
                   
                   <div className="text-center">
-                    <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center mx-auto mb-3">
-                      <MapPin className="w-8 h-8 text-white" />
+                    <div className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center mx-auto mb-2 sm:mb-3">
+                      <MapPin className="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8 text-white" />
                     </div>
-                    <h4 className="text-lg font-bold text-white mb-2">Visit Us</h4>
-                    <p className="text-white/80 text-sm">Old Baneshwor</p>
-                    <p className="text-white/60 text-xs mt-1">Kathmandu, Nepal</p>
+                    <h4 className="text-base sm:text-lg font-bold text-white mb-1 sm:mb-2">Visit Us</h4>
+                    <p className="text-white/80 text-xs sm:text-sm">Old Baneshwor</p>
+                    <p className="text-white/60 text-xs mt-0.5">Kathmandu, Nepal</p>
                   </div>
                   
                   <div className="text-center">
-                    <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center mx-auto mb-3">
-                      <Clock className="w-8 h-8 text-white" />
+                    <div className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center mx-auto mb-2 sm:mb-3">
+                      <Clock className="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8 text-white" />
                     </div>
-                    <h4 className="text-lg font-bold text-white mb-2">Office Hours</h4>
-                    <p className="text-white/80 text-sm">9:00 AM - 4:00 PM</p>
-                    <p className="text-white/60 text-xs mt-1">Sunday - Friday</p>
+                    <h4 className="text-base sm:text-lg font-bold text-white mb-1 sm:mb-2">Office Hours</h4>
+                    <p className="text-white/80 text-xs sm:text-sm">9:00 AM - 4:00 PM</p>
+                    <p className="text-white/60 text-xs mt-0.5">Sunday - Friday</p>
                   </div>
                 </div>
               </div>
@@ -645,7 +864,7 @@ const ContactPage = () => {
         </div>
 
         {/* Background Pattern */}
-        <div className="absolute inset-0 -z-10 opacity-5">
+        <div className="absolute inset-0 -z-10 opacity-3 sm:opacity-5">
           <div className="absolute inset-0" style={{
             backgroundImage: `url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='32' height='32' fill='none' stroke='%23006699'%3e%3cpath d='M0 .5H31.5V32'/%3e%3c/svg%3e")`,
           }} />
