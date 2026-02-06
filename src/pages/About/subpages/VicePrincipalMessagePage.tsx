@@ -496,43 +496,6 @@ const VicePrincipalMessagePage = () => {
               </div>
             </motion.div>
           </div>
-
-          {/* Testimonials Section - Responsive */}
-          <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-50px" }}
-            transition={{ delay: 0.3, duration: 0.6 }}
-            className="mt-8 sm:mt-10 lg:mt-16"
-          >
-            <div className="bg-gradient-to-r from-red-600/90 to-red-500/80 rounded-lg p-4 sm:p-6 lg:p-8 border border-white/20">
-              <div className="text-center mb-6 sm:mb-8">
-                <h4 className="text-lg sm:text-xl lg:text-2xl font-bold text-white font-[Cambria] mb-2 sm:mb-3">
-                  What Our Community Says
-                </h4>
-                <p className="text-white/90 text-sm sm:text-base font-serif italic max-w-2xl mx-auto">
-                  Hear from parents, teachers, and alumni about their KNS experience
-                </p>
-              </div>
-
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-5 lg:gap-6">
-                {testimonials.map((testimonial, index) => (
-                  <motion.div
-                    key={index}
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
-                    className="bg-white/10 backdrop-blur-sm rounded-lg p-4 sm:p-5 border border-white/20"
-                  >
-                    <p className="text-white/90 text-xs sm:text-sm italic mb-3">"{testimonial.quote}"</p>
-                    <div className="h-px w-6 bg-white/30 my-2"></div>
-                    <p className="text-white text-xs sm:text-sm font-semibold">{testimonial.author}</p>
-                  </motion.div>
-                ))}
-              </div>
-            </div>
-          </motion.div>
         </div>
 
         {/* Background Pattern */}
