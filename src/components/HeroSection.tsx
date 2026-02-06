@@ -113,9 +113,18 @@ const HeroSection = () => {
             {/* School Name - Responsive typography */}
             <div className="mb-3 xs:mb-3 sm:mb-4 md:mb-5 lg:mb-6 xl:mb-8">
               <h1 className="font-bold leading-none tracking-tight">
-                <span className="block text-2xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl text-red-600 font-[Cambria] [-webkit-text-stroke:0.5px_white] xs:[-webkit-text-stroke:0.2px_white] sm:[-webkit-text-stroke:0.5px_white] md:[-webkit-text-stroke:1px_white] lg:[-webkit-text-stroke:1.2px_white] xl:[-webkit-text-stroke:1.5px_white] 2xl:[-webkit-text-stroke:2px_white] mb-1 xs:mb-1 sm:mb-1.5 md:mb-2 lg:mb-2 xl:mb-3">
-                  KATHMANDU
-                </span>
+                <span className="block text-2xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl text-red-600 font-[Cambria] 
+  /* Replace stroke with text-shadow for cleaner mobile rendering */
+  [text-shadow:_0.5px_0.5px_0_white,_-0.5px_-0.5px_0_white,_0.5px_-0.5px_0_white,_-0.5px_0.5px_0_white]
+  xs:[text-shadow:_0.2px_0.2px_0_white,_-0.2px_-0.2px_0_white,_0.2px_-0.2px_0_white,_-0.2px_0.2px_0_white]
+  sm:[text-shadow:_0.5px_0.5px_0_white,_-0.5px_-0.5px_0_white,_0.5px_-0.5px_0_white,_-0.5px_0.5px_0_white]
+  md:[text-shadow:_1px_1px_0_white,_-1px_-1px_0_white,_1px_-1px_0_white,_-1px_1px_0_white]
+  lg:[text-shadow:_1.2px_1.2px_0_white,_-1.2px_-1.2px_0_white,_1.2px_-1.2px_0_white,_-1.2px_1.2px_0_white]
+  xl:[text-shadow:_1.5px_1.5px_0_white,_-1.5px_-1.5px_0_white,_1.5px_-1.5px_0_white,_-1.5px_1.5px_0_white]
+  2xl:[text-shadow:_2px_2px_0_white,_-2px_-2px_0_white,_2px_-2px_0_white,_-2px_2px_0_white]
+  mb-1 xs:mb-1 sm:mb-1.5 md:mb-2 lg:mb-2 xl:mb-3">
+  KATHMANDU
+</span>
                 <span className="block text-base xs:text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl text-white font-[Cambria] tracking-wider xs:tracking-wide sm:tracking-wider md:tracking-wider">
                   NATIONAL SCHOOL
                 </span>
