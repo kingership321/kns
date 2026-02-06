@@ -569,7 +569,7 @@ export default function RootLayout() {
 
       {/* Footer */}
 {/* Footer */}
-<footer className="bg-primary text-white relative rounded-t-2xl mt-12">
+<footer className="bg-primary text-white relative rounded-t-2xl">
   <div className="container mx-auto px-3 sm:px-4 lg:px-6 py-6 sm:py-8 lg:py-12">
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 lg:gap-6">
       {/* School Info */}

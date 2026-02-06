@@ -627,61 +627,6 @@ const FacilitiesPage = () => {
               </div>
             </motion.div>
           </div>
-
-          {/* Facilities Stats Section - Responsive */}
-          <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-50px" }}
-            transition={{ delay: 0.3, duration: 0.6 }}
-            className="mt-8 sm:mt-10 lg:mt-16"
-          >
-            <div className="bg-gradient-to-r from-red-600/90 to-red-500/80 rounded-lg p-4 sm:p-6 lg:p-8 border border-white/20">
-              <div className="text-center mb-6 sm:mb-8">
-                <div className="flex items-center justify-center gap-2 sm:gap-3 mb-3 sm:mb-4">
-                  <div className="h-px w-6 sm:w-8 md:w-10 bg-white/50" />
-                  <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-white font-[Cambria]">
-                    Facilities at a Glance
-                  </h3>
-                  <div className="h-px w-6 sm:w-8 md:w-10 bg-white/50" />
-                </div>
-                <p className="text-white/90 text-sm sm:text-base font-serif italic max-w-2xl mx-auto">
-                  Comprehensive infrastructure supporting student success
-                </p>
-              </div>
-
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6 sm:mb-8">
-                <div className="text-center">
-                  <div className="text-xl sm:text-2xl font-bold text-white font-[Cambria] mb-1">8+</div>
-                  <div className="text-white/90 text-xs sm:text-sm">Major Facilities</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-xl sm:text-2xl font-bold text-white font-[Cambria] mb-1">24/7</div>
-                  <div className="text-white/90 text-xs sm:text-sm">Medical Support</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-xl sm:text-2xl font-bold text-white font-[Cambria] mb-1">100%</div>
-                  <div className="text-white/90 text-xs sm:text-sm">Filtered Water</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-xl sm:text-2xl font-bold text-white font-[Cambria] mb-1">GPS</div>
-                  <div className="text-white/90 text-xs sm:text-sm">Transport Tracking</div>
-                </div>
-              </div>
-              
-              {/* Final Message */}
-              <div className="mt-6 sm:mt-8 pt-4 sm:pt-6 border-t border-white/20">
-                <div className="max-w-3xl mx-auto text-center">
-                  <p className="text-white text-sm sm:text-base mb-3 sm:mb-4">
-                    At Kathmandu National School, our facilities are designed to create a nurturing environment where students can excel academically, develop personally, and grow in a safe and supportive community.
-                  </p>
-                  <div className="text-white/80 text-xs sm:text-sm">
-                    - KNS Facilities Department
-                  </div>
-                </div>
-              </div>
-            </div>
-          </motion.div>
         </div>
 
         {/* Background Pattern */}
