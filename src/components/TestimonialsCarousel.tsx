@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Quote, Star, ChevronRight, Heart } from 'lucide-react';
+import { Quote, Star } from 'lucide-react';
 
 // Import background image for overlay
 import testimonialBg from '../assets/teachers/assembly.jpg';
@@ -38,12 +38,6 @@ const TestimonialSection = () => {
       image: person3,
       year: "Present"
     },
-  ];
-
-  const stats = [
-    { value: "98%", label: "Parent Satisfaction", icon: Heart },
-    { value: "45+", label: "Years of Trust", icon: Star },
-    { value: "1000+", label: "Alumni Network", icon: Quote },
   ];
 
   return (

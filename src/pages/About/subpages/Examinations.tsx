@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Calendar, BarChart3, FileText, Target, Award, TrendingUp, Clock, CheckCircle, BookOpen, Users, ChevronDown, ChevronUp } from 'lucide-react';
+import { Calendar, BarChart3, FileText, Target, Award, TrendingUp, Clock, BookOpen, Users, ChevronDown, ChevronUp } from 'lucide-react';
 import { useState } from 'react';
 
 // Import examination image
@@ -344,7 +344,7 @@ const ExaminationsPage = () => {
                 </div>
                 
                 <div className="space-y-3">
-                  {examSchedule.map((exam, index) => (
+                  {examSchedule.map((exam) => (
                     <div key={exam.id} className="bg-white/10 backdrop-blur-sm rounded-lg p-3 border border-white/20">
                       <div className="flex items-center justify-between mb-1">
                         <h4 className="font-bold text-white text-sm">{exam.month}</h4>
@@ -570,7 +570,7 @@ const ExaminationsPage = () => {
                 </div>
                 
                 <div className="space-y-3">
-                  {examSchedule.map((exam, index) => (
+                  {examSchedule.map((exam) => (
                     <div key={exam.id} className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
                       <div className="flex items-center justify-between mb-2">
                         <h4 className="font-bold text-white text-base">{exam.month}</h4>

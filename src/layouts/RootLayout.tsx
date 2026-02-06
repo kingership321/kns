@@ -663,7 +663,7 @@ export default function RootLayout() {
         </div>
         
         <ul className="space-y-1.5 sm:space-y-2">
-          {['Montessori', 'Primary Education (1-5)', 'Basic Education (6-8)', 'Secondary Education (9-10)', 'Extra Curricular Activities'].map((program, index) => (
+          {['Montessori', 'Primary Education (1-5)', 'Basic Education (6-8)', 'Secondary Education (9-10)', 'Extra Curricular Activities'].map((program) => (
             <li key={program}>
               <a 
                 href="#" 
