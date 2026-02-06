@@ -575,7 +575,7 @@ export default function RootLayout() {
       {/* School Info */}
       <div className="space-y-4 sm:space-y-5">
         <Link to="/" className="inline-flex items-center gap-3 sm:gap-4 group">
-          <div className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 border-2 border-white/20 flex items-center justify-center bg-white/10 backdrop-blur-sm group-hover:bg-white/20 transition-all duration-300 rounded-lg">
+          <div className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 border-2 border-white/20 flex items-center justify-center bg-white/10 backdrop-blur-sm group-hover:bg-white/20 transition-all duration-300">
             <img
               src={logo}
               alt="Kathmandu National School Logo"
@@ -583,19 +583,15 @@ export default function RootLayout() {
             />
           </div>
           <div>
-            <div className="font-light text-white/90 text-xs sm:text-sm">Kathmandu</div>
+            <div className="font-light text-white/90 sm:text-lg lg:text-xl">Kathmandu</div>
             <div className="font-bold text-white text-base sm:text-lg lg:text-xl font-[Cambria]">National School</div>
+            <p className="text-white/90 text-xs italic font-serif text-left">
+              Education · Civilization · Humanization
+            </p>
           </div>
         </Link>
         
         <div className="space-y-2.5 sm:space-y-3">
-          <div className="flex items-center justify-center sm:justify-start gap-1.5 sm:gap-2">
-            <div className="h-px w-4 sm:w-6 bg-red-500"></div>
-            <p className="text-white/90 text-xs sm:text-sm italic font-serif text-center sm:text-left">
-              Education · Civilization · Humanization
-            </p>
-            <div className="h-px w-4 sm:w-6 bg-red-500"></div>
-          </div>
           
           <div className="flex items-center justify-center sm:justify-start gap-2 sm:gap-3">
             <a 
