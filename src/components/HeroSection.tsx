@@ -17,9 +17,9 @@ const HeroSection = () => {
           className="w-full h-full object-cover object-center"
         />
         {/* Enhanced Blue Overlay with gradient */}
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/80 via-primary/70 to-primary/90" />
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/50 via-primary/60 to-primary/70" />
         <div className="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/80 to-primary/60" />
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/60 via-transparent to-primary/60" />
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/50 via-transparent/60 to-primary/70" />
       </div>
       
       {/* Subtle Pattern Texture */}
@@ -52,7 +52,7 @@ const HeroSection = () => {
       <div className="container mx-auto px-3 xs:px-4 sm:px-5 md:px-6 lg:px-8 relative z-10">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-4 xs:gap-5 sm:gap-6 md:gap-8 lg:gap-10 xl:gap-12 2xl:gap-14 py-4 xs:py-5 sm:py-6 md:py-8 lg:py-0">
           
-          {/* Left Column - Principal's Message (Desktop) */}
+          {/* Left Column - Chairman's Message (Desktop) */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
@@ -62,10 +62,10 @@ const HeroSection = () => {
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 xs:p-4 sm:p-5 md:p-6 border border-white/20 shadow-xl">
               {/* Principal Photo */}
               <div className="relative mb-4 xs:mb-4 sm:mb-5 md:mb-6">
-                <div className="w-24 h-24 xs:w-24 xs:h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 rounded-xl overflow-hidden border-2 border-white/20 mx-auto">
+                <div className="w-24 h-24 xs:w-24 xs:h-24 sm:w-28 sm:h-28 md:w-32 md:h-40 rounded-xl overflow-hidden border-2 border-white/20 mx-auto">
                   <img 
                     src={principalPhoto}
-                    alt="Principal Anju Thapa"
+                    alt="Chairman Arjun Khadka"
                     className="w-full h-full object-cover"
                   />
                 </div>
@@ -77,10 +77,12 @@ const HeroSection = () => {
                 <p className="text-white/90 text-xs xs:text-xs sm:text-sm md:text-base leading-relaxed mb-2 xs:mb-2 sm:mb-3 md:mb-4 italic">
                   It's my fortune to welcome you in Kathmandu National School (KNS). Our students say that KNS is not only a school for them but it is also their home away from parental home. In this sense it is an academic shrine where our students are found to be so happy and confident to lead them to be the future leaders of the country.
                 </p>
-                <p className="text-white/90 text-xs xs:text-xs sm:text-sm md:text-base leading-relaxed mb-2 xs:mb-2 sm:mb-3 md:mb-4 italic">At the KNS we take our responsibility to find what is exceptional in students very seriously. The experience that we have prepared for them here gives every student an all-round education built on a foundation of service, adventure, sports, creative arts and academics.</p>
+                <p className="text-white/90 text-xs xs:text-xs sm:text-sm md:text-base leading-relaxed mb-2 xs:mb-2 sm:mb-3 md:mb-4 italic">
+                At the KNS we take our responsibility to find what is exceptional in students very seriously. The experience that we have prepared for them here gives every student an all-round education built on a foundation of service, adventure, sports, creative arts and academics.
+                </p>
                 <div className="pt-3 xs:pt-3 sm:pt-4 border-t border-white/20">
-                  <h3 className="text-base xs:text-base sm:text-lg md:text-xl font-bold text-white font-[Cambria] mb-0.5 xs:mb-0.5 sm:mb-1">Anju Thapa</h3>
-                  <p className="text-white/80 text-xs xs:text-xs sm:text-sm md:text-base">Principal</p>
+                  <h3 className="text-base xs:text-base sm:text-lg md:text-xl font-bold text-white font-[Cambria] mb-0.5 xs:mb-0.5 sm:mb-1">Arjun Khadka</h3>
+                  <p className="text-white/80 text-xs xs:text-xs sm:text-sm md:text-base">Chairman</p>
                 </div>
               </div>
             </div>
@@ -162,7 +164,7 @@ const HeroSection = () => {
               ].map((stat, index) => (
                 <div key={index} className="text-center group">
                   <div className="inline-block p-1 xs:p-1 sm:p-1.5 md:p-2 rounded-md bg-white/5 mb-1 xs:mb-1 sm:mb-1.5 group-hover:bg-white/10 transition-all duration-300">
-                    <stat.icon className={`w-3 h-3 xs:w-3 xs:h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 ${stat.color}`} />
+                    <stat.icon className={`w-6 h-6 xs:w-5 xs:h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 ${stat.color}`} />
                   </div>
                   <div className="text-sm xs:text-sm sm:text-base md:text-lg lg:text-xl font-bold text-white mb-0.5 xs:mb-0.5 sm:mb-0.5">{stat.value}</div>
                   <div className="text-white/80 text-xs xs:text-xs sm:text-xs md:text-sm">{stat.label}</div>
@@ -171,7 +173,7 @@ const HeroSection = () => {
             </motion.div>
           </motion.div>
           
-          {/* Right Column - Chairman's Message (Desktop) */}
+          {/* Right Column - Principal's Message (Desktop) */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
@@ -179,12 +181,12 @@ const HeroSection = () => {
             className="hidden lg:block lg:w-1/4 xl:w-1/3 2xl:w-2/5"
           >
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 xs:p-4 sm:p-5 md:p-6 border border-white/20 shadow-xl">
-              {/* Chairman Photo */}
+              {/* Principal Photo */}
               <div className="relative mb-4 xs:mb-4 sm:mb-5 md:mb-6">
-                <div className="w-24 h-24 xs:w-24 xs:h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 rounded-xl overflow-hidden border-2 border-white/20 mx-auto">
+                <div className="w-24 h-24 xs:w-24 xs:h-24 sm:w-28 sm:h-28 md:w-32 md:h-40 rounded-xl overflow-hidden border-2 border-white/20 mx-auto">
                   <img 
                     src={chairmanPhoto}
-                    alt="Chairman"
+                    alt="Principal"
                     className="w-full h-full object-cover"
                   />
                 </div>
@@ -200,8 +202,8 @@ const HeroSection = () => {
                   Our approach is interdisciplinary, experimental and progressive. Our students are encouraged not only to focus on textbooks but also to enhance their creativity, analytical skills, and pursue their extra-curricular interest.
                 </p>
                 <div className="pt-3 xs:pt-3 sm:pt-4 border-t border-white/20">
-                  <h3 className="text-base xs:text-base sm:text-lg md:text-xl font-bold text-white font-[Cambria] mb-0.5 xs:mb-0.5 sm:mb-1">Rajesh Shrestha</h3>
-                  <p className="text-white/80 text-xs xs:text-xs sm:text-sm md:text-base">Chairman</p>
+                  <h3 className="text-base xs:text-base sm:text-lg md:text-xl font-bold text-white font-[Cambria] mb-0.5 xs:mb-0.5 sm:mb-1">Kamal Prasad Adhikari</h3>
+                  <p className="text-white/80 text-xs xs:text-xs sm:text-sm md:text-base">Principal</p>
                 </div>
               </div>
             </div>
@@ -211,7 +213,7 @@ const HeroSection = () => {
         {/* Tablet/Mobile Layout - Messages below welcome */}
         <div className="lg:hidden mt-3 xs:mt-3 sm:mt-4 md:mt-6">
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 xs:gap-4 sm:gap-5 md:gap-6">
-            {/* Principal's Message - Mobile/Tablet - Redesigned */}
+            {/* Chairman's Message - Mobile/Tablet - Redesigned */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -222,10 +224,10 @@ const HeroSection = () => {
               <div className="flex flex-col items-center mb-4 xs:mb-4 sm:mb-5 md:mb-6">
                 <div className="relative mb-3 xs:mb-3 sm:mb-4">
                   {/* Main Image with larger size and enhanced border */}
-                  <div className="w-24 h-24 xs:w-24 xs:h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 rounded-full overflow-hidden border-3 border-white/30 relative">
+                  <div className="w-40 h-40 xs:w-24 xs:h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 rounded-full overflow-hidden border-3 border-white/30 relative">
                     <img 
                       src={principalPhoto}
-                      alt="Principal Anju Thapa"
+                      alt="Chairman Arjun Khadka"
                       className="w-full h-full object-cover"
                     />
                     {/* Subtle gradient overlay */}
@@ -238,14 +240,14 @@ const HeroSection = () => {
                   {/* Badge positioned at bottom */}
                   <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2">
                     <span className="px-3 xs:px-3 sm:px-3.5 py-1 bg-red-500 text-white text-xs xs:text-xs sm:text-sm font-semibold rounded-full whitespace-nowrap shadow-lg">
-                      Principal
+                      Chairman
                     </span>
                   </div>
                 </div>
                 
                 {/* Name and Title centered below image */}
                 <div className="text-center">
-                  <h3 className="text-base xs:text-base sm:text-lg md:text-xl font-bold text-white font-[Cambria]">Anju Thapa</h3>
+                  <h3 className="text-base xs:text-base sm:text-lg md:text-xl font-bold text-white font-[Cambria]">Arjun Khadka</h3>
                   
                   {/* Experience badge */}
                   <div className="inline-block mt-2 px-2.5 py-0.5 bg-white/10 backdrop-blur-sm rounded-full border border-white/20">
@@ -258,7 +260,10 @@ const HeroSection = () => {
               <div className="text-center">
                 <Quote className="w-4 h-4 xs:w-4 xs:h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 text-white/60 mx-auto mb-3 xs:mb-3 sm:mb-4" />
                 <p className="text-white/95 text-sm xs:text-sm sm:text-base md:text-lg leading-relaxed italic font-serif">
-                  "Our commitment is to provide quality education that shapes character and builds future leaders."
+                  It's my fortune to welcome you in Kathmandu National School (KNS). Our students say that KNS is not only a school for them but it is also their home away from parental home. In this sense it is an academic shrine where our students are found to be so happy and confident to lead them to be the future leaders of the country.
+                </p>
+                <p className="text-white/95 text-sm xs:text-sm sm:text-base md:text-lg leading-relaxed italic font-serif">
+                At the KNS we take our responsibility to find what is exceptional in students very seriously. The experience that we have prepared for them here gives every student an all-round education built on a foundation of service, adventure, sports, creative arts and academics.
                 </p>
               </div>
               
@@ -268,7 +273,7 @@ const HeroSection = () => {
               </div>
             </motion.div>
             
-            {/* Chairman's Message - Mobile/Tablet - Redesigned */}
+            {/* Principal's Message - Mobile/Tablet - Redesigned */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -279,10 +284,10 @@ const HeroSection = () => {
               <div className="flex flex-col items-center mb-4 xs:mb-4 sm:mb-5 md:mb-6">
                 <div className="relative mb-3 xs:mb-3 sm:mb-4">
                   {/* Main Image with larger size and enhanced border */}
-                  <div className="w-24 h-24 xs:w-24 xs:h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 rounded-full overflow-hidden border-3 border-white/30 relative">
+                  <div className="w-40 h-40 xs:w-24 xs:h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 rounded-full overflow-hidden border-3 border-white/30 relative">
                     <img 
                       src={chairmanPhoto}
-                      alt="Chairman"
+                      alt="Principal"
                       className="w-full h-full object-cover"
                     />
                     {/* Subtle gradient overlay */}
@@ -295,18 +300,18 @@ const HeroSection = () => {
                   {/* Badge positioned at bottom */}
                   <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2">
                     <span className="px-3 xs:px-3 sm:px-3.5 py-1 bg-blue-500 text-white text-xs xs:text-xs sm:text-sm font-semibold rounded-full whitespace-nowrap shadow-lg">
-                      Chairman
+                      Principal
                     </span>
                   </div>
                 </div>
                 
                 {/* Name and Title centered below image */}
                 <div className="text-center">
-                  <h3 className="text-base xs:text-base sm:text-lg md:text-xl font-bold text-white font-[Cambria]">Rajesh Shrestha</h3>
+                  <h3 className="text-base xs:text-base sm:text-lg md:text-xl font-bold text-white font-[Cambria]">Kamal Prasad Adhikari</h3>
                   
                   {/* Qualification badge */}
                   <div className="inline-block mt-2 px-2.5 py-0.5 bg-white/10 backdrop-blur-sm rounded-full border border-white/20">
-                    <span className="text-white/80 text-xs xs:text-xs sm:text-sm">Ph.D. in Education</span>
+                    <span className="text-white/80 text-xs xs:text-xs sm:text-sm">M.Phil.</span>
                   </div>
                 </div>
               </div>
@@ -315,7 +320,10 @@ const HeroSection = () => {
               <div className="text-center">
                 <Quote className="w-4 h-4 xs:w-4 xs:h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 text-white/60 mx-auto mb-3 xs:mb-3 sm:mb-4" />
                 <p className="text-white/95 text-sm xs:text-sm sm:text-base md:text-lg leading-relaxed italic font-serif">
-                  "We envision an institution that not only imparts knowledge but also instills values in students."
+                  It's our immense pleasure to welcome you in Kathmandu National School (KNS). KNS is the junction of qualified teachers, professionals and students. Since its foundation, it has been imparting quality education that benefits our young children's overall development.
+                </p>
+                <p className="text-white/95 text-sm xs:text-sm sm:text-base md:text-lg leading-relaxed italic font-serif">
+                  Our approach is interdisciplinary, experimental and progressive. Our students are encouraged not only to focus on textbooks but also to enhance their creativity, analytical skills, and pursue their extra-curricular interest.
                 </p>
               </div>
               

@@ -29,6 +29,15 @@ export default function RootLayout() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+
+
+  // Close all dropdowns
+  const closeAllDropdowns = () => {
+    setIsAboutOpen(false);
+    setIsAchievementsOpen(false);
+  };
+
+
   const contactDetails = {
     name: "Kathmandu National School",
     address: "Old Baneshwor-34, Kathmandu, Nepal",
@@ -150,6 +159,7 @@ export default function RootLayout() {
               to="/" 
               className="flex items-center gap-1.5 group"
               aria-label="Kathmandu National School Home"
+              onClick={closeAllDropdowns}
             >
               <motion.div
                 whileHover={{ rotate: 10 }}
@@ -175,7 +185,7 @@ export default function RootLayout() {
               
               {/* School Name - Mobile */}
               <div className="lg:hidden">
-                <div className="font-bold font-[Cambria] text-red-500 text-xl">KNS</div>
+                <div className="font-bold font-[Cambria] text-red-500 text-xl">Kathmandu <span className="font-bold font-[Cambria] text-blue-900 text-xl">National School</span></div>
               </div>
             </Link>
 
@@ -208,10 +218,6 @@ export default function RootLayout() {
                       <div className={`absolute left-0 top-full mt-0.5 w-40 md:w-48 lg:w-56 bg-white rounded-sm shadow-xl border border-gray-200 py-1 transition-all duration-200 z-50 ${
                         isAboutOpen ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-2'
                       }`}>
-                        <div className="px-2.5 py-1 border-b border-gray-100">
-                          <h3 className="font-bold text-gray-900 font-[Cambria] text-xs">About Our School</h3>
-                          <p className="text-xs text-gray-600 mt-0.5">Discover our heritage and values</p>
-                        </div>
                         
                         <div className="max-h-64 overflow-y-auto">
                           {aboutSubmenuItems.map((subItem, index) => (
@@ -265,10 +271,6 @@ export default function RootLayout() {
                       <div className={`absolute left-0 top-full mt-0.5 w-40 md:w-44 lg:w-48 bg-white rounded-sm shadow-xl border border-gray-200 py-1 transition-all duration-200 z-50 ${
                         isAchievementsOpen ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-2'
                       }`}>
-                        <div className="px-2.5 py-1 border-b border-gray-100">
-                          <h3 className="font-bold text-gray-900 font-[Cambria] text-xs">Our Achievements</h3>
-                          <p className="text-xs text-gray-600 mt-0.5">Celebrating excellence and success</p>
-                        </div>
                         
                         <div className="max-h-64 overflow-y-auto">
                           {achievementsSubmenuItems.map((subItem, index) => (
@@ -400,7 +402,10 @@ export default function RootLayout() {
                     return (
                       <div key={item.path} className="space-y-0.5">
                         <button
-                          onClick={() => setIsAboutOpen(!isAboutOpen)}
+                          onClick={() => {
+                          setIsAboutOpen(!isAboutOpen);
+                          setIsAchievementsOpen(false);
+                        }}
                           className={`w-full flex items-center justify-between px-2.5 py-1.5 text-sm font-bold rounded-sm transition-colors ${
                             isAboutPageActive
                               ? 'text-red-600 bg-red-50'
@@ -417,10 +422,6 @@ export default function RootLayout() {
                         <div className={`overflow-hidden transition-all duration-200 ml-2.5 ${
                           isAboutOpen ? 'max-h-[400px]' : 'max-h-0'
                         }`}>
-                          <div className="px-1 py-1 mb-1">
-                            <h3 className="text-xs font-semibold text-gray-900">About Our School</h3>
-                            <p className="text-xs text-gray-600 mt-0.5">Discover our heritage and values</p>
-                          </div>
                           
                           {aboutSubmenuItems.map((subItem, index) => (
                             <Link
@@ -452,7 +453,10 @@ export default function RootLayout() {
                     return (
                       <div key={item.path} className="space-y-0.5">
                         <button
-                          onClick={() => setIsAchievementsOpen(!isAchievementsOpen)}
+                          onClick={() => {
+                          setIsAchievementsOpen(!isAchievementsOpen);
+                          setIsAboutOpen(false);
+                        }}
                           className={`w-full flex items-center justify-between px-2.5 py-1.5 text-sm font-bold rounded-sm transition-colors ${
                             isAchievementsPageActive
                               ? 'text-red-600 bg-red-50'
@@ -469,10 +473,6 @@ export default function RootLayout() {
                         <div className={`overflow-hidden transition-all duration-200 ml-2.5 ${
                           isAchievementsOpen ? 'max-h-[240px]' : 'max-h-0'
                         }`}>
-                          <div className="px-1 py-1 mb-1">
-                            <h3 className="text-xs font-semibold text-gray-900">Our Achievements</h3>
-                            <p className="text-xs text-gray-600 mt-0.5">Celebrating excellence and success</p>
-                          </div>
                           
                           {achievementsSubmenuItems.map((subItem, index) => (
                             <Link
