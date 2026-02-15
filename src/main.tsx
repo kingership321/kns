@@ -83,83 +83,83 @@ const router = createBrowserRouter([
       
       // About Section
       {
-        path: 'about/introduction',
+        path: 'about-us/introduction/',
         element: <IntroductionPage />,
       },
       {
-        path: 'about/governing-body-message',
+        path: 'about-us/message-from-managing-director/',
         element: <GoverningBodyMessagePage />,
       },
       {
-        path: 'about/founder-principal-message',
+        path: 'about-us/principal-message/',
         element: <FounderPrincipalMessagePage />,
       },
       {
-        path: 'about/vice-principal-message',
+        path: 'about-us/board-of-directors/',
         element: <VicePrincipalMessagePage />,
       },
       {
-        path: 'about/examinations',
+        path: 'about-us/examinations/',
         element: <ExaminationsPage />,
       },
       {
-        path: 'about/rules-discipline',
+        path: 'about-us/rules-and-discipline/',
         element: <RulesDisciplinePage />,
       },
       {
-        path: 'about/facilities',
+        path: 'facilities/',
         element: <FacilitiesPage />,
       },
       {
-        path: 'about/extra-curricular',
+        path: 'extra-curricular-activities/',
         element: <ExtraCurricularPage />,
       },
       
       // Achievements Section
       {
-        path: 'achievements/recent',
+        path: 'achievement/recent-achievements/',
         element: <RecentAchievementsPage />,
       },
       {
-        path: 'achievements/co-curricular',
+        path: 'achievement/co-curricular/',
         element: <CoCurricularAchievementsPage />,
       },
       {
-        path: 'achievements/disciplinary-action',
+        path: 'achievement/disciplinary-action/',
         element: <DisciplinaryActionPage />,
       },
       {
-        path: 'achievements/recommendations',
+        path: 'achievement/recommendations/',
         element: <RecommendationsPage />,
       },
       
       // Other Main Pages
       {
-        path: 'gallery/photos',
+        path: 'gallery/photos/',
         element: <GalleryPage />,
       },
         {
-        path: 'gallery/videos',
+        path: 'gallery/videos/',
         element: <VideoGalleryPage />,
       },
       {
-        path: 'newsandevents',
+        path: 'news-events/',
         element: <NewsEventsPage />,
       },
       {
-        path: 'calendar',
+        path: 'calendar/',
         element: <CalendarPage />,
       },
       {
-        path: 'contact',
+        path: 'contact/',
         element: <ContactPage />,
       },
       {
-        path: 'downloads',
+        path: 'downloads/',
         element: <DownloadsPage />
       },
       {
-        path: 'policy',
+        path: 'policy/',
         element: <SalientFeaturesPage />
       }
     ],

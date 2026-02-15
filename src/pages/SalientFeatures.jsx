@@ -27,6 +27,7 @@ import {
 
 // Import banner image (replace with your actual banner)
 import featuresBanner from '../assets/kns-logo.png';
+import LinksSection from '../components/LinksSection';
 
 const SalientFeaturesPage = () => {
   // Main features categories
@@ -342,42 +343,7 @@ const SalientFeaturesPage = () => {
         </div>
       </section>
 
-      {/* Stats Section */}
-      <section className="py-12 sm:py-16 bg-white">
-        <div className="container mx-auto px-3 sm:px-4 lg:px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-8 sm:mb-10"
-          >
-            <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 font-playfair mb-2">
-              Our Impact in Numbers
-            </h2>
-            <p className="text-sm text-gray-600">
-              A legacy of excellence and achievement
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 sm:gap-4">
-            {stats.map((stat, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                className="bg-gradient-to-br from-gray-50 to-white rounded-lg p-3 sm:p-4 text-center border border-gray-200 hover:shadow-md transition-all"
-              >
-                <stat.icon className="w-5 h-5 sm:w-6 sm:h-6 text-primary mx-auto mb-2" />
-                <div className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-900">{stat.value}</div>
-                <div className="text-xs text-gray-600">{stat.label}</div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <LinksSection />
 
       {/* Background Pattern */}
       <div className="absolute inset-0 -z-10 opacity-3 sm:opacity-5 pointer-events-none">

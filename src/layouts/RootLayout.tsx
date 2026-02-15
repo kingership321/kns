@@ -52,42 +52,42 @@ export default function RootLayout() {
 
   const aboutSubmenuItems = [
     { 
-      path: '/about/introduction', 
+      path: '/about-us/introduction/', 
       name: 'Introduction',
       description: 'Overview of our school'
     },
     { 
-      path: '/about/governing-body-message', 
+      path: '/about-us/message-from-managing-director/', 
       name: 'Message from Governing Body',
       description: 'Leadership perspectives'
     },
     { 
-      path: '/about/founder-principal-message', 
+      path: '/about-us/principal-message/', 
       name: 'Founder Principal\'s Message',
       description: 'Founding vision and values'
     },
     { 
-      path: '/about/vice-principal-message', 
+      path: '/about-us/board-of-directors/', 
       name: 'Vice Principal\'s Message',
       description: 'Academic leadership insights'
     },
     { 
-      path: '/about/examinations', 
+      path: '/about-us/examinations/', 
       name: 'Examinations',
       description: 'Assessment and evaluation system'
     },
     { 
-      path: '/about/rules-discipline', 
+      path: '/about-us/rules-and-discipline/', 
       name: 'Rules and Discipline',
       description: 'Code of conduct and policies'
     },
     { 
-      path: '/about/facilities', 
+      path: 'facilities/', 
       name: 'Facilities',
       description: 'Campus infrastructure and resources'
     },
     { 
-      path: '/about/extra-curricular', 
+      path: 'extra-curricular-activities/', 
       name: 'Extra Curricular Activities',
       description: 'Beyond classroom learning'
     }
@@ -96,12 +96,12 @@ export default function RootLayout() {
 
   const gallerySubmenuItems = [
     {
-      path: '/gallery/photos',
+      path: '/gallery/photos/',
       name: 'Photo Gallery',
       description: 'Collection of memorable moments and events'
     },
     {
-      path: '/gallery/videos',
+      path: '/gallery/videos/',
       name: 'Video Gallery',
       description: 'Highlights and events in video format'
     }
@@ -109,22 +109,22 @@ export default function RootLayout() {
 
   const achievementsSubmenuItems = [
     { 
-      path: '/achievements/recent', 
+      path: '/achievement/recent-achievements/', 
       name: 'Recent Achievements',
       description: 'Latest accomplishments and awards'
     },
     { 
-      path: '/achievements/co-curricular', 
+      path: '/achievement/co-curricular', 
       name: 'Co-curricular',
       description: 'Achievements in arts and activities'
     },
     { 
-      path: '/achievements/disciplinary-action', 
+      path: '/achievement/disciplinary-action/', 
       name: 'Disciplinary Action',
       description: 'Standards and conduct records'
     },
     { 
-      path: '/achievements/recommendations', 
+      path: '/achievement/recommendations/', 
       name: 'Recommendations',
       description: 'Feedback and endorsements'
     }
@@ -132,13 +132,13 @@ export default function RootLayout() {
 
   const navItems = [
     { title: "Home", path: "/" },
-    { title: "About", path: "/about/introduction", hasDropdown: true },
-    { title: "Achievements", path: "/achievements/recent", hasDropdown: true },
-    { title: "Gallery", path: "/gallery", hasDropdown: true },
-    { title: "Salient Features", path: "/policy" },
-    { title: "News & Events", path: "/newsandevents" },
-    { title: "Calendar", path: "/calendar" },
-    { title: "Contact", path: "/contact" }
+    { title: "About", path: "/about-us/introduction/", hasDropdown: true },
+    { title: "Achievements", path: "/achievement/recent-achievements/", hasDropdown: true },
+    { title: "Gallery", path: "/gallery/photos/", hasDropdown: true },
+    { title: "Salient Features", path: "/policy/" },
+    { title: "News & Events", path: "/news-events/" },
+    { title: "Calendar", path: "/calendar/" },
+    { title: "Contact", path: "/contact/" }
   ];
 
   // Scrolling messages for notice bar
@@ -150,9 +150,9 @@ export default function RootLayout() {
     "📢 PTA Meeting on Jan 15 at 10 AM in School Auditorium"
   ];
 
-  const isAboutPageActive = location.pathname.startsWith('/about');
-  const isAchievementsPageActive = location.pathname.startsWith('/achievements');
-  const isGalleryPageActive = location.pathname.startsWith('/gallery');
+  const isAboutPageActive = location.pathname.startsWith('/about-us/');
+  const isAchievementsPageActive = location.pathname.startsWith('/achievement/');
+  const isGalleryPageActive = location.pathname.startsWith('/gallery/');
   
   return (
     <div className="min-h-screen flex flex-col bg-white text-gray-900">
