@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { Calendar, BarChart3, FileText, Target, Award, TrendingUp, Clock, BookOpen, Users, ChevronDown, ChevronUp } from 'lucide-react';
 import { useState } from 'react';
+import QuickLinksSection from '../../../components/LinksSection';
 
 // Import examination image
 import examImage from '../../../assets/saraswati-puja/Saraswati-Puja4.jpg';
@@ -598,6 +599,7 @@ const ExaminationsPage = () => {
                 </div>
               </div>
             </motion.div>
+            <QuickLinksSection />
           </div>
         </div>
 

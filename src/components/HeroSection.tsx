@@ -81,7 +81,7 @@ const HeroSection = () => {
                 At the KNS we take our responsibility to find what is exceptional in students very seriously. The experience that we have prepared for them here gives every student an all-round education built on a foundation of service, adventure, sports, creative arts and academics.
                 </p>
                 <div className="pt-3 xs:pt-3 sm:pt-4 border-t border-white/20">
-                  <h3 className="text-base xs:text-base sm:text-lg md:text-xl font-bold text-white font-[Cambria] mb-0.5 xs:mb-0.5 sm:mb-1">Arjun Khadka</h3>
+                  <h3 className="text-base xs:text-base sm:text-lg md:text-xl font-bold text-white font-serif mb-0.5 xs:mb-0.5 sm:mb-1">Arjun Khadka</h3>
                   <p className="text-white/80 text-xs xs:text-xs sm:text-sm md:text-base">Chairman</p>
                 </div>
               </div>
@@ -113,7 +113,7 @@ const HeroSection = () => {
             <div className="mb-3 xs:mb-3 sm:mb-4 md:mb-5 lg:mb-6 xl:mb-8">
               <h1 className="font-bold leading-none tracking-tight">
                 {/* KATHMANDU - Larger on mobile, original sizes on desktop */}
-                <span className="block text-4xl xs:text-4xl sm:text-5xl md:text-5xl lg:text-5xl xl:text-6xl 2xl:text-7xl text-red-600 font-[Cambria] 
+                <span className="block text-4xl xs:text-4xl sm:text-5xl md:text-5xl lg:text-5xl xl:text-6xl 2xl:text-7xl text-red-600 font-serif 
                   /* Adjusted text-shadow */
                   [text-shadow:_0.6px_0.6px_0_white,_-0.6px_-0.6px_0_white,_0.6px_-0.6px_0_white,_-0.6px_0.6px_0_white]
                   xs:[text-shadow:_0.4px_0.4px_0_white,_-0.4px_-0.4px_0_white,_0.4px_-0.4px_0_white,_-0.4px_0.4px_0_white]
@@ -127,7 +127,7 @@ const HeroSection = () => {
                 </span>
                 
                 {/* NATIONAL SCHOOL - Larger on mobile, original sizes on desktop */}
-                <span className="block text-xl xs:text-xl sm:text-2xl md:text-2xl lg:text-3xl xl:text-3xl 2xl:text-4xl text-white font-[Cambria] tracking-wider xs:tracking-wide sm:tracking-wider md:tracking-wider mt-1 xs:mt-1 sm:mt-1.5 md:mt-1.5 lg:mt-2">
+                <span className="block text-xl xs:text-xl sm:text-2xl md:text-2xl lg:text-3xl xl:text-3xl 2xl:text-4xl text-white font-serif tracking-wider xs:tracking-wide sm:tracking-wider md:tracking-wider mt-1 xs:mt-1 sm:mt-1.5 md:mt-1.5 lg:mt-2">
                   NATIONAL SCHOOL
                 </span>
               </h1>
@@ -202,7 +202,7 @@ const HeroSection = () => {
                   Our approach is interdisciplinary, experimental and progressive. Our students are encouraged not only to focus on textbooks but also to enhance their creativity, analytical skills, and pursue their extra-curricular interest.
                 </p>
                 <div className="pt-3 xs:pt-3 sm:pt-4 border-t border-white/20">
-                  <h3 className="text-base xs:text-base sm:text-lg md:text-xl font-bold text-white font-[Cambria] mb-0.5 xs:mb-0.5 sm:mb-1">Kamal Prasad Adhikari</h3>
+                  <h3 className="text-base xs:text-base sm:text-lg md:text-xl font-bold text-white font-serif mb-0.5 xs:mb-0.5 sm:mb-1">Kamal Prasad Adhikari</h3>
                   <p className="text-white/80 text-xs xs:text-xs sm:text-sm md:text-base">Principal</p>
                 </div>
               </div>
@@ -247,7 +247,7 @@ const HeroSection = () => {
                 
                 {/* Name and Title centered below image */}
                 <div className="text-center">
-                  <h3 className="text-base xs:text-base sm:text-lg md:text-xl font-bold text-white font-[Cambria]">Arjun Khadka</h3>
+                  <h3 className="text-base xs:text-base sm:text-lg md:text-xl font-bold text-white font-serif">Arjun Khadka</h3>
                   
                   {/* Experience badge */}
                   <div className="inline-block mt-2 px-2.5 py-0.5 bg-white/10 backdrop-blur-sm rounded-full border border-white/20">
@@ -307,7 +307,7 @@ const HeroSection = () => {
                 
                 {/* Name and Title centered below image */}
                 <div className="text-center">
-                  <h3 className="text-base xs:text-base sm:text-lg md:text-xl font-bold text-white font-[Cambria]">Kamal Prasad Adhikari</h3>
+                  <h3 className="text-base xs:text-base sm:text-lg md:text-xl font-bold text-white font-serif">Kamal Prasad Adhikari</h3>
                   
                   {/* Qualification badge */}
                   <div className="inline-block mt-2 px-2.5 py-0.5 bg-white/10 backdrop-blur-sm rounded-full border border-white/20">
@@ -343,7 +343,7 @@ const HeroSection = () => {
           >
             <div className="flex items-center gap-2 xs:gap-2 sm:gap-3 md:gap-4 mb-3 xs:mb-3 sm:mb-4 md:mb-5">
               <div className="h-6 xs:h-6 sm:h-8 md:h-10 w-0.5 xs:w-0.5 sm:w-1 md:w-1.5 bg-gradient-to-b from-blue-500 to-cyan-400 rounded-full"></div>
-              <h2 className="text-base xs:text-base sm:text-lg md:text-xl font-bold text-white font-[Cambria]">About Our School</h2>
+              <h2 className="text-base xs:text-base sm:text-lg md:text-xl font-bold text-white font-serif">About Our School</h2>
             </div>
             <p className="text-white/90 text-sm xs:text-sm sm:text-base md:text-lg leading-relaxed mb-3 xs:mb-3 sm:mb-4 md:mb-5">
               Established in 1995, Kathmandu National School has been a beacon of quality education with state-of-the-art facilities and holistic development approach.

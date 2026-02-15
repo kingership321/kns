@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { Heart, Target, Users, BookOpen, Music, Brain, Shield, Award, Sparkles, ChevronDown, ChevronUp } from 'lucide-react';
 import { useState } from 'react';
+import QuickLinksSection from '../../../components/LinksSection';
 
 // Import vice principal image
 import vicePrincipalImage from '../../../assets/students/std2.jpg';
@@ -495,6 +496,7 @@ const VicePrincipalMessagePage = () => {
                 </div>
               </div>
             </motion.div>
+            <QuickLinksSection />
           </div>
         </div>
 

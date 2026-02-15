@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { Palette, Music, Trophy, BookOpen, Users, Target, Award, Star, Leaf, Heart, Brain, Zap, ChevronDown, ChevronUp } from 'lucide-react';
 import { useState } from 'react';
+import QuickLinksSection from '../../../components/LinksSection';
 
 // Import activity images
 import martialArtsImage from '../../../assets/Scout/kns-scout1.jpg';
@@ -703,6 +704,7 @@ const CoCurricularAchievementsPage = () => {
               </div>
             </div>
           </motion.div>
+          <QuickLinksSection />
         </div>
 
         {/* Background Pattern */}

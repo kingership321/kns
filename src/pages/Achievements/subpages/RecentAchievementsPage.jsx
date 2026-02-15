@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { Trophy, Award, Globe, Users, Calendar, Star, Target, Medal, ChevronDown, ChevronUp } from 'lucide-react';
 import { useState } from 'react';
+import QuickLinksSection from '../../../components/LinksSection';
 
 // Import achievement images
 import exchangeImage from '../../../assets/Montessori/prize1.jpg';
@@ -576,6 +577,7 @@ const RecentAchievementsPage = () => {
                 </div>
               </div>
             </motion.div>
+            <QuickLinksSection />
           </div>
         </div>
 

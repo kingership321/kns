@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { Calendar, Download, FileText, Clock, BookOpen, Trophy, Users, GraduationCap, Star, Bell, CheckCircle, CalendarDays, ChevronDown, ChevronUp } from 'lucide-react';
 import { useState } from 'react';
+import QuickLinksSection from '../components/LinksSection';
 
 // Import calendar images
 import calendarImage from '../assets/annual-day/annual-day1.jpg';
@@ -608,6 +609,7 @@ const CalendarPage = () => {
               </div>
             </div>
           </motion.div>
+          <QuickLinksSection />
         </div>
 
         {/* Background Pattern */}

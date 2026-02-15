@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { MapPin, Phone, Mail, Clock, Send, CheckCircle, MessageSquare, AlertCircle, ExternalLink, ChevronDown, ChevronUp } from 'lucide-react';
 import { useState } from 'react';
 import emailjs from '@emailjs/browser';
+import QuickLinksSection from '../components/LinksSection';
 
 // Import contact page image
 import contactImage from '../../src/assets/teachers/grppic.jpg';
@@ -861,6 +862,7 @@ const ContactPage = () => {
               </div>
             </div>
           </motion.div>
+          <QuickLinksSection />
         </div>
 
         {/* Background Pattern */}

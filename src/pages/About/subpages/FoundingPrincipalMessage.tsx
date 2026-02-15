@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { Home, Target, Heart, Award, Star, Shield, BookOpen, GraduationCap, ChevronDown, ChevronUp } from 'lucide-react';
 import { useState } from 'react';
+import QuickLinksSection from '../../../components/LinksSection';
 
 // Import founder principal image
 import founderPrincipalImage from '../../../assets/governing-body/principal.jpg';
@@ -482,6 +483,7 @@ const FounderPrincipalMessagePage = () => {
               </div>
             </div>
           </motion.div>
+          <QuickLinksSection />
         </div>
 
         {/* Background Pattern */}

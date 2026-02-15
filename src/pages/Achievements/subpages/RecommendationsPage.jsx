@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { BookOpen, Calendar, Shield, Heart, Target, Users, Star, CheckCircle, AlertCircle, TrendingUp, Award, Home, ChevronDown, ChevronUp } from 'lucide-react';
 import { useState } from 'react';
+import QuickLinksSection from '../../../components/LinksSection';
 
 // Import recommendation images
 import parentInvolvementImage from '../../../assets/annual-day/annual-day2.jpg';
@@ -737,6 +738,7 @@ const RecommendationsPage = () => {
               </div>
             </div>
           </motion.div>
+          <QuickLinksSection />
         </div>
 
         {/* Background Pattern */}

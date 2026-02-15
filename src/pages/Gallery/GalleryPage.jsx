@@ -1,15 +1,16 @@
 import { motion } from 'framer-motion';
 import { Folder, ChevronLeft, Image as ImageIcon, Calendar, Clock, MapPin, Users, Search, ChevronDown, ChevronUp } from 'lucide-react';
 import { useState, useRef } from 'react';
+import QuickLinksSection from '../../components/LinksSection';
 
 // Import gallery images (you'll replace these with your actual images)
-import galleryBanner from '../assets/annual-day/annual-day1.jpg';
-import event1Image from '../assets/annual-day/annual-day2.jpg';
-import event2Image from '../assets/annual-day/annual-day3.jpg';
-import event3Image from '../assets/annual-day/annual-day4.jpg';
-import event4Image from '../assets/annual-day/annual-day5.jpg';
-import event5Image from '../assets/annual-day/annual-day6.jpg';
-import event6Image from '../assets/Montessori/prize1.jpg';
+import galleryBanner from '../../assets/annual-day/annual-day1.jpg';
+import event1Image from '../../assets/annual-day/annual-day2.jpg';
+import event2Image from '../../assets/annual-day/annual-day3.jpg';
+import event3Image from '../../assets/annual-day/annual-day4.jpg';
+import event4Image from '../../assets/annual-day/annual-day5.jpg';
+import event5Image from '../../assets/annual-day/annual-day6.jpg';
+import event6Image from '../../assets/Montessori/prize1.jpg';
 
 // Sample event images for gallery display
 const sampleEventImages = [
@@ -894,6 +895,7 @@ const GalleryPage = () => {
           </motion.div>
         )}
       </section>
+      <QuickLinksSection />
     </div>
   );
 };

@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { Music, Palette, Trophy, Brain, Globe, Camera, Users, Target, Award, Star, BookOpen, GraduationCap, ChevronDown, ChevronUp } from 'lucide-react';
 import { useState } from 'react';
+import QuickLinksSection from '../../../components/LinksSection';
 
 // Import activity images
 import sportsImage from '../../../assets/annual-day/annual-day1.jpg';
@@ -632,6 +633,7 @@ const ExtraCurricularPage = () => {
                 </div>
               </div>
             </motion.div>
+            <QuickLinksSection />
           </div>
         </div>
 

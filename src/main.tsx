@@ -7,13 +7,12 @@ import '../src/index.css';
 
 // Layout & Pages
 import RootLayout from '../src/layouts/RootLayout';
-import GalleryPage from '../src/pages/GalleryPage';
 import NewsEventsPage from '../src/pages/NewsEventsPage';
 import CalendarPage from '../src/pages/CalendarPage';
 import ContactPage from '../src/pages/ContactPage';
 import Home from '../src/pages/Home';
 
-// About Pages (Already created)
+// About Pages
 import IntroductionPage from '../src/pages/About/subpages/IntroductionPage';
 import GoverningBodyMessagePage from '../src/pages/About/subpages/GoverningBodyMessagePage';
 import FounderPrincipalMessagePage from '../src/pages/About/subpages/FoundingPrincipalMessage';
@@ -22,11 +21,14 @@ import ExaminationsPage from '../src/pages/About/subpages/Examinations';
 import RulesDisciplinePage from '../src/pages/About/subpages/RulesDisciplinePage';
 import FacilitiesPage from '../src/pages/About/subpages/FacilitiesPage';
 import ExtraCurricularPage from '../src/pages/About/subpages/ExtraCurricularPage';
-
+// Achievements Pages
 import RecentAchievementsPage from '../src/pages/Achievements/subpages/RecentAchievementsPage';
 import CoCurricularAchievementsPage from '../src/pages/Achievements/subpages/CoCurricularAchievementsPage';
 import DisciplinaryActionPage from '../src/pages/Achievements/subpages/DisciplinaryActionPage';
 import RecommendationsPage from '../src/pages/Achievements/subpages/RecommendationsPage';
+// Gallery Pages
+import GalleryPage from '../src/pages/Gallery/GalleryPage';
+import VideoGalleryPage from '../src/pages/Gallery/VideoPage';
 
 // Error Fallback Component
 import type { FallbackProps } from 'react-error-boundary';
@@ -83,7 +85,7 @@ const router = createBrowserRouter([
         element: <IntroductionPage />,
       },
       {
-        path: 'about/governingbodymessage',
+        path: 'about/governing-body-message',
         element: <GoverningBodyMessagePage />,
       },
       {
@@ -133,6 +135,10 @@ const router = createBrowserRouter([
       {
         path: 'gallery',
         element: <GalleryPage />,
+      },
+        {
+        path: 'gallery/videos',
+        element: <VideoGalleryPage />,
       },
       {
         path: 'newsandevents',

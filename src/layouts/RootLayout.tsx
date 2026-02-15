@@ -4,11 +4,13 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
 
 import logo from '../assets/schoollogo-3.png'
+// import path from "path";
 
 export default function RootLayout() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [isAboutOpen, setIsAboutOpen] = useState(false);
+  const [isGalleryOpen, setIsGalleryOpen] = useState(false);
   const [isAchievementsOpen, setIsAchievementsOpen] = useState(false);
   const [isNoticeOpen, setIsNoticeOpen] = useState(true);
   const location = useLocation();
@@ -18,6 +20,7 @@ export default function RootLayout() {
     setIsMenuOpen(false);
     setIsAboutOpen(false);
     setIsAchievementsOpen(false);
+    setIsGalleryOpen(false);
   }, [location]);
 
   // Handle scroll for navbar effect
@@ -88,6 +91,20 @@ export default function RootLayout() {
       name: 'Extra Curricular Activities',
       description: 'Beyond classroom learning'
     }
+
+  ];
+
+  const gallerySubmenuItems = [
+    {
+      path: '/gallery/photos',
+      name: 'Photo Gallery',
+      description: 'Collection of memorable moments and events'
+    },
+    {
+      path: '/gallery/videos',
+      name: 'Video Gallery',
+      description: 'Highlights and events in video format'
+    }
   ];
 
   const achievementsSubmenuItems = [
@@ -117,10 +134,10 @@ export default function RootLayout() {
     { title: "Home", path: "/" },
     { title: "About", path: "/about/introduction", hasDropdown: true },
     { title: "Achievements", path: "/achievements/recent", hasDropdown: true },
-    { title: "Gallery", path: "/gallery" },
+    { title: "Gallery", path: "/gallery", hasDropdown: true },
     { title: "News & Events", path: "/newsandevents" },
     { title: "Calendar", path: "/calendar" },
-    { title: "Contact", path: "/contact" },
+    { title: "Contact", path: "/contact" }
   ];
 
   // Scrolling messages for notice bar
@@ -134,6 +151,7 @@ export default function RootLayout() {
 
   const isAboutPageActive = location.pathname.startsWith('/about');
   const isAchievementsPageActive = location.pathname.startsWith('/achievements');
+  const isGalleryPageActive = location.pathname.startsWith('/gallery');
   
   return (
     <div className="min-h-screen flex flex-col bg-white text-gray-900">
@@ -178,14 +196,14 @@ export default function RootLayout() {
               
               {/* School Name - Desktop */}
               <div className="hidden lg:block">
-                <div className="font-bold text-red-500 mb-0 text-lg lg:text-xl xl:text-2xl font-[Cambria]">KATHMANDU <span className="text-blue-900">NATIONAL SCHOOL</span></div>
-                <div className="font-bold text-red-500 mb-0 text-lg lg:text-xl xl:text-2xl font-[Cambria]"></div>
-                <div className="font-bold text-blue-900 text-sm lg:text-md xl:text-lg mb-0.5 font-[Cambria]">"A Grade Coeducational School"</div>
+                <div className="font-bold text-red-500 mb-0 text-lg lg:text-xl xl:text-2xl font-serif">KATHMANDU <span className="text-blue-900">NATIONAL SCHOOL</span></div>
+                <div className="font-bold text-red-500 mb-0 text-lg lg:text-xl xl:text-2xl font-serif"></div>
+                <div className="font-bold text-blue-900 text-sm lg:text-md xl:text-lg mb-0.5 font-serif">"A Grade Coeducational School"</div>
               </div>
               
               {/* School Name - Mobile */}
               <div className="lg:hidden">
-                <div className="font-bold font-[Cambria] text-red-500 text-xl">Kathmandu <span className="font-bold font-[Cambria] text-blue-900 text-xl">National School</span></div>
+                <div className="font-bold font-serif text-red-500 text-xl">Kathmandu <span className="font-bold font-serif text-blue-900 text-xl">National School</span></div>
               </div>
             </Link>
 
@@ -197,7 +215,7 @@ export default function RootLayout() {
                     // About Dropdown
                     <div key={item.path} className="relative group">
                       <button
-                        className={`flex items-center gap-0.5 px-1.5 py-1 md:px-2 md:py-1 text-xs md:text-sm lg:text-sm font-[Cambria] transition-colors rounded-sm md:rounded-md ${
+                        className={`flex items-center gap-0.5 px-1.5 py-1 md:px-2 md:py-1 text-xs md:text-sm lg:text-sm font-serif transition-colors rounded-sm md:rounded-md ${
                           isAboutPageActive
                             ? 'text-white bg-red-500'
                             : 'text-red-500 hover:text-yellow-500'
@@ -250,7 +268,7 @@ export default function RootLayout() {
                     // Achievements Dropdown
                     <div key={item.path} className="relative group">
                       <button
-                        className={`flex items-center gap-0.5 px-1.5 py-1 md:px-2 md:py-1 text-xs md:text-sm lg:text-sm font-[Cambria] transition-colors rounded-sm md:rounded-md ${
+                        className={`flex items-center gap-0.5 px-1.5 py-1 md:px-2 md:py-1 text-xs md:text-sm lg:text-sm font-serif transition-colors rounded-sm md:rounded-md ${
                           isAchievementsPageActive
                             ? 'text-white bg-red-500'
                             : 'text-red-500 hover:text-yellow-500'
@@ -258,6 +276,7 @@ export default function RootLayout() {
                         onClick={() => {
                           setIsAchievementsOpen(!isAchievementsOpen);
                           setIsAboutOpen(false);
+                          setIsGalleryOpen(false);
                         }}
                         aria-label="Achievements menu dropdown"
                       >
@@ -298,13 +317,67 @@ export default function RootLayout() {
                       </div>
                     </div>
                   );
+                }else if (item.title === "Gallery") {
+                  return (
+                    // Achievements Dropdown
+                    <div key={item.path} className="relative group">
+                      <button
+                        className={`flex items-center gap-0.5 px-1.5 py-1 md:px-2 md:py-1 text-xs md:text-sm lg:text-sm font-serif transition-colors rounded-sm md:rounded-md ${
+                          isGalleryPageActive
+                            ? 'text-white bg-red-500'
+                            : 'text-red-500 hover:text-yellow-500'
+                        }`}
+                        onClick={() => {
+                          setIsGalleryOpen(!isGalleryOpen);
+                          setIsAboutOpen(false);
+                          setIsAchievementsOpen(false);
+                        }}
+                        aria-label="Gallery menu dropdown"
+                      >
+                        Gallery
+                        <ChevronDown className={`w-2.5 h-2.5 transition-transform duration-200 ${
+                          isGalleryOpen ? 'rotate-180' : ''
+                        }`} />
+                      </button>
+                      
+                      {/* Dropdown Menu */}
+                      <div className={`absolute left-0 top-full mt-0.5 w-40 md:w-44 lg:w-48 bg-white rounded-sm shadow-xl border border-gray-200 py-1 transition-all duration-200 z-50 ${
+                        isGalleryOpen ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-2'
+                      }`}>
+                        
+                        <div className="max-h-64 overflow-y-auto">
+                          {gallerySubmenuItems.map((subItem, index) => (
+                            <Link
+                              key={index}
+                              to={subItem.path}
+                              className={`block px-2.5 py-1.5 hover:bg-gray-50 transition-colors ${
+                                location.pathname === subItem.path ? 'bg-red-50 border-l-3 border-red-500' : ''
+                              }`}
+                              onClick={() => setIsGalleryOpen(false)}
+                            >
+                              <div className="flex items-center gap-1.5">
+                                <div className={`w-1 h-1 rounded-full ${
+                                  location.pathname === subItem.path ? 'bg-red-500' : 'bg-gray-300'
+                                }`} />
+                                <div className="flex-1">
+                                  <h4 className="font-semibold text-gray-900 text-xs">{subItem.name}</h4>
+                                  <p className="text-xs text-gray-500 mt-0.5">{subItem.description}</p>
+                                </div>
+                                <ChevronRight className="w-2.5 h-2.5 text-gray-400" />
+                              </div>
+                            </Link>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  );
                 } else {
                   return (
                     // Regular Nav Items
                     <Link
                       key={item.path}
                       to={item.path}
-                      className={`px-1.5 py-1 md:px-2 md:py-1 text-xs md:text-sm lg:text-sm font-[Cambria] transition-colors rounded-sm md:rounded-md ${
+                      className={`px-1.5 py-1 md:px-2 md:py-1 text-xs md:text-sm lg:text-sm font-serif transition-colors rounded-sm md:rounded-md ${
                         location.pathname === item.path
                           ? 'text-white bg-red-500'
                           : 'text-red-500 hover:text-yellow-500'
@@ -405,6 +478,7 @@ export default function RootLayout() {
                           onClick={() => {
                           setIsAboutOpen(!isAboutOpen);
                           setIsAchievementsOpen(false);
+                          setIsGalleryOpen(false);
                         }}
                           className={`w-full flex items-center justify-between px-2.5 py-1.5 text-sm font-bold rounded-sm transition-colors ${
                             isAboutPageActive
@@ -449,6 +523,58 @@ export default function RootLayout() {
                         </div>
                       </div>
                     );
+                  } else if (item.title === "Gallery") {
+                    return (
+                      <div key={item.path} className="space-y-0.5">
+                        <button
+                          onClick={() => {
+                          setIsGalleryOpen(!isGalleryOpen);
+                          setIsAboutOpen(false);
+                          setIsAchievementsOpen(false);
+                        }}
+                          className={`w-full flex items-center justify-between px-2.5 py-1.5 text-sm font-bold rounded-sm transition-colors ${
+                            isGalleryPageActive
+                              ? 'text-red-600 bg-red-50'
+                              : 'text-gray-700 hover:text-red-600 hover:bg-gray-50'
+                          }`}
+                        >
+                          <span>Gallery</span>
+                          <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-200 ${
+                            isGalleryOpen ? 'rotate-180' : ''
+                          }`} />
+                        </button>
+                        
+                        {/* Mobile Gallery Submenu */}
+                        <div className={`overflow-hidden transition-all duration-200 ml-2.5 ${
+                          isGalleryOpen ? 'max-h-[240px]' : 'max-h-0'
+                        }`}>
+                          
+                          {gallerySubmenuItems.map((subItem, index) => (
+                            <Link
+                              key={index}
+                              to={subItem.path}
+                              className={`block px-2.5 py-1 hover:bg-gray-50 rounded-sm mb-0.5 ${
+                                location.pathname === subItem.path ? 'bg-red-50' : ''
+                              }`}
+                              onClick={() => {
+                                setIsMenuOpen(false);
+                                setIsGalleryOpen(false);
+                              }}
+                            >
+                              <div className="flex items-center gap-1.5">
+                                <div className={`w-1 h-1 rounded-full ${
+                                  location.pathname === subItem.path ? 'bg-red-500' : 'bg-gray-400'
+                                }`} />
+                                <div>
+                                  <h4 className="font-medium text-gray-900 text-xs">{subItem.name}</h4>
+                                  <p className="text-xs text-gray-500 mt-0.5">{subItem.description}</p>
+                                </div>
+                              </div>
+                            </Link>
+                          ))}
+                        </div>
+                      </div>
+                    );
                   } else if (item.title === "Achievements") {
                     return (
                       <div key={item.path} className="space-y-0.5">
@@ -456,6 +582,7 @@ export default function RootLayout() {
                           onClick={() => {
                           setIsAchievementsOpen(!isAchievementsOpen);
                           setIsAboutOpen(false);
+                          setIsGalleryOpen(false);
                         }}
                           className={`w-full flex items-center justify-between px-2.5 py-1.5 text-sm font-bold rounded-sm transition-colors ${
                             isAchievementsPageActive
@@ -596,7 +723,7 @@ export default function RootLayout() {
                 </div>
                 <div>
                   <div className="font-light text-white/90 sm:text-lg lg:text-xl">Kathmandu</div>
-                  <div className="font-bold text-white text-base sm:text-lg lg:text-xl font-[Cambria]">National School</div>
+                  <div className="font-bold text-white text-base sm:text-lg lg:text-xl font-serif">National School</div>
                   <p className="text-white/90 text-xs italic font-serif text-left">
                     Education · Civilization · Humanization
                   </p>
@@ -641,7 +768,7 @@ export default function RootLayout() {
             <div className="sm:mx-auto lg:mx-0">
               <div className="flex items-center gap-2 mb-3 sm:mb-4">
                 <div className="h-6 w-0.5 sm:w-1 bg-red-500 rounded-full"></div>
-                <h3 className="text-white font-bold text-sm sm:text-base font-[Cambria]">
+                <h3 className="text-white font-bold text-sm sm:text-base font-serif">
                   Quick Links
                 </h3>
               </div>
@@ -665,7 +792,7 @@ export default function RootLayout() {
             <div>
               <div className="flex items-center gap-2 mb-3 sm:mb-4">
                 <div className="h-6 w-0.5 sm:w-1 bg-blue-500 rounded-full"></div>
-                <h3 className="text-white font-bold text-sm sm:text-base font-[Cambria]">
+                <h3 className="text-white font-bold text-sm sm:text-base font-serif">
                   Academics
                 </h3>
               </div>
@@ -689,7 +816,7 @@ export default function RootLayout() {
             <div>
               <div className="flex items-center gap-2 mb-3 sm:mb-4">
                 <div className="h-6 w-0.5 sm:w-1 bg-green-500 rounded-full"></div>
-                <h3 className="text-white font-bold text-sm sm:text-base font-[Cambria]">
+                <h3 className="text-white font-bold text-sm sm:text-base font-serif">
                   Contact Us
                 </h3>
               </div>

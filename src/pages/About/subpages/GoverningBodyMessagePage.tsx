@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { Users, Target, Building2, Heart, BookOpen, Award, Users2, Handshake, TrendingUp, Star, ChevronDown, ChevronUp } from 'lucide-react';
 import { useState } from 'react';
+import QuickLinksSection from '../../../components/LinksSection';
 
 // Import governing body image
 import governingBodyImage from '../../../assets/governing-body/governing-1.jpg';
@@ -500,6 +501,7 @@ const GoverningBodyMessagePage = () => {
               </div>
             </div>
           </motion.div>
+          <QuickLinksSection />
         </div>
 
         {/* Background Pattern */}

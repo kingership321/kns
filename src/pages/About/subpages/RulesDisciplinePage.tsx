@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { Users, Shield, AlertCircle, Target, Award, Calendar, UserCheck, FileText, Home, School, CheckCircle, Star, ChevronDown, ChevronUp } from 'lucide-react';
 import { useState } from 'react';
+import QuickLinksSection from '../../../components/LinksSection';
 
 // Import discipline image
 import disciplineImage from '../../../assets/annual-day/annual-day1.jpg';
@@ -660,6 +661,7 @@ const RulesDisciplinePage = () => {
                 </div>
               </div>
             </motion.div>
+            <QuickLinksSection />
           </div>
         </div>
 

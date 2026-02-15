@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { BookOpen, FlaskConical, Coffee, Bus, Home, Clock, HelpCircle, HeartPulse, Wifi, Users, Shield, Monitor, ChevronDown, ChevronUp } from 'lucide-react';
 import { useState } from 'react';
+import QuickLinksSection from '../../../components/LinksSection';
 
 // Import facility images
 import libraryImage from '../../../assets/Montessori/prize1.jpg';
@@ -626,6 +627,7 @@ const FacilitiesPage = () => {
                 </div>
               </div>
             </motion.div>
+            <QuickLinksSection />
           </div>
         </div>
 

@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { Building2, Target, Eye, Trophy, UserPlus, Shirt, Users, BookOpen, GraduationCap, Heart, ChevronDown, ChevronUp } from 'lucide-react';
 import { useState } from 'react';
+import QuickLinksSection from '../../../components/LinksSection.tsx';
 
 // Import school image
 import schoolImage from '../../../assets/annual-day/annual-day5.jpg';
@@ -406,6 +407,9 @@ const IntroductionPage = () => {
               </div>
             </div>
           </motion.div>
+
+          {/*Add Quick links*/}
+          <QuickLinksSection />
         </div>
 
         {/* Background Pattern */}

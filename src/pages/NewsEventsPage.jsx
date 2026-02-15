@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { Calendar, Clock, MapPin, Users, Newspaper, ExternalLink, ChevronRight, Award, BookOpen, Trophy, Megaphone, Eye, Heart, Share2, CalendarDays, Bell, ChevronDown, ChevronUp } from 'lucide-react';
 import { useState } from 'react';
+import QuickLinksSection from '../components/LinksSection';
 
 // Import banner image
 import newsBanner from '../assets/annual-day/annual-day4.jpg';
@@ -953,6 +954,7 @@ const NewsEventsPage = () => {
               </div>
             </div>
           </motion.div>
+          <QuickLinksSection />
         </div>
 
         {/* Background Pattern */}

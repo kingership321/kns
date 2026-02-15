@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { Scale, Award, AlertTriangle, Shield, Users, Target, CheckCircle, XCircle, BookOpen, Heart, TrendingUp, Star, ChevronDown, ChevronUp } from 'lucide-react';
 import { useState } from 'react';
+import QuickLinksSection from '../../../components/LinksSection';
 
 // Import disciplinary images
 import disciplinaryMeetingImage from '../../../assets/saraswati-puja/Saraswati-Puja1.jpg';
@@ -616,6 +617,7 @@ const DisciplinaryActionPage = () => {
               </div>
             </div>
           </motion.div>
+          <QuickLinksSection />
         </div>
 
         {/* Background Pattern */}

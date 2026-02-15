@@ -2,6 +2,7 @@ import HeroSection from '../components/HeroSection.tsx';
 import StatsSection from '../components/StatsSection.tsx';
 import GallerySection from '../components/GallerySection.tsx';
 import TestimonialsSection from '../components/TestimonialsCarousel.tsx';
+import QuickLinksSection from '../components/LinksSection.tsx';
 
 const Home = () => {
   return (
@@ -16,6 +17,7 @@ const Home = () => {
         <StatsSection />
         <GallerySection />
         <TestimonialsSection />
+        <QuickLinksSection />
     </>
   );
 };
