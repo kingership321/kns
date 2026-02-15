@@ -5,14 +5,23 @@ import { Link, useNavigate } from 'react-router'; // Import useNavigate
 import QuickLinksSection from '../../components/LinksSection';
 
 // Import gallery images (you'll replace these with your actual images)
-import galleryBanner from '../../assets/annual-day/annual-day1.jpg';
-import event1Image from '../../assets/annual-day/annual-day2.jpg';
-import event2Image from '../../assets/annual-day/annual-day3.jpg';
-import event3Image from '../../assets/annual-day/annual-day4.jpg';
-import event4Image from '../../assets/annual-day/annual-day5.jpg';
-import event5Image from '../../assets/annual-day/annual-day6.jpg';
+import annualDay1 from '../../assets/annual-day/annual-day1.jpg';
+import annualDay2 from '../../assets/annual-day/annual-day2.jpg';
+import annualDay3 from '../../assets/annual-day/annual-day3.jpg';
+import annualDay4 from '../../assets/annual-day/annual-day4.jpg';
+import annualDay5 from '../../assets/annual-day/annual-day5.jpg';
+import annualDay6 from '../../assets/annual-day/annual-day6.jpg';
 import event6Image from '../../assets/Montessori/prize1.jpg';
 
+//saraswati-pooja images imports
+import saraswatiPooja1 from '../../assets/saraswati-puja/Saraswati-Puja1.jpg';
+import saraswatiPooja2 from '../../assets/saraswati-puja/Saraswati-Puja2.jpg';
+import saraswatiPooja3 from '../../assets/saraswati-puja/Saraswati-Puja3.jpg';
+import saraswatiPooja4 from '../../assets/saraswati-puja/Saraswati-Puja4.jpg';
+import saraswatiPooja5 from '../../assets/saraswati-puja/Saraswati-Puja5.jpg';
+import saraswatiPooja7 from '../../assets/saraswati-puja/Saraswati-Puja7.jpg';
+
+//
 // Sample event images for gallery display
 const sampleEventImages = [
   "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
@@ -56,10 +65,10 @@ const GalleryPage = () => {
       time: "4:00 PM - 7:00 PM",
       location: "School Auditorium",
       category: "celebration",
-      images: sampleEventImages.slice(0, 12),
-      coverImage: event1Image,
+      images: [annualDay1, annualDay2, annualDay3, annualDay4, annualDay5, annualDay6],
+      coverImage: annualDay1,
       featured: true,
-      photoCount: 24,
+      photoCount: 6,
       participants: "All students and staff"
     },
     {
@@ -71,22 +80,22 @@ const GalleryPage = () => {
       location: "School Ground",
       category: "sports",
       images: sampleEventImages.slice(2, 10),
-      coverImage: event2Image,
+      coverImage: sampleEventImages[2],
       featured: true,
       photoCount: 18,
       participants: "Classes 6-12"
     },
     {
       id: 3,
-      title: "Cultural Fest 2023",
-      description: "Showcasing diverse cultural heritage through music, dance, and art performances",
+      title: "Saraswati Pooja Celebration",
+      description: "Honoring the goddess of knowledge with traditional rituals, music, and dance performances",
       date: "2023-09-20",
       time: "3:00 PM - 6:00 PM",
       location: "School Cultural Hall",
       category: "cultural",
-      images: sampleEventImages.slice(1, 9),
-      coverImage: event3Image,
-      photoCount: 32,
+      images: [saraswatiPooja1, saraswatiPooja2, saraswatiPooja3, saraswatiPooja4, saraswatiPooja5, saraswatiPooja7],
+      coverImage: saraswatiPooja1,
+      photoCount: 6,
       participants: "All grades"
     },
     {
@@ -98,7 +107,7 @@ const GalleryPage = () => {
       location: "Science Block",
       category: "academic",
       images: sampleEventImages.slice(3, 11),
-      coverImage: event4Image,
+      coverImage: annualDay3,
       photoCount: 21,
       participants: "Science Club Members"
     },
@@ -111,7 +120,7 @@ const GalleryPage = () => {
       location: "Main Hall",
       category: "celebration",
       images: sampleEventImages.slice(0, 8),
-      coverImage: event5Image,
+      coverImage: annualDay5,
       photoCount: 28,
       participants: "Grade 12 Students"
     },
@@ -137,7 +146,7 @@ const GalleryPage = () => {
       location: "School Auditorium",
       category: "celebration",
       images: sampleEventImages.slice(2, 10),
-      coverImage: event1Image,
+      coverImage: annualDay2,
       photoCount: 19,
       participants: "All teachers and students"
     },
@@ -150,7 +159,7 @@ const GalleryPage = () => {
       location: "Principal's Office",
       category: "academic",
       images: sampleEventImages.slice(1, 7),
-      coverImage: event2Image,
+      coverImage: annualDay4,
       photoCount: 12,
       participants: "Math Club"
     }
@@ -217,7 +226,7 @@ const GalleryPage = () => {
         {/* Background Image with Overlay */}
         <div className="absolute inset-0 z-0">
           <img 
-            src={galleryBanner}
+            src={annualDay1}
             alt="KNS Gallery - School Events & Activities" 
             className="w-full h-full object-cover"
           />

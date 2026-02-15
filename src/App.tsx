@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import viteLogo from '../src/assets/logo-kns.jpg'
 import './App.css'
 // Remove the duplicate import: import { useEffect } from 'react'; // This is duplicate
 
