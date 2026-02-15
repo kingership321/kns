@@ -156,7 +156,7 @@ const DisciplinaryActionPage = () => {
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
           >
-            <h1 className="text-xl xs:text-2xl sm:text-3xl lg:text-4xl font-bold text-white font-[Cambria] mb-3 sm:mb-4">
+            <h1 className="text-xl xs:text-2xl sm:text-3xl lg:text-4xl font-bold text-white font-display mb-3 sm:mb-4">
               Disciplinary Actions
             </h1>
             
@@ -200,7 +200,7 @@ const DisciplinaryActionPage = () => {
               <div className="bg-white rounded-lg p-4 sm:p-5 border border-gray-200 shadow-sm">
                 <div className="flex items-center gap-2 mb-3">
                   <div className="h-6 w-0.5 bg-red-500 rounded-full"></div>
-                  <h2 className="text-lg sm:text-xl font-bold text-gray-900 font-[Cambria]">
+                  <h2 className="text-lg sm:text-xl font-bold text-gray-900 font-display">
                     Our Philosophy of Discipline
                   </h2>
                 </div>
@@ -239,7 +239,7 @@ const DisciplinaryActionPage = () => {
                           <system.icon className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
                         </div>
                         <div>
-                          <h3 className="text-sm sm:text-base font-bold text-gray-900 font-[Cambria]">
+                          <h3 className="text-sm sm:text-base font-bold text-gray-900 font-display">
                             {system.title}
                           </h3>
                           <div className="h-0.5 w-8 bg-red-500 rounded-full mt-1"></div>
@@ -299,7 +299,7 @@ const DisciplinaryActionPage = () => {
               <div className="bg-gradient-to-r from-primary/90 to-primary/80 rounded-lg p-4 sm:p-5 border border-white/20 backdrop-blur-sm">
                 <div className="flex items-center gap-2 mb-3">
                   <Shield className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
-                  <h3 className="text-base sm:text-lg font-bold text-white font-[Cambria]">
+                  <h3 className="text-base sm:text-lg font-bold text-white font-display">
                     Disciplinary Committee
                   </h3>
                 </div>
@@ -335,7 +335,7 @@ const DisciplinaryActionPage = () => {
               <div className="bg-white rounded-lg p-6 border border-gray-200 shadow-md">
                 <div className="flex items-center gap-2 mb-4">
                   <div className="h-8 w-0.5 bg-red-500 rounded-full"></div>
-                  <h2 className="text-2xl font-bold text-gray-900 font-[Cambria]">
+                  <h2 className="text-2xl font-bold text-gray-900 font-display">
                     Our Philosophy of Discipline
                   </h2>
                 </div>
@@ -361,7 +361,7 @@ const DisciplinaryActionPage = () => {
               <div className="bg-white rounded-lg p-6 border border-gray-200 shadow-md">
                 <div className="flex items-center gap-2 mb-4">
                   <Target className="w-5 h-5 text-primary" />
-                  <h3 className="text-xl font-bold text-gray-900 font-[Cambria]">
+                  <h3 className="text-xl font-bold text-gray-900 font-display">
                     Guiding Principles
                   </h3>
                 </div>
@@ -405,7 +405,7 @@ const DisciplinaryActionPage = () => {
                           <system.icon className="w-6 h-6 text-white" />
                         </div>
                         <div>
-                          <h3 className="text-lg font-bold text-white font-[Cambria] mb-1.5">
+                          <h3 className="text-lg font-bold text-white font-display mb-1.5">
                             {system.title}
                           </h3>
                           <p className="text-white/90 text-sm">{system.description}</p>
@@ -452,7 +452,7 @@ const DisciplinaryActionPage = () => {
             <div className="text-center mb-6 sm:mb-8">
               <div className="flex items-center justify-center gap-2 sm:gap-3 mb-3">
                 <div className="h-px w-6 sm:w-8 md:w-10 bg-primary/50" />
-                <h2 className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-900 font-[Cambria]">
+                <h2 className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-900 font-display">
                   Disciplinary Committee Structure
                 </h2>
                 <div className="h-px w-6 sm:w-8 md:w-10 bg-primary/50" />
@@ -477,7 +477,7 @@ const DisciplinaryActionPage = () => {
                       <member.icon className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
                     </div>
                     
-                    <h3 className="text-sm sm:text-base font-bold text-gray-900 font-[Cambria] mb-1 sm:mb-1.5">
+                    <h3 className="text-sm sm:text-base font-bold text-gray-900 font-display mb-1 sm:mb-1.5">
                       {member.role}
                     </h3>
                     
@@ -505,7 +505,7 @@ const DisciplinaryActionPage = () => {
             <div className="bg-gradient-to-r from-primary/90 to-primary/80 rounded-lg p-4 sm:p-6 border border-white/20 backdrop-blur-sm">
               <div className="flex items-center gap-2 mb-4">
                 <Scale className="w-5 h-5 text-white" />
-                <h3 className="text-lg sm:text-xl font-bold text-white font-[Cambria]">
+                <h3 className="text-lg sm:text-xl font-bold text-white font-display">
                   Disciplinary Process
                 </h3>
               </div>
@@ -554,7 +554,7 @@ const DisciplinaryActionPage = () => {
                 <div className="text-center mb-4 sm:mb-6 lg:mb-8">
                   <div className="flex items-center justify-center gap-2 sm:gap-3 mb-2 sm:mb-3">
                     <div className="h-px w-6 sm:w-8 md:w-10 bg-white/50" />
-                    <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-white font-[Cambria]">
+                    <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-white font-display">
                       Our Commitment to Positive Discipline
                     </h3>
                     <div className="h-px w-6 sm:w-8 md:w-10 bg-white/50" />
@@ -599,15 +599,15 @@ const DisciplinaryActionPage = () => {
                 {/* Policy Highlights */}
                 <div className="mt-6 sm:mt-8 lg:mt-10 pt-4 sm:pt-6 border-t border-white/20">
                   <div className="max-w-3xl mx-auto text-center">
-                    <h4 className="text-base sm:text-lg font-bold text-white mb-3 sm:mb-4 font-[Cambria]">Policy Highlights</h4>
+                    <h4 className="text-base sm:text-lg font-bold text-white mb-3 sm:mb-4 font-display">Policy Highlights</h4>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
                       <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3">
-                        <div className="text-lg sm:text-xl font-bold text-white font-[Cambria] mb-1">100%</div>
+                        <div className="text-lg sm:text-xl font-bold text-white font-display mb-1">100%</div>
                         <div className="text-white/90 text-sm">No Physical Punishment</div>
                         <div className="text-white/70 text-xs mt-0.5">Strictly discouraged in all circumstances</div>
                       </div>
                       <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3">
-                        <div className="text-lg sm:text-xl font-bold text-white font-[Cambria] mb-1">Fair</div>
+                        <div className="text-lg sm:text-xl font-bold text-white font-display mb-1">Fair</div>
                         <div className="text-white/90 text-sm">Due Process</div>
                         <div className="text-white/70 text-xs mt-0.5">Investigation before any disciplinary action</div>
                       </div>
@@ -632,3 +632,4 @@ const DisciplinaryActionPage = () => {
 };
 
 export default DisciplinaryActionPage;
+

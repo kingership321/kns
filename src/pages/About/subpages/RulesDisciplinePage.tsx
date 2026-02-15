@@ -160,7 +160,7 @@ const RulesDisciplinePage = () => {
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
           >
-            <h1 className="text-xl xs:text-2xl sm:text-3xl lg:text-4xl font-bold text-white font-[Cambria] mb-3 sm:mb-4">
+            <h1 className="text-xl xs:text-2xl sm:text-3xl lg:text-4xl font-bold text-white font-display mb-3 sm:mb-4">
               Rules & Discipline
             </h1>
             
@@ -205,7 +205,7 @@ const RulesDisciplinePage = () => {
               <div className="bg-white rounded-lg p-4 sm:p-5 border border-gray-200 shadow-sm">
                 <div className="flex items-center gap-2 mb-3">
                   <div className="h-6 w-0.5 bg-red-500 rounded-full"></div>
-                  <h2 className="text-lg sm:text-xl font-bold text-gray-900 font-[Cambria]">
+                  <h2 className="text-lg sm:text-xl font-bold text-gray-900 font-display">
                     School Rules & Discipline Policy
                   </h2>
                 </div>
@@ -232,7 +232,7 @@ const RulesDisciplinePage = () => {
             <div className="mb-6">
               <div className="flex items-center gap-2 mb-3">
                 <div className="h-6 w-0.5 bg-blue-500 rounded-full"></div>
-                <h2 className="text-lg sm:text-xl font-bold text-gray-900 font-[Cambria]">
+                <h2 className="text-lg sm:text-xl font-bold text-gray-900 font-display">
                   Key Requirements
                 </h2>
               </div>
@@ -255,7 +255,7 @@ const RulesDisciplinePage = () => {
                           <div className="w-8 h-8 sm:w-10 sm:h-10 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
                             <point.icon className="w-4 h-4 sm:w-5 sm:h-5 text-primary" />
                           </div>
-                          <h3 className="text-sm sm:text-base font-bold text-gray-900 font-[Cambria]">
+                          <h3 className="text-sm sm:text-base font-bold text-gray-900 font-display">
                             {point.title}
                           </h3>
                         </div>
@@ -285,7 +285,7 @@ const RulesDisciplinePage = () => {
             <div className="mb-6">
               <div className="flex items-center gap-2 mb-3">
                 <div className="h-6 w-0.5 bg-red-500 rounded-full"></div>
-                <h2 className="text-lg sm:text-xl font-bold text-gray-900 font-[Cambria]">
+                <h2 className="text-lg sm:text-xl font-bold text-gray-900 font-display">
                   Comprehensive Rules & Regulations
                 </h2>
               </div>
@@ -308,7 +308,7 @@ const RulesDisciplinePage = () => {
                           <div className="w-8 h-8 sm:w-10 sm:h-10 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
                             <category.icon className="w-4 h-4 sm:w-5 sm:h-5 text-primary" />
                           </div>
-                          <h3 className="text-sm sm:text-base font-bold text-gray-900 font-[Cambria]">
+                          <h3 className="text-sm sm:text-base font-bold text-gray-900 font-display">
                             {category.title}
                           </h3>
                         </div>
@@ -354,7 +354,7 @@ const RulesDisciplinePage = () => {
                   <div className="w-10 h-10 bg-red-500/10 rounded-full flex items-center justify-center mb-2">
                     <AlertCircle className="w-5 h-5 text-red-500" />
                   </div>
-                  <h3 className="text-lg sm:text-xl font-bold text-gray-900 font-[Cambria]">
+                  <h3 className="text-lg sm:text-xl font-bold text-gray-900 font-display">
                     Consequences of Violations
                   </h3>
                 </div>
@@ -390,7 +390,7 @@ const RulesDisciplinePage = () => {
                   <div className="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center mb-2">
                     <Award className="w-5 h-5 text-white" />
                   </div>
-                  <h3 className="text-base sm:text-lg font-bold text-white font-[Cambria]">
+                  <h3 className="text-base sm:text-lg font-bold text-white font-display">
                     Our Commitment to Discipline
                   </h3>
                 </div>
@@ -420,7 +420,7 @@ const RulesDisciplinePage = () => {
                 <div className="text-center mb-4">
                   <div className="flex items-center justify-center gap-2 sm:gap-3 mb-3">
                     <div className="h-px w-6 sm:w-8 bg-white/50" />
-                    <h3 className="text-base sm:text-lg font-bold text-white font-[Cambria]">
+                    <h3 className="text-base sm:text-lg font-bold text-white font-display">
                       Partnership for Success
                     </h3>
                     <div className="h-px w-6 sm:w-8 bg-white/50" />
@@ -435,7 +435,7 @@ const RulesDisciplinePage = () => {
                     <div className="w-12 h-12 sm:w-14 sm:h-14 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center mx-auto mb-2">
                       <School className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
                     </div>
-                    <h4 className="text-sm sm:text-base font-bold text-white font-[Cambria] mb-1">School's Role</h4>
+                    <h4 className="text-sm sm:text-base font-bold text-white font-display mb-1">School's Role</h4>
                     <p className="text-white/90 text-xs">
                       Establish clear rules, ensure enforcement, provide guidance
                     </p>
@@ -445,7 +445,7 @@ const RulesDisciplinePage = () => {
                     <div className="w-12 h-12 sm:w-14 sm:h-14 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center mx-auto mb-2">
                       <UserCheck className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
                     </div>
-                    <h4 className="text-sm sm:text-base font-bold text-white font-[Cambria] mb-1">Student's Role</h4>
+                    <h4 className="text-sm sm:text-base font-bold text-white font-display mb-1">Student's Role</h4>
                     <p className="text-white/90 text-xs">
                       Follow rules, show respect, maintain discipline
                     </p>
@@ -455,7 +455,7 @@ const RulesDisciplinePage = () => {
                     <div className="w-12 h-12 sm:w-14 sm:h-14 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center mx-auto mb-2">
                       <Home className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
                     </div>
-                    <h4 className="text-sm sm:text-base font-bold text-white font-[Cambria] mb-1">Parent's Role</h4>
+                    <h4 className="text-sm sm:text-base font-bold text-white font-display mb-1">Parent's Role</h4>
                     <p className="text-white/90 text-xs">
                       Support school policies, ensure compliance, attend meetings
                     </p>
@@ -479,7 +479,7 @@ const RulesDisciplinePage = () => {
               <div className="bg-white rounded-lg p-6 border border-gray-200 shadow-md">
                 <div className="flex items-center gap-2 mb-4">
                   <div className="h-8 w-0.5 bg-red-500 rounded-full"></div>
-                  <h2 className="text-2xl font-bold text-gray-900 font-[Cambria]">
+                  <h2 className="text-2xl font-bold text-gray-900 font-display">
                     School Rules & Discipline Policy
                   </h2>
                 </div>
@@ -505,7 +505,7 @@ const RulesDisciplinePage = () => {
               <div className="bg-white rounded-lg p-6 border border-gray-200 shadow-md">
                 <div className="flex items-center gap-2 mb-4">
                   <div className="h-8 w-0.5 bg-blue-500 rounded-full"></div>
-                  <h2 className="text-xl font-bold text-gray-900 font-[Cambria]">
+                  <h2 className="text-xl font-bold text-gray-900 font-display">
                     Comprehensive Rules & Regulations
                   </h2>
                 </div>
@@ -525,7 +525,7 @@ const RulesDisciplinePage = () => {
                           <category.icon className="w-5 h-5 text-primary" />
                         </div>
                         <div>
-                          <h3 className="text-base font-bold text-gray-900 font-[Cambria] mb-1.5">
+                          <h3 className="text-base font-bold text-gray-900 font-display mb-1.5">
                             {category.title}
                           </h3>
                           <div className="h-0.5 w-8 bg-red-500 rounded-full"></div>
@@ -560,7 +560,7 @@ const RulesDisciplinePage = () => {
               <div className="bg-white rounded-lg p-6 border border-gray-200 shadow-md">
                 <div className="flex items-center gap-2 mb-4">
                   <div className="h-8 w-0.5 bg-red-500 rounded-full"></div>
-                  <h3 className="text-xl font-bold text-gray-900 font-[Cambria]">
+                  <h3 className="text-xl font-bold text-gray-900 font-display">
                     Key Requirements
                   </h3>
                 </div>
@@ -580,7 +580,7 @@ const RulesDisciplinePage = () => {
                           <point.icon className="w-5 h-5 text-primary" />
                         </div>
                         <div>
-                          <h4 className="text-base font-bold text-gray-900 font-[Cambria] mb-1">
+                          <h4 className="text-base font-bold text-gray-900 font-display mb-1">
                             {point.title}
                           </h4>
                           <div className="h-0.5 w-8 bg-red-500 rounded-full"></div>
@@ -600,7 +600,7 @@ const RulesDisciplinePage = () => {
                   <div className="w-12 h-12 bg-red-500/10 rounded-full flex items-center justify-center mb-3">
                     <AlertCircle className="w-6 h-6 text-red-500" />
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900 font-[Cambria]">
+                  <h3 className="text-xl font-bold text-gray-900 font-display">
                     Consequences of Violations
                   </h3>
                 </div>
@@ -628,7 +628,7 @@ const RulesDisciplinePage = () => {
                   <div className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center mb-3">
                     <Award className="w-6 h-6 text-white" />
                   </div>
-                  <h3 className="text-xl font-bold text-white font-[Cambria]">
+                  <h3 className="text-xl font-bold text-white font-display">
                     Our Commitment to Discipline
                   </h3>
                 </div>
@@ -677,3 +677,4 @@ const RulesDisciplinePage = () => {
 };
 
 export default RulesDisciplinePage;
+

@@ -86,7 +86,7 @@ const GoverningBodyMessagePage = () => {
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
           >
-            <h1 className="text-xl xs:text-2xl sm:text-3xl lg:text-4xl font-bold text-white font-[Cambria] mb-3 sm:mb-4">
+            <h1 className="text-xl xs:text-2xl sm:text-3xl lg:text-4xl font-bold text-white font-display mb-3 sm:mb-4">
               Message from Governing Body
             </h1>
             
@@ -140,7 +140,7 @@ const GoverningBodyMessagePage = () => {
                 
                 <div className="flex items-center gap-2 mb-3">
                   <div className="h-6 w-0.5 bg-red-500 rounded-full"></div>
-                  <h2 className="text-lg sm:text-xl font-bold text-gray-900 font-[Cambria]">
+                  <h2 className="text-lg sm:text-xl font-bold text-gray-900 font-display">
                     Welcome to KNS
                   </h2>
                 </div>
@@ -165,7 +165,7 @@ const GoverningBodyMessagePage = () => {
             <div className="mb-6">
               <div className="flex items-center gap-2 mb-3">
                 <div className="h-6 w-0.5 bg-blue-500 rounded-full"></div>
-                <h2 className="text-lg sm:text-xl font-bold text-gray-900 font-[Cambria]">
+                <h2 className="text-lg sm:text-xl font-bold text-gray-900 font-display">
                   Our Core Values
                 </h2>
               </div>
@@ -188,7 +188,7 @@ const GoverningBodyMessagePage = () => {
                           <div className="w-8 h-8 sm:w-10 sm:h-10 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
                             <value.icon className="w-4 h-4 sm:w-5 sm:h-5 text-primary" />
                           </div>
-                          <h3 className="text-sm sm:text-base font-bold text-gray-900 font-[Cambria]">
+                          <h3 className="text-sm sm:text-base font-bold text-gray-900 font-display">
                             {value.title}
                           </h3>
                         </div>
@@ -225,7 +225,7 @@ const GoverningBodyMessagePage = () => {
               <div className="bg-gradient-to-r from-primary/90 to-primary/80 rounded-lg p-4 sm:p-5 border border-white/20 backdrop-blur-sm">
                 <div className="flex items-center gap-2 mb-3">
                   <Building2 className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
-                  <h3 className="text-base sm:text-lg font-bold text-white font-[Cambria]">
+                  <h3 className="text-base sm:text-lg font-bold text-white font-display">
                     Our Vision for Growth
                   </h3>
                 </div>
@@ -258,7 +258,7 @@ const GoverningBodyMessagePage = () => {
             >
               <div className="bg-gradient-to-r from-red-600/90 to-red-500/80 rounded-lg p-4 sm:p-5 border border-white/20">
                 <div className="text-center mb-4">
-                  <h3 className="text-lg sm:text-xl font-bold text-white font-[Cambria] mb-2">
+                  <h3 className="text-lg sm:text-xl font-bold text-white font-display mb-2">
                     Our Journey in Numbers
                   </h3>
                   <p className="text-white/80 text-xs sm:text-sm">
@@ -272,7 +272,7 @@ const GoverningBodyMessagePage = () => {
                       <div className="w-12 h-12 sm:w-14 sm:h-14 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center mx-auto mb-2">
                         <achievement.icon className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
                       </div>
-                      <div className="text-lg sm:text-xl font-bold text-white font-[Cambria] mb-0.5">
+                      <div className="text-lg sm:text-xl font-bold text-white font-display mb-0.5">
                         {achievement.number}
                       </div>
                       <div className="text-white/90 text-xs">
@@ -308,7 +308,7 @@ const GoverningBodyMessagePage = () => {
                 
                 <div className="flex items-center gap-2 mb-4">
                   <div className="h-8 w-0.5 bg-red-500 rounded-full"></div>
-                  <h2 className="text-2xl font-bold text-gray-900 font-[Cambria]">
+                  <h2 className="text-2xl font-bold text-gray-900 font-display">
                     Welcome to KNS
                   </h2>
                 </div>
@@ -336,7 +336,7 @@ const GoverningBodyMessagePage = () => {
               <div className="bg-gradient-to-r from-primary/90 to-primary/80 rounded-lg p-6 border border-white/20 backdrop-blur-sm">
                 <div className="flex items-center gap-2 mb-4">
                   <Building2 className="w-5 h-5 text-white" />
-                  <h3 className="text-xl font-bold text-white font-[Cambria]">
+                  <h3 className="text-xl font-bold text-white font-display">
                     Our Vision for Growth
                   </h3>
                 </div>
@@ -375,7 +375,7 @@ const GoverningBodyMessagePage = () => {
               <div className="bg-white rounded-lg p-6 border border-gray-200 shadow-md">
                 <div className="flex items-center gap-2 mb-4">
                   <div className="h-8 w-0.5 bg-blue-500 rounded-full"></div>
-                  <h3 className="text-xl font-bold text-gray-900 font-[Cambria]">
+                  <h3 className="text-xl font-bold text-gray-900 font-display">
                     Our Core Values
                   </h3>
                 </div>
@@ -395,7 +395,7 @@ const GoverningBodyMessagePage = () => {
                           <value.icon className="w-5 h-5 text-primary" />
                         </div>
                         <div>
-                          <h4 className="text-base font-bold text-gray-900 font-[Cambria] mb-1">
+                          <h4 className="text-base font-bold text-gray-900 font-display mb-1">
                             {value.title}
                           </h4>
                           <div className="h-0.5 w-8 bg-red-500 rounded-full"></div>
@@ -412,7 +412,7 @@ const GoverningBodyMessagePage = () => {
               {/* Achievements Stats */}
               <div className="bg-gradient-to-r from-red-600/90 to-red-500/80 rounded-lg p-6 border border-white/20">
                 <div className="text-center mb-6">
-                  <h3 className="text-xl font-bold text-white font-[Cambria] mb-3">
+                  <h3 className="text-xl font-bold text-white font-display mb-3">
                     Our Journey in Numbers
                   </h3>
                   <p className="text-white/80 text-sm max-w-md mx-auto">
@@ -433,7 +433,7 @@ const GoverningBodyMessagePage = () => {
                       <div className="w-14 h-14 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center mx-auto mb-3">
                         <achievement.icon className="w-6 h-6 text-white" />
                       </div>
-                      <div className="text-2xl font-bold text-white font-[Cambria] mb-0.5">
+                      <div className="text-2xl font-bold text-white font-display mb-0.5">
                         {achievement.number}
                       </div>
                       <div className="text-white/90 text-xs">
@@ -458,7 +458,7 @@ const GoverningBodyMessagePage = () => {
               <div className="text-center mb-6 sm:mb-8">
                 <div className="flex items-center justify-center gap-2 sm:gap-3 mb-3 sm:mb-4">
                   <div className="h-px w-6 sm:w-8 md:w-10 bg-white/50" />
-                  <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-white font-[Cambria]">
+                  <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-white font-display">
                     Our Commitment to Excellence
                   </h3>
                   <div className="h-px w-6 sm:w-8 md:w-10 bg-white/50" />
@@ -473,7 +473,7 @@ const GoverningBodyMessagePage = () => {
                   <div className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center mx-auto mb-2 sm:mb-3">
                     <BookOpen className="w-5 h-5 sm:w-6 sm:h-6 lg:w-8 lg:h-8 text-white" />
                   </div>
-                  <h4 className="text-base sm:text-lg font-bold text-white font-[Cambria] mb-1 sm:mb-1.5">Holistic Development</h4>
+                  <h4 className="text-base sm:text-lg font-bold text-white font-display mb-1 sm:mb-1.5">Holistic Development</h4>
                   <p className="text-white/90 text-xs sm:text-sm">
                     Beyond textbooks, focusing on creativity, analytical skills, and extracurricular growth
                   </p>
@@ -483,7 +483,7 @@ const GoverningBodyMessagePage = () => {
                   <div className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center mx-auto mb-2 sm:mb-3">
                     <Users2 className="w-5 h-5 sm:w-6 sm:h-6 lg:w-8 lg:h-8 text-white" />
                   </div>
-                  <h4 className="text-base sm:text-lg font-bold text-white font-[Cambria] mb-1 sm:mb-1.5">Collaborative Growth</h4>
+                  <h4 className="text-base sm:text-lg font-bold text-white font-display mb-1 sm:mb-1.5">Collaborative Growth</h4>
                   <p className="text-white/90 text-xs sm:text-sm">
                     Strong partnerships between school, parents, and students for continuous improvement
                   </p>
@@ -493,7 +493,7 @@ const GoverningBodyMessagePage = () => {
                   <div className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center mx-auto mb-2 sm:mb-3">
                     <TrendingUp className="w-5 h-5 sm:w-6 sm:h-6 lg:w-8 lg:h-8 text-white" />
                   </div>
-                  <h4 className="text-base sm:text-lg font-bold text-white font-[Cambria] mb-1 sm:mb-1.5">Future Ready</h4>
+                  <h4 className="text-base sm:text-lg font-bold text-white font-display mb-1 sm:mb-1.5">Future Ready</h4>
                   <p className="text-white/90 text-xs sm:text-sm">
                     Developing infrastructure and programs for promising higher education opportunities
                   </p>
@@ -516,3 +516,4 @@ const GoverningBodyMessagePage = () => {
 };
 
 export default GoverningBodyMessagePage;
+

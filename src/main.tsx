@@ -10,6 +10,8 @@ import RootLayout from '../src/layouts/RootLayout';
 import NewsEventsPage from '../src/pages/NewsEventsPage';
 import CalendarPage from '../src/pages/CalendarPage';
 import ContactPage from '../src/pages/ContactPage';
+import DownloadsPage from '../src/pages/DownloadsPage';
+import SalientFeaturesPage from '../src/pages/SalientFeatures';
 import Home from '../src/pages/Home';
 
 // About Pages
@@ -133,7 +135,7 @@ const router = createBrowserRouter([
       
       // Other Main Pages
       {
-        path: 'gallery',
+        path: 'gallery/photos',
         element: <GalleryPage />,
       },
         {
@@ -152,6 +154,14 @@ const router = createBrowserRouter([
         path: 'contact',
         element: <ContactPage />,
       },
+      {
+        path: 'downloads',
+        element: <DownloadsPage />
+      },
+      {
+        path: 'policy',
+        element: <SalientFeaturesPage />
+      }
     ],
   },
 ]);
@@ -182,3 +192,4 @@ root.render(
     <App />
   </StrictMode>
 );
+

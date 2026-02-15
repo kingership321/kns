@@ -70,7 +70,7 @@ const TestimonialSection = () => {
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
           >
-            <h1 className="text-xl xs:text-2xl sm:text-3xl lg:text-4xl font-bold text-white font-[Cambria] mb-3 sm:mb-4">
+            <h1 className="text-xl xs:text-2xl sm:text-3xl lg:text-4xl font-bold text-white font-display mb-3 sm:mb-4">
               Voices of Our Community
             </h1>
             
@@ -156,7 +156,7 @@ const TestimonialSection = () => {
                       
                       {/* Name and Role - Matching Introduction's typography */}
                       <div className="flex-1">
-                        <h4 className="text-base font-bold text-gray-900 font-[Cambria]">
+                        <h4 className="text-base font-bold text-gray-900 font-display">
                           {testimonial.name}
                         </h4>
                         <p className="text-gray-600 text-xs sm:text-sm">
@@ -185,3 +185,4 @@ const TestimonialSection = () => {
 };
 
 export default TestimonialSection;
+

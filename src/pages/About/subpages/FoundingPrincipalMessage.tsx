@@ -85,7 +85,7 @@ const FounderPrincipalMessagePage = () => {
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
           >
-            <h1 className="text-xl xs:text-2xl sm:text-3xl lg:text-4xl font-bold text-white font-[Cambria] mb-3 sm:mb-4">
+            <h1 className="text-xl xs:text-2xl sm:text-3xl lg:text-4xl font-bold text-white font-display mb-3 sm:mb-4">
               Founding Principal's Message
             </h1>
             
@@ -137,7 +137,7 @@ const FounderPrincipalMessagePage = () => {
                       className="w-full h-full object-cover"
                     />
                   </div>
-                  <h3 className="text-lg sm:text-xl font-bold text-gray-900 font-[Cambria] mb-1">
+                  <h3 className="text-lg sm:text-xl font-bold text-gray-900 font-display mb-1">
                     Anju Thapa (Khadka)
                   </h3>
                   <p className="text-primary font-semibold text-xs sm:text-sm mb-3">Founding Principal</p>
@@ -146,7 +146,7 @@ const FounderPrincipalMessagePage = () => {
                 
                 <div className="flex items-center gap-2 mb-3">
                   <div className="h-6 w-0.5 bg-red-500 rounded-full"></div>
-                  <h2 className="text-lg sm:text-xl font-bold text-gray-900 font-[Cambria]">
+                  <h2 className="text-lg sm:text-xl font-bold text-gray-900 font-display">
                     A Warm Welcome
                   </h2>
                 </div>
@@ -172,7 +172,7 @@ const FounderPrincipalMessagePage = () => {
                   <p className="text-gray-600 text-xs italic mb-2">
                     With all good wishes,
                   </p>
-                  <div className="font-[Cambria] text-gray-800 text-sm font-bold">
+                  <div className="font-display text-gray-800 text-sm font-bold">
                     Anju Thapa (Khadka)
                   </div>
                   <div className="text-gray-500 text-xs">Founder Principal</div>
@@ -184,7 +184,7 @@ const FounderPrincipalMessagePage = () => {
             <div className="mb-6">
               <div className="flex items-center gap-2 mb-3">
                 <div className="h-6 w-0.5 bg-red-500 rounded-full"></div>
-                <h2 className="text-lg sm:text-xl font-bold text-gray-900 font-[Cambria]">
+                <h2 className="text-lg sm:text-xl font-bold text-gray-900 font-display">
                   Pillars of KNS Philosophy
                 </h2>
               </div>
@@ -207,7 +207,7 @@ const FounderPrincipalMessagePage = () => {
                           <div className="w-8 h-8 sm:w-10 sm:h-10 bg-white/20 rounded-lg flex items-center justify-center flex-shrink-0">
                             <pillar.icon className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
                           </div>
-                          <h3 className="text-sm sm:text-base font-bold text-white font-[Cambria]">
+                          <h3 className="text-sm sm:text-base font-bold text-white font-display">
                             {pillar.title}
                           </h3>
                         </div>
@@ -244,7 +244,7 @@ const FounderPrincipalMessagePage = () => {
               <div className="bg-gradient-to-r from-primary/90 to-primary/80 rounded-lg p-4 sm:p-5 border border-white/20 backdrop-blur-sm">
                 <div className="flex items-center gap-2 mb-3">
                   <Target className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
-                  <h3 className="text-base sm:text-lg font-bold text-white font-[Cambria]">
+                  <h3 className="text-base sm:text-lg font-bold text-white font-display">
                     Our Educational Philosophy
                   </h3>
                 </div>
@@ -287,7 +287,7 @@ const FounderPrincipalMessagePage = () => {
                       className="w-full h-full object-cover"
                     />
                   </div>
-                  <h3 className="text-2xl font-bold text-gray-900 font-[Cambria] mb-1">
+                  <h3 className="text-2xl font-bold text-gray-900 font-display mb-1">
                     Anju Thapa (Khadka)
                   </h3>
                   <p className="text-primary font-semibold text-base mb-4">Founding Principal</p>
@@ -296,7 +296,7 @@ const FounderPrincipalMessagePage = () => {
                 
                 <div className="flex items-center gap-2 mb-4">
                   <div className="h-8 w-0.5 bg-red-500 rounded-full"></div>
-                  <h2 className="text-2xl font-bold text-gray-900 font-[Cambria]">
+                  <h2 className="text-2xl font-bold text-gray-900 font-display">
                     A Warm Welcome
                   </h2>
                 </div>
@@ -327,7 +327,7 @@ const FounderPrincipalMessagePage = () => {
                     With all good wishes,
                   </p>
                   <div className="relative">
-                    <div className="font-[Cambria] text-gray-800 text-lg font-bold">
+                    <div className="font-display text-gray-800 text-lg font-bold">
                       Anju Thapa (Khadka)
                     </div>
                     <div className="text-gray-500 text-sm mb-4">Founder Principal</div>
@@ -356,7 +356,7 @@ const FounderPrincipalMessagePage = () => {
               <div className="bg-gradient-to-r from-primary/90 to-primary/80 rounded-lg p-6 border border-white/20 backdrop-blur-sm">
                 <div className="flex items-center gap-2 mb-4">
                   <Target className="w-5 h-5 text-white" />
-                  <h3 className="text-xl font-bold text-white font-[Cambria]">
+                  <h3 className="text-xl font-bold text-white font-display">
                     Our Educational Philosophy
                   </h3>
                 </div>
@@ -380,7 +380,7 @@ const FounderPrincipalMessagePage = () => {
               <div className="bg-white rounded-lg p-6 border border-gray-200 shadow-md">
                 <div className="flex items-center gap-2 mb-4">
                   <div className="h-8 w-0.5 bg-blue-500 rounded-full"></div>
-                  <h3 className="text-xl font-bold text-gray-900 font-[Cambria]">
+                  <h3 className="text-xl font-bold text-gray-900 font-display">
                     Pillars of KNS Philosophy
                   </h3>
                 </div>
@@ -400,7 +400,7 @@ const FounderPrincipalMessagePage = () => {
                           <pillar.icon className="w-5 h-5 text-primary" />
                         </div>
                         <div>
-                          <h4 className="text-base font-bold text-gray-900 font-[Cambria] mb-1">
+                          <h4 className="text-base font-bold text-gray-900 font-display mb-1">
                             {pillar.title}
                           </h4>
                           <div className="h-0.5 w-8 bg-red-500 rounded-full"></div>
@@ -428,7 +428,7 @@ const FounderPrincipalMessagePage = () => {
               <div className="text-center mb-6 sm:mb-8">
                 <div className="flex items-center justify-center gap-2 sm:gap-3 mb-3 sm:mb-4">
                   <div className="h-px w-6 sm:w-8 md:w-10 bg-white/50" />
-                  <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-white font-[Cambria]">
+                  <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-white font-display">
                     The KNS Difference
                   </h3>
                   <div className="h-px w-6 sm:w-8 md:w-10 bg-white/50" />
@@ -443,7 +443,7 @@ const FounderPrincipalMessagePage = () => {
                   <div className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center mx-auto mb-2 sm:mb-3">
                     <Heart className="w-5 h-5 sm:w-6 sm:h-6 lg:w-8 lg:h-8 text-white" />
                   </div>
-                  <h4 className="text-base sm:text-lg font-bold text-white font-[Cambria] mb-1 sm:mb-1.5">Caring Environment</h4>
+                  <h4 className="text-base sm:text-lg font-bold text-white font-display mb-1 sm:mb-1.5">Caring Environment</h4>
                   <p className="text-white/90 text-xs sm:text-sm">
                     More than a school - a home where students feel loved, valued, and secure
                   </p>
@@ -453,7 +453,7 @@ const FounderPrincipalMessagePage = () => {
                   <div className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center mx-auto mb-2 sm:mb-3">
                     <Star className="w-5 h-5 sm:w-6 sm:h-6 lg:w-8 lg:h-8 text-white" />
                   </div>
-                  <h4 className="text-base sm:text-lg font-bold text-white font-[Cambria] mb-1 sm:mb-1.5">Exceptional Discovery</h4>
+                  <h4 className="text-base sm:text-lg font-bold text-white font-display mb-1 sm:mb-1.5">Exceptional Discovery</h4>
                   <p className="text-white/90 text-xs sm:text-sm">
                     Finding and nurturing what is exceptional in every student
                   </p>
@@ -463,7 +463,7 @@ const FounderPrincipalMessagePage = () => {
                   <div className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center mx-auto mb-2 sm:mb-3">
                     <Award className="w-5 h-5 sm:w-6 sm:h-6 lg:w-8 lg:h-8 text-white" />
                   </div>
-                  <h4 className="text-base sm:text-lg font-bold text-white font-[Cambria] mb-1 sm:mb-1.5">Affordable Excellence</h4>
+                  <h4 className="text-base sm:text-lg font-bold text-white font-display mb-1 sm:mb-1.5">Affordable Excellence</h4>
                   <p className="text-white/90 text-xs sm:text-sm">
                     Sophisticated services maintained with affordable cost for all
                   </p>
@@ -498,3 +498,4 @@ const FounderPrincipalMessagePage = () => {
 };
 
 export default FounderPrincipalMessagePage;
+

@@ -236,7 +236,7 @@ const GalleryPage = () => {
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
           >
-            <h1 className="text-xl xs:text-2xl sm:text-3xl lg:text-4xl font-bold text-white font-[Cambria] mb-3 sm:mb-4">
+            <h1 className="text-xl xs:text-2xl sm:text-3xl lg:text-4xl font-bold text-white font-display mb-3 sm:mb-4">
               School Gallery
             </h1>
             
@@ -297,7 +297,7 @@ const GalleryPage = () => {
                 <div className="mb-3">
                   <div className="flex items-center gap-2 mb-3">
                     <div className="h-6 w-0.5 bg-red-500 rounded-full"></div>
-                    <h2 className="text-lg sm:text-xl lg:text-2xl font-bold text-white font-[Cambria]">
+                    <h2 className="text-lg sm:text-xl lg:text-2xl font-bold text-white font-display">
                       {selectedEvent.title}
                     </h2>
                   </div>
@@ -343,7 +343,7 @@ const GalleryPage = () => {
               {/* Images Grid - Mobile Optimized */}
               <div className="mb-6">
                 <div className="flex items-center justify-between mb-3">
-                  <h3 className="text-base sm:text-lg font-bold text-gray-900 font-[Cambria]">
+                  <h3 className="text-base sm:text-lg font-bold text-gray-900 font-display">
                     Event Photos
                   </h3>
                   <p className="text-gray-600 text-xs">
@@ -386,7 +386,7 @@ const GalleryPage = () => {
               <div className="bg-white rounded-lg p-4 sm:p-5 border border-gray-200 shadow-sm">
                 <div className="flex items-center gap-2 mb-3">
                   <div className="h-6 w-0.5 bg-primary rounded-full"></div>
-                  <h3 className="text-base sm:text-lg font-bold text-gray-900 font-[Cambria]">
+                  <h3 className="text-base sm:text-lg font-bold text-gray-900 font-display">
                     Event Details
                   </h3>
                 </div>
@@ -467,7 +467,7 @@ const GalleryPage = () => {
                   <div className="bg-white rounded-lg p-4 sm:p-5 border border-gray-200 shadow-sm">
                     <div className="flex items-center gap-2 mb-3">
                       <div className="h-6 w-0.5 bg-red-500 rounded-full"></div>
-                      <h2 className="text-lg sm:text-xl font-bold text-gray-900 font-[Cambria]">
+                      <h2 className="text-lg sm:text-xl font-bold text-gray-900 font-display">
                         Event Folders
                       </h2>
                     </div>
@@ -658,7 +658,7 @@ const GalleryPage = () => {
                   <div className="bg-white rounded-lg p-6 border border-gray-200 shadow-md">
                     <div className="flex items-center gap-2 mb-4">
                       <div className="h-8 w-0.5 bg-red-500 rounded-full"></div>
-                      <h2 className="text-2xl font-bold text-gray-900 font-[Cambria]">
+                      <h2 className="text-2xl font-bold text-gray-900 font-display">
                         Event Folders
                       </h2>
                     </div>
@@ -716,7 +716,7 @@ const GalleryPage = () => {
                   <div className="bg-gradient-to-r from-primary/90 to-primary/80 rounded-lg p-6 border border-white/20 backdrop-blur-sm">
                     <div className="flex items-center gap-2 mb-3">
                       <ImageIcon className="w-5 h-5 text-white" />
-                      <h3 className="text-xl font-bold text-white font-[Cambria]">
+                      <h3 className="text-xl font-bold text-white font-display">
                         Preserving School Memories
                       </h3>
                     </div>
@@ -901,3 +901,4 @@ const GalleryPage = () => {
 };
 
 export default GalleryPage;
+

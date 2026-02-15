@@ -143,7 +143,7 @@ const ExaminationsPage = () => {
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
           >
-            <h1 className="text-xl xs:text-2xl sm:text-3xl lg:text-4xl font-bold text-white font-[Cambria] mb-3 sm:mb-4">
+            <h1 className="text-xl xs:text-2xl sm:text-3xl lg:text-4xl font-bold text-white font-display mb-3 sm:mb-4">
               Examinations & Evaluation
             </h1>
             
@@ -188,7 +188,7 @@ const ExaminationsPage = () => {
               <div className="bg-white rounded-lg p-4 sm:p-5 border border-gray-200 shadow-sm">
                 <div className="flex items-center gap-2 mb-3">
                   <div className="h-6 w-0.5 bg-red-500 rounded-full"></div>
-                  <h2 className="text-lg sm:text-xl font-bold text-gray-900 font-[Cambria]">
+                  <h2 className="text-lg sm:text-xl font-bold text-gray-900 font-display">
                     Our Examination System
                   </h2>
                 </div>
@@ -215,7 +215,7 @@ const ExaminationsPage = () => {
             <div className="mb-6">
               <div className="flex items-center gap-2 mb-3">
                 <div className="h-6 w-0.5 bg-blue-500 rounded-full"></div>
-                <h2 className="text-lg sm:text-xl font-bold text-gray-900 font-[Cambria]">
+                <h2 className="text-lg sm:text-xl font-bold text-gray-900 font-display">
                   Types of Examinations
                 </h2>
               </div>
@@ -239,7 +239,7 @@ const ExaminationsPage = () => {
                             <exam.icon className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
                           </div>
                           <div>
-                            <h3 className="text-sm sm:text-base font-bold text-gray-900 font-[Cambria]">
+                            <h3 className="text-sm sm:text-base font-bold text-gray-900 font-display">
                               {exam.title}
                             </h3>
                             <div className="text-xs text-gray-600 mt-0.5">{exam.duration}</div>
@@ -279,7 +279,7 @@ const ExaminationsPage = () => {
             <div className="mb-6">
               <div className="flex items-center gap-2 mb-3">
                 <div className="h-6 w-0.5 bg-red-500 rounded-full"></div>
-                <h2 className="text-lg sm:text-xl font-bold text-gray-900 font-[Cambria]">
+                <h2 className="text-lg sm:text-xl font-bold text-gray-900 font-display">
                   Holistic Evaluation Approach
                 </h2>
               </div>
@@ -302,7 +302,7 @@ const ExaminationsPage = () => {
                           <div className="w-8 h-8 sm:w-10 sm:h-10 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
                             <item.icon className="w-4 h-4 sm:w-5 sm:h-5 text-primary" />
                           </div>
-                          <h3 className="text-sm sm:text-base font-bold text-gray-900 font-[Cambria]">
+                          <h3 className="text-sm sm:text-base font-bold text-gray-900 font-display">
                             {item.title}
                           </h3>
                         </div>
@@ -339,7 +339,7 @@ const ExaminationsPage = () => {
               <div className="bg-gradient-to-r from-primary/90 to-primary/80 rounded-lg p-4 sm:p-5 border border-white/20 backdrop-blur-sm">
                 <div className="flex items-center gap-2 mb-3">
                   <Calendar className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
-                  <h3 className="text-base sm:text-lg font-bold text-white font-[Cambria]">
+                  <h3 className="text-base sm:text-lg font-bold text-white font-display">
                     Annual Examination Schedule
                   </h3>
                 </div>
@@ -379,7 +379,7 @@ const ExaminationsPage = () => {
                 <div className="text-center mb-4">
                   <div className="flex items-center justify-center gap-2 sm:gap-3 mb-3">
                     <div className="h-px w-6 sm:w-8 bg-white/50" />
-                    <h3 className="text-base sm:text-lg font-bold text-white font-[Cambria]">
+                    <h3 className="text-base sm:text-lg font-bold text-white font-display">
                       Annual Result & Evaluation
                     </h3>
                     <div className="h-px w-6 sm:w-8 bg-white/50" />
@@ -394,7 +394,7 @@ const ExaminationsPage = () => {
                     <div className="w-12 h-12 sm:w-14 sm:h-14 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center mx-auto mb-2">
                       <BarChart3 className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
                     </div>
-                    <h4 className="text-sm sm:text-base font-bold text-white font-[Cambria] mb-1">Comprehensive Summary</h4>
+                    <h4 className="text-sm sm:text-base font-bold text-white font-display mb-1">Comprehensive Summary</h4>
                     <p className="text-white/90 text-xs">
                       Annual result combines all assessment components for complete evaluation
                     </p>
@@ -404,7 +404,7 @@ const ExaminationsPage = () => {
                     <div className="w-12 h-12 sm:w-14 sm:h-14 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center mx-auto mb-2">
                       <TrendingUp className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
                     </div>
-                    <h4 className="text-sm sm:text-base font-bold text-white font-[Cambria] mb-1">Progress Tracking</h4>
+                    <h4 className="text-sm sm:text-base font-bold text-white font-display mb-1">Progress Tracking</h4>
                     <p className="text-white/90 text-xs">
                       Continuous monitoring of academic growth throughout the year
                     </p>
@@ -414,7 +414,7 @@ const ExaminationsPage = () => {
                     <div className="w-12 h-12 sm:w-14 sm:h-14 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center mx-auto mb-2">
                       <Award className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
                     </div>
-                    <h4 className="text-sm sm:text-base font-bold text-white font-[Cambria] mb-1">Fair Assessment</h4>
+                    <h4 className="text-sm sm:text-base font-bold text-white font-display mb-1">Fair Assessment</h4>
                     <p className="text-white/90 text-xs">
                       Transparent evaluation process ensuring fair and accurate results
                     </p>
@@ -438,7 +438,7 @@ const ExaminationsPage = () => {
               <div className="bg-white rounded-lg p-6 border border-gray-200 shadow-md">
                 <div className="flex items-center gap-2 mb-4">
                   <div className="h-8 w-0.5 bg-red-500 rounded-full"></div>
-                  <h2 className="text-2xl font-bold text-gray-900 font-[Cambria]">
+                  <h2 className="text-2xl font-bold text-gray-900 font-display">
                     Our Examination System
                   </h2>
                 </div>
@@ -464,7 +464,7 @@ const ExaminationsPage = () => {
               <div className="bg-white rounded-lg p-6 border border-gray-200 shadow-md">
                 <div className="flex items-center gap-2 mb-4">
                   <div className="h-8 w-0.5 bg-blue-500 rounded-full"></div>
-                  <h2 className="text-xl font-bold text-gray-900 font-[Cambria]">
+                  <h2 className="text-xl font-bold text-gray-900 font-display">
                     Types of Examinations
                   </h2>
                 </div>
@@ -484,7 +484,7 @@ const ExaminationsPage = () => {
                           <exam.icon className="w-5 h-5 text-white" />
                         </div>
                         <div>
-                          <h3 className="text-base font-bold text-gray-900 font-[Cambria] mb-1.5">
+                          <h3 className="text-base font-bold text-gray-900 font-display mb-1.5">
                             {exam.title}
                           </h3>
                           <div className="h-0.5 w-8 bg-red-500 rounded-full"></div>
@@ -527,7 +527,7 @@ const ExaminationsPage = () => {
               <div className="bg-white rounded-lg p-6 border border-gray-200 shadow-md">
                 <div className="flex items-center gap-2 mb-4">
                   <Target className="w-5 h-5 text-primary" />
-                  <h3 className="text-xl font-bold text-gray-900 font-[Cambria]">
+                  <h3 className="text-xl font-bold text-gray-900 font-display">
                     Holistic Evaluation Approach
                   </h3>
                 </div>
@@ -547,7 +547,7 @@ const ExaminationsPage = () => {
                           <item.icon className="w-5 h-5 text-primary" />
                         </div>
                         <div>
-                          <h4 className="text-base font-bold text-gray-900 font-[Cambria] mb-1">
+                          <h4 className="text-base font-bold text-gray-900 font-display mb-1">
                             {item.title}
                           </h4>
                           <div className="h-0.5 w-8 bg-red-500 rounded-full"></div>
@@ -565,7 +565,7 @@ const ExaminationsPage = () => {
               <div className="bg-gradient-to-r from-primary/90 to-primary/80 rounded-lg p-6 border border-white/20 backdrop-blur-sm">
                 <div className="flex items-center gap-2 mb-4">
                   <Calendar className="w-5 h-5 text-white" />
-                  <h3 className="text-xl font-bold text-white font-[Cambria]">
+                  <h3 className="text-xl font-bold text-white font-display">
                     Annual Examination Schedule
                   </h3>
                 </div>
@@ -615,3 +615,4 @@ const ExaminationsPage = () => {
 };
 
 export default ExaminationsPage;
+

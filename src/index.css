@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Cambria:wght@400;700&family=Inter:wght@400;500;600;700&family=Merriweather:wght@400;700&display=swap');
+
 @import "tailwindcss";
 
 @theme {
@@ -9,8 +11,10 @@
   --color-primary: #1e3a8a;    /* Deep Navy Blue */
   --color-secondary: #d4af37;  /* Gold */
   
-  /* Custom Fonts */
-  --font-sans: "Inter", "Segoe UI", sans-serif;
+  /* Custom Fonts with Web-Safe Fallbacks */
+  --font-sans: "Inter", "Segoe UI", "Roboto", "Helvetica Neue", sans-serif;
+  --font-serif: "Cambria", "Georgia", "Times New Roman", serif;
+  --font-display: "Cambria", "Georgia", "Times New Roman", serif;
   
   /* Professional Spacing / Shadows */
   --shadow-kns: 0 4px 20px -2px rgba(30, 58, 138, 0.1);
@@ -28,12 +32,52 @@
 }
 
 @layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
   body {
-    @apply bg-slate-50 text-slate-900;
+    @apply bg-slate-50 text-slate-900 font-sans;
+    font-family: "Inter", "Segoe UI", "Roboto", "Helvetica Neue", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
   
-  h1, h2, h3 {
+  h1, h2, h3, h4, h5, h6 {
     @apply font-bold text-navy;
+    font-family: "Cambria", "Georgia", "Times New Roman", serif;
+  }
+
+  /* Ensure proper font rendering across browsers */
+  * {
+    -webkit-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
+}
+
+/* Custom font utilities for Tailwind */
+@layer utilities {
+  .font-display {
+    font-family: "Cambria", "Georgia", "Times New Roman", serif;
+  }
+
+  .font-body {
+    font-family: "Inter", "Segoe UI", "Roboto", "Helvetica Neue", sans-serif;
+  }
+
+  .font-serif-alt {
+    font-family: "Merriweather", "Georgia", "Times New Roman", serif;
+  }
+
+  /* Cross-browser text rendering optimization */
+  .prose-text {
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 }
 

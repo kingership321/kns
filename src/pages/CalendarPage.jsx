@@ -172,7 +172,7 @@ const CalendarPage = () => {
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
           >
-            <h1 className="text-xl xs:text-2xl sm:text-3xl lg:text-4xl font-bold text-white font-[Cambria] mb-3 sm:mb-4">
+            <h1 className="text-xl xs:text-2xl sm:text-3xl lg:text-4xl font-bold text-white font-display mb-3 sm:mb-4">
               Academic Calendar
             </h1>
             
@@ -216,7 +216,7 @@ const CalendarPage = () => {
               <div className="bg-white rounded-lg p-4 sm:p-5 border border-gray-200 shadow-sm">
                 <div className="flex items-center gap-2 mb-3">
                   <div className="h-6 w-0.5 bg-red-500 rounded-full"></div>
-                  <h2 className="text-lg sm:text-xl font-bold text-gray-900 font-[Cambria]">
+                  <h2 className="text-lg sm:text-xl font-bold text-gray-900 font-display">
                     Academic Calendar Downloads
                   </h2>
                 </div>
@@ -271,7 +271,7 @@ const CalendarPage = () => {
                           <download.icon className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
                         </div>
                         <div>
-                          <h3 className="text-sm sm:text-base font-bold text-gray-900 font-[Cambria]">
+                          <h3 className="text-sm sm:text-base font-bold text-gray-900 font-display">
                             {download.title}
                           </h3>
                           <div className="h-0.5 w-8 bg-red-500 rounded-full mt-1"></div>
@@ -358,7 +358,7 @@ const CalendarPage = () => {
               <div className="bg-gradient-to-r from-primary/90 to-primary/80 rounded-lg p-4 sm:p-5 border border-white/20 backdrop-blur-sm">
                 <div className="flex items-center gap-2 mb-3">
                   <Calendar className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
-                  <h3 className="text-base sm:text-lg font-bold text-white font-[Cambria]">
+                  <h3 className="text-base sm:text-lg font-bold text-white font-display">
                     Key Academic Dates
                   </h3>
                 </div>
@@ -392,7 +392,7 @@ const CalendarPage = () => {
               <div className="bg-white rounded-lg p-6 border border-gray-200 shadow-md">
                 <div className="flex items-center gap-2 mb-4">
                   <div className="h-8 w-0.5 bg-red-500 rounded-full"></div>
-                  <h2 className="text-2xl font-bold text-gray-900 font-[Cambria]">
+                  <h2 className="text-2xl font-bold text-gray-900 font-display">
                     Academic Calendar Downloads
                   </h2>
                 </div>
@@ -436,7 +436,7 @@ const CalendarPage = () => {
               <div className="bg-gradient-to-r from-primary/90 to-primary/80 rounded-lg p-6 border border-white/20 backdrop-blur-sm">
                 <div className="flex items-center gap-2 mb-4">
                   <Calendar className="w-5 h-5 text-white" />
-                  <h3 className="text-xl font-bold text-white font-[Cambria]">
+                  <h3 className="text-xl font-bold text-white font-display">
                     Key Academic Dates
                   </h3>
                 </div>
@@ -477,7 +477,7 @@ const CalendarPage = () => {
                         <download.icon className="w-5 h-5 text-white" />
                       </div>
                       <div>
-                        <h3 className="text-lg font-bold text-gray-900 font-[Cambria] mb-1.5">
+                        <h3 className="text-lg font-bold text-gray-900 font-display mb-1.5">
                           {download.title}
                         </h3>
                         <div className="h-0.5 w-10 bg-red-500 rounded-full"></div>
@@ -565,7 +565,7 @@ const CalendarPage = () => {
                 <div className="text-center mb-4 sm:mb-6 lg:mb-8">
                   <div className="flex items-center justify-center gap-2 sm:gap-3 mb-2 sm:mb-3">
                     <div className="h-px w-6 sm:w-8 md:w-10 bg-white/50" />
-                    <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-white font-[Cambria]">
+                    <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-white font-display">
                       Stay Organized, Stay Ahead
                     </h3>
                     <div className="h-px w-6 sm:w-8 md:w-10 bg-white/50" />
@@ -624,3 +624,4 @@ const CalendarPage = () => {
 };
 
 export default CalendarPage;
+

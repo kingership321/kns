@@ -109,7 +109,7 @@ const IntroductionPage = () => {
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
           >
-            <h1 className="text-xl xs:text-2xl sm:text-3xl lg:text-4xl font-bold text-white font-[Cambria] mb-3 sm:mb-4">
+            <h1 className="text-xl xs:text-2xl sm:text-3xl lg:text-4xl font-bold text-white font-display mb-3 sm:mb-4">
               Introduction
             </h1>
             
@@ -153,7 +153,7 @@ const IntroductionPage = () => {
               <div className="bg-white rounded-lg p-4 sm:p-5 border border-gray-200 shadow-sm">
                 <div className="flex items-center gap-2 mb-3">
                   <div className="h-6 w-0.5 bg-red-500 rounded-full"></div>
-                  <h2 className="text-lg sm:text-xl font-bold text-gray-900 font-[Cambria]">
+                  <h2 className="text-lg sm:text-xl font-bold text-gray-900 font-display">
                     Kathmandu National School
                   </h2>
                 </div>
@@ -195,7 +195,7 @@ const IntroductionPage = () => {
                           <section.icon className="w-4 h-4 sm:w-5 sm:h-5 text-primary" />
                         </div>
                         <div>
-                          <h3 className="text-sm sm:text-base font-bold text-gray-900 font-[Cambria]">
+                          <h3 className="text-sm sm:text-base font-bold text-gray-900 font-display">
                             {section.title}
                           </h3>
                           <div className="h-0.5 w-8 bg-red-500 rounded-full mt-1"></div>
@@ -233,7 +233,7 @@ const IntroductionPage = () => {
               <div className="bg-gradient-to-r from-primary/90 to-primary/80 rounded-lg p-4 sm:p-5 border border-white/20 backdrop-blur-sm">
                 <div className="flex items-center gap-2 mb-3">
                   <Heart className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
-                  <h3 className="text-base sm:text-lg font-bold text-white font-[Cambria]">
+                  <h3 className="text-base sm:text-lg font-bold text-white font-display">
                     Our Unique Culture
                   </h3>
                 </div>
@@ -271,7 +271,7 @@ const IntroductionPage = () => {
               <div className="bg-white rounded-lg p-6 border border-gray-200 shadow-md">
                 <div className="flex items-center gap-2 mb-4">
                   <div className="h-8 w-0.5 bg-red-500 rounded-full"></div>
-                  <h2 className="text-2xl font-bold text-gray-900 font-[Cambria]">
+                  <h2 className="text-2xl font-bold text-gray-900 font-display">
                     Kathmandu National School
                   </h2>
                 </div>
@@ -300,7 +300,7 @@ const IntroductionPage = () => {
               <div className="bg-gradient-to-r from-primary/90 to-primary/80 rounded-lg p-6 border border-white/20 backdrop-blur-sm">
                 <div className="flex items-center gap-2 mb-4">
                   <Heart className="w-5 h-5 text-white" />
-                  <h3 className="text-xl font-bold text-white font-[Cambria]">
+                  <h3 className="text-xl font-bold text-white font-display">
                     Our Unique Culture
                   </h3>
                 </div>
@@ -346,7 +346,7 @@ const IntroductionPage = () => {
                         <section.icon className="w-5 h-5 text-primary" />
                       </div>
                       <div>
-                        <h3 className="text-lg font-bold text-gray-900 font-[Cambria] mb-1.5">
+                        <h3 className="text-lg font-bold text-gray-900 font-display mb-1.5">
                           {section.title}
                         </h3>
                         <div className="h-0.5 w-10 bg-red-500 rounded-full"></div>
@@ -377,7 +377,7 @@ const IntroductionPage = () => {
                   <div className="w-12 h-12 sm:w-14 sm:h-14 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center mx-auto mb-2 sm:mb-3">
                     <Trophy className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
                   </div>
-                  <h4 className="text-base sm:text-lg font-bold text-white font-[Cambria] mb-1 sm:mb-1.5">Discipline First</h4>
+                  <h4 className="text-base sm:text-lg font-bold text-white font-display mb-1 sm:mb-1.5">Discipline First</h4>
                   <p className="text-white/90 text-xs sm:text-sm">
                     We believe discipline is the foundation of all success and character formation.
                   </p>
@@ -388,7 +388,7 @@ const IntroductionPage = () => {
                   <div className="w-12 h-12 sm:w-14 sm:h-14 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center mx-auto mb-2 sm:mb-3">
                     <Heart className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
                   </div>
-                  <h4 className="text-base sm:text-lg font-bold text-white font-[Cambria] mb-1 sm:mb-1.5">Our Trinity</h4>
+                  <h4 className="text-base sm:text-lg font-bold text-white font-display mb-1 sm:mb-1.5">Our Trinity</h4>
                   <p className="text-white/90 text-xs sm:text-sm">
                     Education · Civilization · Humanization - The core of our educational philosophy.
                   </p>
@@ -399,7 +399,7 @@ const IntroductionPage = () => {
                   <div className="w-12 h-12 sm:w-14 sm:h-14 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center mx-auto mb-2 sm:mb-3">
                     <BookOpen className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
                   </div>
-                  <h4 className="text-base sm:text-lg font-bold text-white font-[Cambria] mb-1 sm:mb-1.5">Innovative Teaching</h4>
+                  <h4 className="text-base sm:text-lg font-bold text-white font-display mb-1 sm:mb-1.5">Innovative Teaching</h4>
                   <p className="text-white/90 text-xs sm:text-sm">
                     Modern methodologies combined with traditional values for holistic development.
                   </p>
@@ -424,3 +424,4 @@ const IntroductionPage = () => {
 };
 
 export default IntroductionPage;
+

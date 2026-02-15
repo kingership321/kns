@@ -57,7 +57,7 @@ export default function RootLayout() {
       description: 'Overview of our school'
     },
     { 
-      path: '/about/governingbodymessage', 
+      path: '/about/governing-body-message', 
       name: 'Message from Governing Body',
       description: 'Leadership perspectives'
     },
@@ -135,6 +135,7 @@ export default function RootLayout() {
     { title: "About", path: "/about/introduction", hasDropdown: true },
     { title: "Achievements", path: "/achievements/recent", hasDropdown: true },
     { title: "Gallery", path: "/gallery", hasDropdown: true },
+    { title: "Salient Features", path: "/policy" },
     { title: "News & Events", path: "/newsandevents" },
     { title: "Calendar", path: "/calendar" },
     { title: "Contact", path: "/contact" }
@@ -940,3 +941,4 @@ export default function RootLayout() {
     </div>
   );
 }
+

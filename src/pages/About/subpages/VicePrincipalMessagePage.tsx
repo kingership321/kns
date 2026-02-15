@@ -100,7 +100,7 @@ const VicePrincipalMessagePage = () => {
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
           >
-            <h1 className="text-xl xs:text-2xl sm:text-3xl lg:text-4xl font-bold text-white font-[Cambria] mb-3 sm:mb-4">
+            <h1 className="text-xl xs:text-2xl sm:text-3xl lg:text-4xl font-bold text-white font-display mb-3 sm:mb-4">
               Vice Principal's Message
             </h1>
             
@@ -152,7 +152,7 @@ const VicePrincipalMessagePage = () => {
                       className="w-full h-full object-cover"
                     />
                   </div>
-                  <h3 className="text-lg sm:text-xl font-bold text-gray-900 font-[Cambria] mb-1">
+                  <h3 className="text-lg sm:text-xl font-bold text-gray-900 font-display mb-1">
                     Sushma K.C. (Karki)
                   </h3>
                   <p className="text-primary font-semibold text-xs sm:text-sm mb-3">Vice Principal</p>
@@ -161,7 +161,7 @@ const VicePrincipalMessagePage = () => {
                 
                 <div className="flex items-center gap-2 mb-3">
                   <div className="h-6 w-0.5 bg-red-500 rounded-full"></div>
-                  <h2 className="text-lg sm:text-xl font-bold text-gray-900 font-[Cambria]">
+                  <h2 className="text-lg sm:text-xl font-bold text-gray-900 font-display">
                     Value-Based Education
                   </h2>
                 </div>
@@ -187,7 +187,7 @@ const VicePrincipalMessagePage = () => {
                   <p className="text-gray-600 text-xs italic mb-2">
                     With all good wishes,
                   </p>
-                  <div className="font-[Cambria] text-gray-800 text-sm font-bold">
+                  <div className="font-display text-gray-800 text-sm font-bold">
                     Sushma K.C. (Karki)
                   </div>
                   <div className="text-gray-500 text-xs">Vice Principal</div>
@@ -199,7 +199,7 @@ const VicePrincipalMessagePage = () => {
             <div className="mb-6">
               <div className="flex items-center gap-2 mb-3">
                 <div className="h-6 w-0.5 bg-blue-500 rounded-full"></div>
-                <h2 className="text-lg sm:text-xl font-bold text-gray-900 font-[Cambria]">
+                <h2 className="text-lg sm:text-xl font-bold text-gray-900 font-display">
                   Our Core Values
                 </h2>
               </div>
@@ -222,7 +222,7 @@ const VicePrincipalMessagePage = () => {
                           <div className="w-8 h-8 sm:w-10 sm:h-10 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
                             <value.icon className="w-4 h-4 sm:w-5 sm:h-5 text-primary" />
                           </div>
-                          <h3 className="text-sm sm:text-base font-bold text-gray-900 font-[Cambria]">
+                          <h3 className="text-sm sm:text-base font-bold text-gray-900 font-display">
                             {value.title}
                           </h3>
                         </div>
@@ -260,7 +260,7 @@ const VicePrincipalMessagePage = () => {
                 <div className="text-center mb-4">
                   <div className="flex items-center justify-center gap-2 sm:gap-3 mb-3">
                     <div className="h-px w-6 sm:w-8 bg-white/50" />
-                    <h3 className="text-base sm:text-lg font-bold text-white font-[Cambria]">
+                    <h3 className="text-base sm:text-lg font-bold text-white font-display">
                       The KNS Community Experience
                     </h3>
                     <div className="h-px w-6 sm:w-8 bg-white/50" />
@@ -275,7 +275,7 @@ const VicePrincipalMessagePage = () => {
                     <div className="w-12 h-12 sm:w-14 sm:h-14 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center mx-auto mb-2">
                       <Shield className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
                     </div>
-                    <h4 className="text-sm sm:text-base font-bold text-white font-[Cambria] mb-1">Safe Environment</h4>
+                    <h4 className="text-sm sm:text-base font-bold text-white font-display mb-1">Safe Environment</h4>
                     <p className="text-white/90 text-xs">
                       A secure space for personal, spiritual, and educational growth
                     </p>
@@ -285,7 +285,7 @@ const VicePrincipalMessagePage = () => {
                     <div className="w-12 h-12 sm:w-14 sm:h-14 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center mx-auto mb-2">
                       <Target className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
                     </div>
-                    <h4 className="text-sm sm:text-base font-bold text-white font-[Cambria] mb-1">True Potential</h4>
+                    <h4 className="text-sm sm:text-base font-bold text-white font-display mb-1">True Potential</h4>
                     <p className="text-white/90 text-xs">
                       Helping each child explore and realize their unique capabilities
                     </p>
@@ -295,7 +295,7 @@ const VicePrincipalMessagePage = () => {
                     <div className="w-12 h-12 sm:w-14 sm:h-14 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center mx-auto mb-2">
                       <Award className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
                     </div>
-                    <h4 className="text-sm sm:text-base font-bold text-white font-[Cambria] mb-1">Outstanding School</h4>
+                    <h4 className="text-sm sm:text-base font-bold text-white font-display mb-1">Outstanding School</h4>
                     <p className="text-white/90 text-xs">
                       Each member contributes to making our school truly outstanding
                     </p>
@@ -312,7 +312,7 @@ const VicePrincipalMessagePage = () => {
               transition={{ duration: 0.6, delay: 0.3 }}
             >
               <div className="bg-gradient-to-r from-red-600/90 to-red-500/80 rounded-lg p-4 sm:p-5 border border-white/20">
-                <h4 className="text-center text-base sm:text-lg font-bold text-white font-[Cambria] mb-4">
+                <h4 className="text-center text-base sm:text-lg font-bold text-white font-display mb-4">
                   What Our Community Says
                 </h4>
                 <div className="space-y-3">
@@ -349,7 +349,7 @@ const VicePrincipalMessagePage = () => {
                       className="w-full h-full object-cover"
                     />
                   </div>
-                  <h3 className="text-2xl font-bold text-gray-900 font-[Cambria] mb-1">
+                  <h3 className="text-2xl font-bold text-gray-900 font-display mb-1">
                     Sushma K.C. (Karki)
                   </h3>
                   <p className="text-primary font-semibold text-base mb-4">Vice Principal</p>
@@ -358,7 +358,7 @@ const VicePrincipalMessagePage = () => {
                 
                 <div className="flex items-center gap-2 mb-4">
                   <div className="h-8 w-0.5 bg-red-500 rounded-full"></div>
-                  <h2 className="text-2xl font-bold text-gray-900 font-[Cambria]">
+                  <h2 className="text-2xl font-bold text-gray-900 font-display">
                     Value-Based Education
                   </h2>
                 </div>
@@ -385,7 +385,7 @@ const VicePrincipalMessagePage = () => {
                     With all good wishes,
                   </p>
                   <div className="relative">
-                    <div className="font-[Cambria] text-gray-800 text-lg font-bold">
+                    <div className="font-display text-gray-800 text-lg font-bold">
                       Sushma K.C. (Karki)
                     </div>
                     <div className="text-gray-500 text-sm mb-4">Vice Principal</div>
@@ -414,7 +414,7 @@ const VicePrincipalMessagePage = () => {
               <div className="bg-white rounded-lg p-6 border border-gray-200 shadow-md">
                 <div className="flex items-center gap-2 mb-4">
                   <div className="h-8 w-0.5 bg-blue-500 rounded-full"></div>
-                  <h3 className="text-xl font-bold text-gray-900 font-[Cambria]">
+                  <h3 className="text-xl font-bold text-gray-900 font-display">
                     Our Core Values
                   </h3>
                 </div>
@@ -434,7 +434,7 @@ const VicePrincipalMessagePage = () => {
                           <value.icon className="w-5 h-5 text-primary" />
                         </div>
                         <div>
-                          <h4 className="text-base font-bold text-gray-900 font-[Cambria] mb-1">
+                          <h4 className="text-base font-bold text-gray-900 font-display mb-1">
                             {value.title}
                           </h4>
                           <div className="h-0.5 w-8 bg-red-500 rounded-full"></div>
@@ -453,7 +453,7 @@ const VicePrincipalMessagePage = () => {
                 <div className="text-center mb-6">
                   <div className="flex items-center justify-center gap-3 mb-3">
                     <div className="h-px w-10 bg-white/50" />
-                    <h3 className="text-xl font-bold text-white font-[Cambria]">
+                    <h3 className="text-xl font-bold text-white font-display">
                       The KNS Community Experience
                     </h3>
                     <div className="h-px w-10 bg-white/50" />
@@ -512,3 +512,4 @@ const VicePrincipalMessagePage = () => {
 };
 
 export default VicePrincipalMessagePage;
+
