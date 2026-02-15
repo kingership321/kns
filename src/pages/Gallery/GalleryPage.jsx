@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { Folder, ChevronLeft, Image as ImageIcon, Calendar, Clock, MapPin, Users, Search, ChevronDown, ChevronUp } from 'lucide-react';
 import { useState, useRef } from 'react';
+import { Link, useNavigate } from 'react-router'; // Import useNavigate
 import QuickLinksSection from '../../components/LinksSection';
 
 // Import gallery images (you'll replace these with your actual images)
@@ -32,6 +33,8 @@ const GalleryPage = () => {
   const [activeCategory, setActiveCategory] = useState('all');
   const [selectedImage, setSelectedImage] = useState(null);
   const [expandedFilters, setExpandedFilters] = useState(false);
+
+  const navigate = useNavigate();
 
   // Event categories
   const categories = [
@@ -166,6 +169,7 @@ const GalleryPage = () => {
     setSelectedEvent(event);
     // Scroll to top when viewing images
     window.scrollTo({ top: 0, behavior: 'smooth' });
+    navigate(`/gallery/photos/?id=${event.id}`);
   };
 
   // Handle back to folders
@@ -277,7 +281,7 @@ const GalleryPage = () => {
             >
               <button
                 onClick={handleBackToFolders}
-                className="flex items-center gap-1 px-3 py-1.5 bg-white/10 backdrop-blur-sm text-white font-medium rounded-lg hover:bg-white/20 transition-all duration-300 border border-white/20 hover:border-white/40 text-sm"
+                className="flex items-center gap-1 px-3 py-1.5 bg-red-500 backdrop-blur-sm text-white font-medium rounded-lg hover:bg-red-600 transition-all duration-300 border border-white/20 hover:border-white/40 text-sm"
               >
                 <ChevronLeft className="w-3 h-3" />
                 Back to Events

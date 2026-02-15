@@ -42,7 +42,7 @@ const QuickLinksSection = () => {
   ];
 
   return (
-    <section className="relative py-12 sm:py-16 lg:py-20 bg-white overflow-hidden">
+    <section className="relative mb-12 bg-white overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 -z-10 opacity-3 sm:opacity-5">
         <div className="absolute inset-0" style={{

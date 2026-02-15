@@ -1,14 +1,27 @@
-// Import images
 import sara1 from '../assets/saraswati-puja/Saraswati-Puja1.jpg';
 import sara2 from '../assets/saraswati-puja/Saraswati-Puja2.jpg';
 import sara3 from '../assets/saraswati-puja/Saraswati-Puja3.jpg';
 import ann1 from '../assets/annual-day/annual-day1.jpg';
 
-import { motion } from 'framer-motion';
-import { Link, useNavigate } from 'react-router'; // Import useNavigate
+import { motion, AnimatePresence } from 'framer-motion';
+import { Link, useNavigate } from 'react-router';
+import { useState } from 'react';
+import { X, ChevronLeft, ChevronRight, ZoomIn } from 'lucide-react';
+
+interface GalleryItem {
+  id: number;
+  image: string;
+  title: string;
+  description: string;
+  category: string;
+  eventId: number;
+}
 
 const GallerySection = () => {
   const navigate = useNavigate();
+  const [selectedImage, setSelectedImage] = useState<GalleryItem | null>(null);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [showFullScreen, setShowFullScreen] = useState(false);
 
   const galleryItems = [
     {
@@ -17,7 +30,7 @@ const GallerySection = () => {
       title: "Annual Sports Day",
       description: "Students showcasing their athletic talents and team spirit",
       category: "Events",
-      eventId: 2 // Sports Day Competition
+      eventId: 1
     },
     {
       id: 2,
@@ -25,7 +38,7 @@ const GallerySection = () => {
       title: "Science Exhibition",
       description: "Young innovators presenting their scientific projects",
       category: "Academics",
-      eventId: 4 // Science Exhibition
+      eventId: 2
     },
     {
       id: 3,
@@ -33,7 +46,7 @@ const GallerySection = () => {
       title: "Cultural Program",
       description: "Celebrating diversity through dance and music performances",
       category: "Cultural",
-      eventId: 3 // Cultural Fest
+      eventId: 3
     },
     {
       id: 4,
@@ -41,13 +54,58 @@ const GallerySection = () => {
       title: "Campus Facilities",
       description: "Modern infrastructure for holistic learning environment",
       category: "Campus",
-      eventId: 8 // Math Olympiad Winners (or any appropriate event)
+      eventId: 4
     }
   ];
 
   // Handle card click to navigate to specific event folder
   const handleCardClick = (eventId: number) => {
-    navigate(`/gallery?event=${eventId}`);
+    navigate(`/gallery/photos/?id=${eventId}`);
+  };
+
+  // Handle image click for full-screen view
+  const handleImageClick = (e: React.MouseEvent, item: any) => {
+    e.stopPropagation(); // Prevent triggering the card click
+    setSelectedImage(item);
+    setCurrentImageIndex(galleryItems.findIndex(i => i.id === item.id));
+    setShowFullScreen(true);
+    // Prevent body scrolling when modal is open
+    document.body.style.overflow = 'hidden';
+  };
+
+  // Close full-screen modal
+  const closeFullScreen = () => {
+    setShowFullScreen(false);
+    setSelectedImage(null);
+    // Restore body scrolling
+    document.body.style.overflow = 'unset';
+  };
+
+  // Navigate to next image
+  const nextImage = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    const nextIndex = (currentImageIndex + 1) % galleryItems.length;
+    setCurrentImageIndex(nextIndex);
+    setSelectedImage(galleryItems[nextIndex]);
+  };
+
+  // Navigate to previous image
+  const prevImage = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    const prevIndex = (currentImageIndex - 1 + galleryItems.length) % galleryItems.length;
+    setCurrentImageIndex(prevIndex);
+    setSelectedImage(galleryItems[prevIndex]);
+  };
+
+  // Handle keyboard navigation
+  const handleKeyDown = (e: React.KeyboardEvent) => {
+    if (e.key === 'Escape') {
+      closeFullScreen();
+    } else if (e.key === 'ArrowRight') {
+      nextImage(e as any);
+    } else if (e.key === 'ArrowLeft') {
+      prevImage(e as any);
+    }
   };
 
   return (
@@ -95,7 +153,7 @@ const GallerySection = () => {
                 onClick={() => handleCardClick(item.eventId)}
               >
                 <div className="bg-white rounded-lg border border-gray-200 shadow-sm overflow-hidden hover:shadow-md transition-all duration-300 hover:border-primary/30">
-                  {/* Image Container */}
+                  {/* Image Container with click handler for full screen */}
                   <div className="relative h-40 sm:h-48 overflow-hidden">
                     <img 
                       src={item.image} 
@@ -113,13 +171,16 @@ const GallerySection = () => {
                     {/* Gradient Overlay */}
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                     
-                    {/* View Indicator */}
+                    {/* View Full Screen Button */}
                     <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                      <div className="bg-white/90 backdrop-blur-sm rounded-lg px-3 py-1.5 flex items-center gap-1.5">
-                        <span className="text-primary text-xs font-medium">View Photos</span>
-                        <svg className="w-3 h-3 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                        </svg>
+                      <div className="flex gap-2">
+                        <button
+                          onClick={(e) => handleImageClick(e, item)}
+                          className="bg-white/90 backdrop-blur-sm rounded-lg px-3 py-1.5 flex items-center gap-1.5 hover:bg-white transition-colors"
+                        >
+                          <ZoomIn className="w-3 h-3 text-primary" />
+                          <span className="text-primary text-xs font-medium">Full Screen</span>
+                        </button>
                       </div>
                     </div>
                   </div>
@@ -195,14 +256,15 @@ const GallerySection = () => {
                     {/* Gradient Overlay */}
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                     
-                    {/* View Indicator */}
+                    {/* View Full Screen Button */}
                     <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                      <div className="bg-white/90 backdrop-blur-sm rounded-lg px-4 py-2 flex items-center gap-2">
-                        <span className="text-primary text-sm font-medium">Click to View Gallery</span>
-                        <svg className="w-4 h-4 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                        </svg>
-                      </div>
+                      <button
+                        onClick={(e) => handleImageClick(e, item)}
+                        className="bg-white/90 backdrop-blur-sm rounded-lg px-4 py-2 flex items-center gap-2 hover:bg-white transition-colors"
+                      >
+                        <ZoomIn className="w-4 h-4 text-primary" />
+                        <span className="text-primary text-sm font-medium">View Full Screen</span>
+                      </button>
                     </div>
                   </div>
                   
@@ -274,14 +336,15 @@ const GallerySection = () => {
                     {/* Gradient Overlay */}
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                     
-                    {/* View Indicator */}
+                    {/* View Full Screen Button */}
                     <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                      <div className="bg-white/90 backdrop-blur-sm rounded-lg px-4 py-2 flex items-center gap-2">
-                        <span className="text-primary text-sm font-medium">Click to View Gallery</span>
-                        <svg className="w-4 h-4 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                        </svg>
-                      </div>
+                      <button
+                        onClick={(e) => handleImageClick(e, item)}
+                        className="bg-white/90 backdrop-blur-sm rounded-lg px-4 py-2 flex items-center gap-2 hover:bg-white transition-colors"
+                      >
+                        <ZoomIn className="w-4 h-4 text-primary" />
+                        <span className="text-primary text-sm font-medium">View Full Screen</span>
+                      </button>
                     </div>
                   </div>
                   
@@ -345,6 +408,78 @@ const GallerySection = () => {
         </motion.div>
       </div>
 
+      {/* Full Screen Image Modal */}
+      <AnimatePresence>
+        {showFullScreen && selectedImage && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.3 }}
+            className="fixed inset-0 z-[100] flex items-center justify-center bg-black/95"
+            onClick={closeFullScreen}
+            onKeyDown={handleKeyDown}
+            tabIndex={0}
+          >
+            {/* Close Button */}
+            <button
+              onClick={closeFullScreen}
+              className="absolute top-4 right-4 z-10 p-2 bg-white/10 backdrop-blur-sm rounded-full text-white hover:bg-white/20 transition-colors"
+            >
+              <X className="w-6 h-6" />
+            </button>
+
+            {/* Navigation Buttons */}
+            <button
+              onClick={prevImage}
+              className="absolute left-4 top-1/2 -translate-y-1/2 z-10 p-2 bg-white/10 backdrop-blur-sm rounded-full text-white hover:bg-white/20 transition-colors"
+            >
+              <ChevronLeft className="w-6 h-6" />
+            </button>
+
+            <button
+              onClick={nextImage}
+              className="absolute right-4 top-1/2 -translate-y-1/2 z-10 p-2 bg-white/10 backdrop-blur-sm rounded-full text-white hover:bg-white/20 transition-colors"
+            >
+              <ChevronRight className="w-6 h-6" />
+            </button>
+
+            {/* Image Container */}
+            <motion.div
+              key={selectedImage.id}
+              initial={{ scale: 0.9, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.9, opacity: 0 }}
+              transition={{ duration: 0.3 }}
+              className="relative max-w-7xl max-h-[90vh] w-full h-full flex items-center justify-center p-4"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <img
+                src={selectedImage.image}
+                alt={selectedImage.title}
+                className="max-w-full max-h-full object-contain rounded-lg shadow-2xl"
+              />
+
+              {/* Image Info Overlay */}
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6 rounded-b-lg">
+                <div className="container mx-auto">
+                  <h3 className="text-white text-xl font-bold mb-2">{selectedImage.title}</h3>
+                  <p className="text-white/90 text-sm">{selectedImage.description}</p>
+                  <div className="flex items-center gap-4 mt-2">
+                    <span className="text-white/80 text-xs">
+                      {currentImageIndex + 1} / {galleryItems.length}
+                    </span>
+                    <span className="text-white/80 text-xs">
+                      Category: {selectedImage.category}
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
       {/* Bottom Gradient Fade */}
       <div className="absolute bottom-0 left-0 right-0 h-12 sm:h-16 bg-gradient-to-t from-gray-50 to-transparent -z-10" />
     </section>
@@ -352,4 +487,3 @@ const GallerySection = () => {
 };
 
 export default GallerySection;
-

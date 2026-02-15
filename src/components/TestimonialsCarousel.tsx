@@ -5,9 +5,9 @@ import { Quote, Star } from 'lucide-react';
 import testimonialBg from '../assets/teachers/assembly.jpg';
 
 // Import testimonial person images (replace with actual images)
-import person1 from '../assets/students/std1.jpg';
-import person2 from '../assets/students/std2.jpg';
-import person3 from '../assets/students/std3.jpg';
+import person1 from '../assets/testimonials/kalpana-mahat.jpg';
+import person2 from '../assets/testimonials/uttam-thapa.jpg';
+import person3 from '../assets/testimonials/colonel-of-nepal-army-balkrishna-karki.jpg';
 
 const TestimonialSection = () => {
   const testimonials = [
