@@ -2,10 +2,9 @@ import { motion } from 'framer-motion';
 import QuickLinksSection from '../../../components/LinksSection';
 
 // Import founder principal image
-import founderPrincipalImage from '../../../assets/governing-body/principal.jpg';
+import chairperson from '../../../assets/director.jpeg';
 
-const FounderPrincipalMessagePage = () => {
-  
+const Chairperson = () => {
 
   return (
     <div className="min-h-screen bg-white">
@@ -14,8 +13,8 @@ const FounderPrincipalMessagePage = () => {
         {/* Background Image with Overlay */}
         <div className="absolute inset-0 z-0">
           <img 
-            src={founderPrincipalImage}
-            alt="Founder Principal Anju Thapa (Khadka)" 
+            src={chairperson}
+            alt="Chairperson Arjun Kumar Khadka" 
             className="w-full h-full object-cover"
           />
           {/* Blue Overlay */}
@@ -38,7 +37,7 @@ const FounderPrincipalMessagePage = () => {
             className="text-center max-w-4xl mx-auto"
           >
             <h1 className="text-xl xs:text-2xl sm:text-3xl lg:text-4xl font-bold text-white font-display mb-3 sm:mb-4">
-              Founder Principal's Message
+              Chairman's Message
             </h1>
             
             {/* Divider like home page */}
@@ -93,17 +92,17 @@ const FounderPrincipalMessagePage = () => {
     {/* Main Image Container */}
     <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-white/30 shadow-lg">
       <img 
-        src={founderPrincipalImage}
-        alt="Anju Thapa (Khadka)"
+        src={chairperson}
+        alt="Arjun Kumar Khadka"
         className="w-full h-full object-cover"
       />
     </div>
   </div>
   
   <h3 className="text-lg sm:text-xl font-bold text-gray-900 font-display mb-1">
-    Anju Thapa (Khadka)
+    Arjun Kumar Khadka
   </h3>
-  <p className="text-primary font-semibold text-xs sm:text-sm mb-3">Founder Principal</p>
+  <p className="text-primary font-semibold text-xs sm:text-sm mb-3">Executive Chairman</p>
   <div className="h-px w-16 sm:w-20 bg-red-500/50 mx-auto mb-4"></div>
 </div>
                 
@@ -155,7 +154,7 @@ const FounderPrincipalMessagePage = () => {
               className="space-y-6"
             >
               {/* Welcome Message Card */}
-              <div className="bg-white rounded-lg p-6 border border-gray-200 shadow-lg">
+              <div className="bg-white rounded-lg p-6 border border-gray-200 shadow-md">
 {/* Profile Image with Double Rings - More Prominent */}
 <div className="text-center mb-6">
   {/* Image Container with Two Rings */}
@@ -169,17 +168,17 @@ const FounderPrincipalMessagePage = () => {
     {/* Main Image Container */}
     <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-white/30 shadow-xl">
       <img 
-        src={founderPrincipalImage}
-        alt="Anju Thapa (Khadka)"
+        src={chairperson}
+        alt="Arjun Kumar Khadka"
         className="w-full h-full object-cover"
       />
     </div>
   </div>
   
   <h3 className="text-2xl font-bold text-gray-900 font-display mb-1">
-    Anju Thapa (Khadka)
+    Arjun Kumar Khadka
   </h3>
-  <p className="text-primary font-semibold text-base mb-4">Founding Principal</p>
+  <p className="text-primary font-semibold text-base mb-4">Executive Chairman</p>
   <div className="h-px w-24 bg-red-500/50 mx-auto mb-6"></div>
 </div>
                 
@@ -217,9 +216,9 @@ const FounderPrincipalMessagePage = () => {
                   </p>
                   <div className="relative">
                     <div className="font-display text-gray-800 text-lg font-bold">
-                      Anju Thapa (Khadka)
+                      Arjun Kumar Khadka
                     </div>
-                    <div className="text-gray-500 text-sm mb-4">Founder Principal</div>
+                    <div className="text-gray-500 text-sm mb-4">Executive Chairman</div>
                     <div className="pt-4 border-t border-gray-200">
                       <p className="text-gray-600 text-sm">
                         Kathmandu National School
@@ -247,5 +246,5 @@ const FounderPrincipalMessagePage = () => {
   );
 };
 
-export default FounderPrincipalMessagePage;
+export default Chairperson;
 

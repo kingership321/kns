@@ -16,6 +16,7 @@ import Home from '../src/pages/Home';
 
 // About Pages
 import IntroductionPage from '../src/pages/About/subpages/IntroductionPage';
+import Chairperson from '../src/pages/About/subpages/Chairperson'
 import GoverningBodyMessagePage from '../src/pages/About/subpages/GoverningBodyMessagePage';
 import FounderPrincipalMessagePage from '../src/pages/About/subpages/FoundingPrincipalMessage';
 import VicePrincipalMessagePage from '../src/pages/About/subpages/VicePrincipalMessagePage';
@@ -85,6 +86,10 @@ const router = createBrowserRouter([
       {
         path: 'about-us/introduction/',
         element: <IntroductionPage />,
+      },
+      {
+        path: 'about-us/message-from-chairperson/',
+        element: <Chairperson />,
       },
       {
         path: 'about-us/message-from-managing-director/',

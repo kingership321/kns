@@ -57,6 +57,11 @@ export default function RootLayout() {
       description: 'Overview of our school'
     },
     { 
+      path: '/about-us/message-from-chairperson/', 
+      name: 'Message from Chairperson',
+      description: 'Leader perspectives'
+    },
+    { 
       path: '/about-us/message-from-managing-director/', 
       name: 'Message from Governing Body',
       description: 'Leadership perspectives'

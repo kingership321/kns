@@ -1,12 +1,22 @@
 import { motion } from 'framer-motion';
 import { Quote, Award, Users, GraduationCap, Star, Target, BookOpen } from 'lucide-react';
-
+import { useNavigate } from 'react-router';
 // Import images
 import fac1 from '../assets/teachers/assembly.jpg';
-import principalPhoto from '../assets/Montessori/prize1.jpg';
-import chairmanPhoto from '../assets/Montessori/prize2.jpg';
+import principalPhoto from '../assets/director.jpeg';
+import chairmanPhoto from '../assets/founding-principal.jpeg';
 
 const HeroSection = () => {
+  const navigate = useNavigate();
+
+  const handleChairpersonCardClick = () => {
+    navigate('/about-us/message-from-chairperson/');
+  };
+
+  const handleFounderCardClick = () => {
+    navigate('/about-us/principal-message/');
+  };
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Banner Image with enhanced overlay */}
@@ -50,7 +60,7 @@ const HeroSection = () => {
       
       {/* Main Content */}
       <div className="container mx-auto px-3 xs:px-4 sm:px-5 md:px-6 lg:px-8 relative z-10">
-        <div className="flex flex-col lg:flex-row items-center justify-between gap-4 xs:gap-5 sm:gap-6 md:gap-8 lg:gap-10 xl:gap-12 2xl:gap-14 py-4 xs:py-5 sm:py-6 md:py-8 lg:py-0">
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-4 xs:gap-5 sm:gap-6 md:gap-8 lg:gap-10 xl:gap-12 2xl:gap-14 py-4 xs:py-5 sm:py-6 md:py-8 lg:py-8">
           
           {/* Left Column - Chairman's Message (Desktop) */}
           <motion.div
@@ -59,16 +69,26 @@ const HeroSection = () => {
             transition={{ duration: 0.8 }}
             className="hidden lg:block lg:w-1/4 xl:w-1/3 2xl:w-2/5"
           >
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 xs:p-4 sm:p-5 md:p-6 border border-white/20 shadow-xl">
+            <div onClick={handleChairpersonCardClick} className="bg-white/10 backdrop-blur-sm rounded-lg p-4 xs:p-4 sm:p-5 md:p-6 border border-white/20 shadow-xl">
               {/* Principal Photo */}
               <div className="relative mb-4 xs:mb-4 sm:mb-5 md:mb-6">
-                <div className="w-24 h-24 xs:w-24 xs:h-24 sm:w-28 sm:h-28 md:w-32 md:h-40 rounded-xl overflow-hidden border-2 border-white/20 mx-auto">
-                  <img 
-                    src={principalPhoto}
-                    alt="Chairman Arjun Khadka"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
+  {/* Image Container with Two Rings */}
+  <div className="relative w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 lg:w-50 lg:h-50 mx-auto mb-6 group">
+    {/* Outer Golden Ring - Thicker */}
+    <div className="absolute -inset-2.5 rounded-full border-8 border-blue-800"></div>
+    
+    {/* Inner Red Ring - Thicker */}
+    <div className="absolute -inset-1 rounded-full border-6 border-red-600"></div>
+    
+    {/* Main Image Container */}
+    <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-white shadow-xl">
+      <img 
+        src={principalPhoto}
+        alt="Chairman Arjun Khadka"
+        className="w-full h-full object-cover"
+      />
+    </div>
+  </div>
               </div>
               
               {/* Message */}
@@ -76,9 +96,6 @@ const HeroSection = () => {
                 <Quote className="w-5 h-5 xs:w-5 xs:h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 text-white/60 mx-auto mb-2 xs:mb-2 sm:mb-3 md:mb-4" />
                 <p className="text-white/90 text-xs xs:text-xs sm:text-sm md:text-base leading-relaxed mb-2 xs:mb-2 sm:mb-3 md:mb-4 italic">
                   It's my fortune to welcome you in Kathmandu National School (KNS). Our students say that KNS is not only a school for them but it is also their home away from parental home. In this sense it is an academic shrine where our students are found to be so happy and confident to lead them to be the future leaders of the country.
-                </p>
-                <p className="text-white/90 text-xs xs:text-xs sm:text-sm md:text-base leading-relaxed mb-2 xs:mb-2 sm:mb-3 md:mb-4 italic">
-                At the KNS we take our responsibility to find what is exceptional in students very seriously. The experience that we have prepared for them here gives every student an all-round education built on a foundation of service, adventure, sports, creative arts and academics.
                 </p>
                 <div className="pt-3 xs:pt-3 sm:pt-4 border-t border-white/20">
                   <h3 className="text-base xs:text-base sm:text-lg md:text-xl font-bold text-white font-serif mb-0.5 xs:mb-0.5 sm:mb-1">Arjun Khadka</h3>
@@ -90,24 +107,82 @@ const HeroSection = () => {
           
           {/* Center Column - Welcome Message */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 0 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="w-full lg:w-1/2 xl:w-1/3 2xl:w-1/3 text-center"
           >
-            {/* Welcome Badge */}
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.3, duration: 0.8 }}
-              className="mb-3 xs:mb-3 sm:mb-4 md:mb-5 lg:mb-6 xl:mb-8"
-            >
-              <div className="inline-block px-3 xs:px-3 sm:px-4 md:px-5 py-1.5 xs:py-1.5 sm:py-2 md:py-2.5 bg-white/10 backdrop-blur-sm rounded-lg border border-white/20">
-                <span className="text-white font-serif text-sm xs:text-sm sm:text-base md:text-lg lg:text-xl tracking-widest">
-                  WELCOME TO
-                </span>
-              </div>
-            </motion.div>
+{/* Welcome Badge - Curved Text Path */}
+<motion.div
+  initial={{ opacity: 0 }}
+  animate={{ opacity: 1 }}
+  transition={{ delay: 0.3, duration: 0.8 }}
+  className="mb-0 xs:mb-0 sm:mb-0 md:mb-0 lg:mb-0 xl:mb-0 flex justify-center mt-6 lg:-mt-20 xl:-mt-24"
+>
+  <div className="relative inline-block">
+    {/* SVG with curved path */}
+    <svg 
+      viewBox="0 0 300 80" 
+      className="w-48 xs:w-48 sm:w-56 md:w-64 lg:w-72 xl:w-80 h-auto"
+      preserveAspectRatio="xMidYMid meet"
+    >
+      {/* Define the curved path */}
+      <defs>
+        <path 
+          id="welcomeCurve" 
+          d="M 20,40 Q 150,10 280,40" 
+          fill="transparent" 
+        />
+        
+        {/* Optional: Add a subtle glow filter */}
+        <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+          <feGaussianBlur stdDeviation="4" result="blur" />
+          <feMerge>
+            <feMergeNode in="blur" />
+            <feMergeNode in="SourceGraphic" />
+          </feMerge>
+        </filter>
+      </defs>
+
+      {/* Decorative path line (very subtle) */}
+      <path 
+        d="M 20,40 Q 150,10 280,40" 
+        stroke="white" 
+        strokeWidth="0.5" 
+        strokeOpacity="0.2" 
+        fill="none" 
+        strokeDasharray="4 4"
+      />
+
+      {/* Curved text */}
+      <text 
+        fill="white" 
+        fontSize="30" 
+        fontWeight="500"
+        fontFamily="serif"
+        letterSpacing="2"
+        filter="url(#glow)"
+      >
+        <textPath 
+          href="#welcomeCurve" 
+          startOffset="50%" 
+          textAnchor="middle"
+          className="font-serif tracking-widest"
+        >
+          WELCOME TO
+        </textPath>
+      </text>
+
+      {/* Decorative elements at ends */}
+      <circle cx="20" cy="40" r="2" fill="white" fillOpacity="0.3" />
+      <circle cx="280" cy="40" r="2" fill="white" fillOpacity="0.3" />
+    </svg>
+
+    {/* Optional: Floating particles */}
+    <div className="absolute -top-1 left-1/4 w-1 h-1 bg-white/30 rounded-full animate-pulse" />
+    <div className="absolute -bottom-1 right-1/4 w-1 h-1 bg-white/30 rounded-full animate-pulse delay-300" />
+  </div>
+</motion.div>
 
             {/* School Name - Larger on mobile, original sizes on desktop */}
             <div className="mb-3 xs:mb-3 sm:mb-4 md:mb-5 lg:mb-6 xl:mb-8">
@@ -154,7 +229,7 @@ const HeroSection = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.7, duration: 0.8 }}
-              className="grid grid-cols-2 xs:grid-cols-2 sm:grid-cols-4 gap-2 xs:gap-2 sm:gap-3 md:gap-4 max-w-xs xs:max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg mx-auto"
+              className="grid grid-cols-2 xs:grid-cols-2 sm:grid-cols-4 gap-2 xs:gap-2 sm:gap-3 md:gap-4 max-w-xs xs:max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg mx-auto hidden lg:grid"
             >
               {[
                 { value: "45+", label: "Years", icon: Award, color: "text-blue-400" },
@@ -179,17 +254,28 @@ const HeroSection = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             className="hidden lg:block lg:w-1/4 xl:w-1/3 2xl:w-2/5"
+            onClick={handleFounderCardClick}
           >
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 xs:p-4 sm:p-5 md:p-6 border border-white/20 shadow-xl">
               {/* Principal Photo */}
               <div className="relative mb-4 xs:mb-4 sm:mb-5 md:mb-6">
-                <div className="w-24 h-24 xs:w-24 xs:h-24 sm:w-28 sm:h-28 md:w-32 md:h-40 rounded-xl overflow-hidden border-2 border-white/20 mx-auto">
-                  <img 
-                    src={chairmanPhoto}
-                    alt="Principal"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
+  {/* Image Container with Two Rings */}
+  <div className="relative w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 lg:w-50 lg:h-50 mx-auto mb-6 group">
+    {/* Outer Golden Ring - Thicker */}
+    <div className="absolute -inset-2.5 rounded-full border-8 border-blue-800"></div>
+    
+    {/* Inner Red Ring - Thicker */}
+    <div className="absolute -inset-1 rounded-full border-6 border-red-600"></div>
+    
+    {/* Main Image Container */}
+    <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-white">
+      <img 
+        src={chairmanPhoto}
+        alt="Anju Thapa (Khadka)"
+        className="w-full h-full object-cover"
+      />
+    </div>
+  </div>
               </div>
               
               {/* Message */}
@@ -198,12 +284,9 @@ const HeroSection = () => {
                 <p className="text-white/90 text-xs xs:text-xs sm:text-sm md:text-base leading-relaxed mb-2 xs:mb-2 sm:mb-3 md:mb-4 italic">
                   It's our immense pleasure to welcome you in Kathmandu National School (KNS). KNS is the junction of qualified teachers, professionals and students. Since its foundation, it has been imparting quality education that benefits our young children's overall development.
                 </p>
-                <p className="text-white/90 text-xs xs:text-xs sm:text-sm md:text-base leading-relaxed mb-2 xs:mb-2 sm:mb-3 md:mb-4 italic">
-                  Our approach is interdisciplinary, experimental and progressive. Our students are encouraged not only to focus on textbooks but also to enhance their creativity, analytical skills, and pursue their extra-curricular interest.
-                </p>
                 <div className="pt-3 xs:pt-3 sm:pt-4 border-t border-white/20">
-                  <h3 className="text-base xs:text-base sm:text-lg md:text-xl font-bold text-white font-serif mb-0.5 xs:mb-0.5 sm:mb-1">Kamal Prasad Adhikari</h3>
-                  <p className="text-white/80 text-xs xs:text-xs sm:text-sm md:text-base">Principal</p>
+                  <h3 className="text-base xs:text-base sm:text-lg md:text-xl font-bold text-white font-serif mb-0.5 xs:mb-0.5 sm:mb-1">Anju Thapa (Khadka)</h3>
+                  <p className="text-white/80 text-xs xs:text-xs sm:text-sm md:text-base">Founder Principal</p>
                 </div>
               </div>
             </div>
@@ -219,6 +302,7 @@ const HeroSection = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3, duration: 0.6 }}
               className="bg-white/10 backdrop-blur-sm rounded-lg p-4 xs:p-4 sm:p-5 md:p-6 border border-white/20"
+              onClick={handleChairpersonCardClick}
             >
               {/* Centered Profile Image */}
               <div className="flex flex-col items-center mb-4 xs:mb-4 sm:mb-5 md:mb-6">
@@ -251,7 +335,7 @@ const HeroSection = () => {
                   
                   {/* Experience badge */}
                   <div className="inline-block mt-2 px-2.5 py-0.5 bg-white/10 backdrop-blur-sm rounded-full border border-white/20">
-                    <span className="text-white/80 text-xs xs:text-xs sm:text-sm">25+ Years Experience</span>
+                    <span className="text-white/80 text-xs xs:text-xs sm:text-sm">M.Phil./PhD. Scholar</span>
                   </div>
                 </div>
               </div>
@@ -281,7 +365,7 @@ const HeroSection = () => {
               className="bg-white/10 backdrop-blur-sm rounded-lg p-4 xs:p-4 sm:p-5 md:p-6 border border-white/20"
             >
               {/* Centered Profile Image */}
-              <div className="flex flex-col items-center mb-4 xs:mb-4 sm:mb-5 md:mb-6">
+              <div onClick={handleFounderCardClick} className="flex flex-col items-center mb-4 xs:mb-4 sm:mb-5 md:mb-6">
                 <div className="relative mb-3 xs:mb-3 sm:mb-4">
                   {/* Main Image with larger size and enhanced border */}
                   <div className="w-40 h-40 xs:w-24 xs:h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 rounded-full overflow-hidden border-3 border-white/30 relative">
@@ -300,18 +384,18 @@ const HeroSection = () => {
                   {/* Badge positioned at bottom */}
                   <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2">
                     <span className="px-3 xs:px-3 sm:px-3.5 py-1 bg-blue-500 text-white text-xs xs:text-xs sm:text-sm font-semibold rounded-full whitespace-nowrap shadow-lg">
-                      Principal
+                      Founder Principal
                     </span>
                   </div>
                 </div>
                 
                 {/* Name and Title centered below image */}
                 <div className="text-center">
-                  <h3 className="text-base xs:text-base sm:text-lg md:text-xl font-bold text-white font-serif">Kamal Prasad Adhikari</h3>
+                  <h3 className="text-base xs:text-base sm:text-lg md:text-xl font-bold text-white font-serif">Anju Thapa (Khadka)</h3>
                   
                   {/* Qualification badge */}
                   <div className="inline-block mt-2 px-2.5 py-0.5 bg-white/10 backdrop-blur-sm rounded-full border border-white/20">
-                    <span className="text-white/80 text-xs xs:text-xs sm:text-sm">M.Phil.</span>
+                    <span className="text-white/80 text-xs xs:text-xs sm:text-sm">Masters</span>
                   </div>
                 </div>
               </div>
