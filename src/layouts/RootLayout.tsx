@@ -44,8 +44,8 @@ export default function RootLayout() {
   const contactDetails = {
     name: "Kathmandu National School",
     address: "Old Baneshwor-34, Kathmandu, Nepal",
-    telephone: "+977 4490821",
-    fax: "+977 4490821",
+    telephone: "+9774590821",
+    fax: "+9774590821",
     email: "info@kns.edu.np",
     officeHours: "Sunday-Friday: 9:00 AM - 4:00 PM"
   };
@@ -148,7 +148,7 @@ export default function RootLayout() {
 
   // Scrolling messages for notice bar
   const scrollingMessages = [
-    "🎓 Admissions Open for Academic Year 2024-25 | Apply Online Now!",
+    "🎓 Admissions Open for Academic Year 2024-25",
     "📅 Winter Vacation: School closed from Dec 20 to Jan 5",
     "📚 SEE Exam Preparation Classes start from Jan 10, 2024",
     "🏆 Annual Sports Day on Jan 25 - All parents invited!",
