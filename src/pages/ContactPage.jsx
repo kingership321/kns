@@ -315,64 +315,6 @@ const ContactPage = () => {
               </div>
             </motion.div>
 
-            {/* Mobile Departments Accordion */}
-            <div className="space-y-3 sm:space-y-4 mb-6">
-              {departments.map((dept, index) => (
-                <motion.div
-                  key={dept.id}
-                  initial={{ opacity: 0, y: 10 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, margin: "-50px" }}
-                  transition={{ duration: 0.5, delay: index * 0.05 }}
-                >
-                  <div className="bg-white rounded-lg border border-gray-200 shadow-sm overflow-hidden">
-                    <button
-                      onClick={() => toggleContact(dept.id)}
-                      className="w-full p-3 sm:p-4 flex items-center justify-between hover:bg-gray-50 transition-colors"
-                    >
-                      <div className="flex items-center gap-2 sm:gap-3 text-left">
-                        <div className="w-8 h-8 sm:w-10 sm:h-10 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                          <Mail className="w-4 h-4 sm:w-5 sm:h-5 text-primary" />
-                        </div>
-                        <div>
-                          <h3 className="text-sm sm:text-base font-bold text-gray-900 font-display">
-                            {dept.name}
-                          </h3>
-                          <div className="h-0.5 w-8 bg-red-500 rounded-full mt-1"></div>
-                        </div>
-                      </div>
-                      {expandedContact[dept.id] ? (
-                        <ChevronUp className="w-4 h-4 sm:w-5 sm:h-5 text-gray-500 flex-shrink-0" />
-                      ) : (
-                        <ChevronDown className="w-4 h-4 sm:w-5 sm:h-5 text-gray-500 flex-shrink-0" />
-                      )}
-                    </button>
-                    
-                    <div className={`transition-all duration-300 ease-in-out overflow-hidden ${
-                      expandedContact[dept.id] ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'
-                    }`}>
-                      <div className="p-3 sm:p-4 pt-0">
-                        <div className="space-y-2">
-                          <div className="flex items-center gap-2">
-                            <Phone className="w-3 h-3 text-primary" />
-                            <span className="text-gray-700 text-xs sm:text-sm">{dept.phone}</span>
-                          </div>
-                          <div className="flex items-center gap-2">
-                            <Mail className="w-3 h-3 text-primary" />
-                            <span className="text-gray-700 text-xs sm:text-sm">{dept.email}</span>
-                          </div>
-                          <div className="flex items-center gap-2">
-                            <Clock className="w-3 h-3 text-primary" />
-                            <span className="text-gray-700 text-xs sm:text-sm">{dept.hours}</span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-
             {/* Mobile Contact Form */}
             <motion.div
               initial={{ opacity: 0, y: 10 }}
@@ -507,36 +449,6 @@ const ContactPage = () => {
                 </form>
               </div>
             </motion.div>
-
-            {/* Mobile Quick Info */}
-            <motion.div
-              initial={{ opacity: 0, y: 10 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-50px" }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-            >
-              <div className="bg-gradient-to-r from-primary/90 to-primary/80 rounded-lg p-4 sm:p-5 border border-white/20 backdrop-blur-sm">
-                <div className="flex items-center gap-2 mb-3">
-                  <Phone className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
-                  <h3 className="text-base sm:text-lg font-bold text-white font-display">
-                    Quick Contact
-                  </h3>
-                </div>
-                
-                <div className="space-y-3 text-white/90 text-xs sm:text-sm">
-                  <div className="grid grid-cols-2 gap-2 sm:gap-3 mt-3">
-                    <div className="bg-white/10 backdrop-blur-sm rounded-lg p-2 sm:p-3 border border-white/20">
-                      <div className="text-white text-lg sm:text-xl font-bold mb-0.5">4</div>
-                      <div className="text-white/80 text-xs">Departments</div>
-                    </div>
-                    <div className="bg-white/10 backdrop-blur-sm rounded-lg p-2 sm:p-3 border border-white/20">
-                      <div className="text-white text-lg sm:text-xl font-bold mb-0.5">24/7</div>
-                      <div className="text-white/80 text-xs">Email Response</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </motion.div>
           </div>
 
           {/* Desktop: Two Column Layout */}
@@ -601,38 +513,6 @@ const ContactPage = () => {
                       <p className="text-gray-700 text-xs mt-1">{contactDetails.principalOffice}</p>
                     </div>
                   </div>
-                </div>
-              </div>
-
-              {/* Departments Section */}
-              <div className="bg-white rounded-lg p-6 border border-gray-200 shadow-md">
-                <div className="flex items-center gap-2 mb-4">
-                  <div className="h-8 w-0.5 bg-primary rounded-full"></div>
-                  <h2 className="text-xl font-bold text-gray-900 font-display">
-                    Department Contacts
-                  </h2>
-                </div>
-                
-                <div className="space-y-4">
-                  {departments.map((dept, index) => (
-                    <div key={dept.id} className={`p-3 bg-gray-50 rounded-lg border border-gray-100 ${index > 0 ? 'mt-3' : ''}`}>
-                      <h3 className="font-bold text-gray-900 text-sm mb-2">{dept.name}</h3>
-                      <div className="space-y-1.5">
-                        <div className="flex items-center gap-2">
-                          <Phone className="w-3 h-3 text-primary" />
-                          <span className="text-gray-700 text-xs">{dept.phone}</span>
-                        </div>
-                        <div className="flex items-center gap-2">
-                          <Mail className="w-3 h-3 text-primary" />
-                          <span className="text-gray-700 text-xs">{dept.email}</span>
-                        </div>
-                        <div className="flex items-center gap-2">
-                          <Clock className="w-3 h-3 text-primary" />
-                          <span className="text-gray-700 text-xs">{dept.hours}</span>
-                        </div>
-                      </div>
-                    </div>
-                  ))}
                 </div>
               </div>
             </motion.div>
@@ -787,81 +667,6 @@ const ContactPage = () => {
               </div>
             </motion.div>
           </div>
-
-          {/* Final Section - Responsive */}
-          <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-50px" }}
-            transition={{ delay: 0.4, duration: 0.6 }}
-            className="mt-8 sm:mt-10 lg:mt-16"
-          >
-            <div className="relative rounded-lg overflow-hidden">
-              {/* Gradient overlay like hero */}
-              <div className="absolute inset-0 bg-gradient-to-r from-primary/80 via-primary/70 to-primary/60" />
-              <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/70 to-primary/50" />
-              
-              {/* Pattern texture */}
-              <div className="absolute inset-0 opacity-5">
-                <div className="absolute inset-0" style={{
-                  backgroundImage: `url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='32' height='32' fill='none' stroke='white'%3e%3cpath d='M0 .5H31.5V32'/%3e%3c/svg%3e")`,
-                }} />
-              </div>
-
-              <div className="relative z-10 p-4 sm:p-6 lg:p-8">
-                <div className="text-center mb-4 sm:mb-6 lg:mb-8">
-                  <div className="flex items-center justify-center gap-2 sm:gap-3 mb-2 sm:mb-3">
-                    <div className="h-px w-6 sm:w-8 md:w-10 bg-white/50" />
-                    <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-white font-display">
-                      Quick Contact Information
-                    </h3>
-                    <div className="h-px w-6 sm:w-8 md:w-10 bg-white/50" />
-                  </div>
-                  <p className="text-white/90 text-sm sm:text-base font-serif italic max-w-2xl mx-auto">
-                    Connect with Kathmandu National School through multiple channels
-                  </p>
-                </div>
-
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 lg:gap-6 mb-6 sm:mb-8 lg:mb-10">
-                  <div className="text-center">
-                    <div className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center mx-auto mb-2 sm:mb-3">
-                      <Phone className="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8 text-white" />
-                    </div>
-                    <h4 className="text-base sm:text-lg font-bold text-white mb-1 sm:mb-2">Call Us</h4>
-                    <p className="text-white/80 text-xs sm:text-sm">{contactDetails.telephone}</p>
-                    <p className="text-white/60 text-xs mt-0.5">Office Hours Only</p>
-                  </div>
-                  
-                  <div className="text-center">
-                    <div className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center mx-auto mb-2 sm:mb-3">
-                      <Mail className="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8 text-white" />
-                    </div>
-                    <h4 className="text-base sm:text-lg font-bold text-white mb-1 sm:mb-2">Email Us</h4>
-                    <p className="text-white/80 text-xs sm:text-sm">{contactDetails.email}</p>
-                    <p className="text-white/60 text-xs mt-0.5">24/7 Response</p>
-                  </div>
-                  
-                  <div className="text-center">
-                    <div className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center mx-auto mb-2 sm:mb-3">
-                      <MapPin className="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8 text-white" />
-                    </div>
-                    <h4 className="text-base sm:text-lg font-bold text-white mb-1 sm:mb-2">Visit Us</h4>
-                    <p className="text-white/80 text-xs sm:text-sm">Old Baneshwor</p>
-                    <p className="text-white/60 text-xs mt-0.5">Kathmandu, Nepal</p>
-                  </div>
-                  
-                  <div className="text-center">
-                    <div className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center mx-auto mb-2 sm:mb-3">
-                      <Clock className="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8 text-white" />
-                    </div>
-                    <h4 className="text-base sm:text-lg font-bold text-white mb-1 sm:mb-2">Office Hours</h4>
-                    <p className="text-white/80 text-xs sm:text-sm">9:00 AM - 4:00 PM</p>
-                    <p className="text-white/60 text-xs mt-0.5">Sunday - Friday</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </motion.div>
           <QuickLinksSection />
         </div>
 
