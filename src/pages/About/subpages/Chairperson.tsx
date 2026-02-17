@@ -135,9 +135,9 @@ const Chairperson = () => {
                     With all good wishes,
                   </p>
                   <div className="font-display text-gray-800 text-sm font-bold">
-                    Anju Thapa (Khadka)
+                    Arjun Kumar Khadka
                   </div>
-                  <div className="text-gray-500 text-xs">Founder Principal</div>
+                  <div className="text-gray-500 text-xs">Executive Chairman</div>
                 </div>
               </div>
             </motion.div>

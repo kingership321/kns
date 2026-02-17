@@ -84,7 +84,7 @@ const HeroSection = () => {
     <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-white shadow-xl">
       <img 
         src={principalPhoto}
-        alt="Chairman Arjun Khadka"
+        alt="Executive Chairman Arjun Khadka"
         className="w-full h-full object-cover"
       />
     </div>
@@ -99,7 +99,7 @@ const HeroSection = () => {
                 </p>
                 <div className="pt-3 xs:pt-3 sm:pt-4 border-t border-white/20">
                   <h3 className="text-base xs:text-base sm:text-lg md:text-xl font-bold text-white font-serif mb-0.5 xs:mb-0.5 sm:mb-1">Arjun Khadka</h3>
-                  <p className="text-white/80 text-xs xs:text-xs sm:text-sm md:text-base">Chairman</p>
+                  <p className="text-white/80 text-xs xs:text-xs sm:text-sm md:text-base">Executive Chairman</p>
                 </div>
               </div>
             </div>
@@ -259,23 +259,23 @@ const HeroSection = () => {
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 xs:p-4 sm:p-5 md:p-6 border border-white/20 shadow-xl">
               {/* Principal Photo */}
               <div className="relative mb-4 xs:mb-4 sm:mb-5 md:mb-6">
-  {/* Image Container with Two Rings */}
-  <div className="relative w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 lg:w-50 lg:h-50 mx-auto mb-6 group">
-    {/* Outer Golden Ring - Thicker */}
-    <div className="absolute -inset-2.5 rounded-full border-8 border-blue-800"></div>
-    
-    {/* Inner Red Ring - Thicker */}
-    <div className="absolute -inset-1 rounded-full border-6 border-red-600"></div>
-    
-    {/* Main Image Container */}
-    <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-white">
-      <img 
-        src={chairmanPhoto}
-        alt="Anju Thapa (Khadka)"
-        className="w-full h-full object-cover"
-      />
-    </div>
-  </div>
+                {/* Image Container with Two Rings */}
+                <div className="relative w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 lg:w-50 lg:h-50 mx-auto mb-6 group">
+                  {/* Outer Golden Ring - Thicker */}
+                  <div className="absolute -inset-2.5 rounded-full border-8 border-blue-800"></div>
+                  
+                  {/* Inner Red Ring - Thicker */}
+                  <div className="absolute -inset-1 rounded-full border-6 border-red-600"></div>
+                  
+                  {/* Main Image Container */}
+                  <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-white">
+                    <img 
+                      src={chairmanPhoto}
+                      alt="Anju Thapa (Khadka)"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                </div>
               </div>
               
               {/* Message */}
@@ -311,7 +311,7 @@ const HeroSection = () => {
                   <div className="w-40 h-40 xs:w-24 xs:h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 rounded-full overflow-hidden border-3 border-white/30 relative">
                     <img 
                       src={principalPhoto}
-                      alt="Chairman Arjun Khadka"
+                      alt="Executive Chairman Arjun Khadka"
                       className="w-full h-full object-cover"
                     />
                     {/* Subtle gradient overlay */}
@@ -324,7 +324,7 @@ const HeroSection = () => {
                   {/* Badge positioned at bottom */}
                   <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2">
                     <span className="px-3 xs:px-3 sm:px-3.5 py-1 bg-red-500 text-white text-xs xs:text-xs sm:text-sm font-semibold rounded-full whitespace-nowrap shadow-lg">
-                      Chairman
+                      Executive Chairman
                     </span>
                   </div>
                 </div>
@@ -395,7 +395,7 @@ const HeroSection = () => {
                   
                   {/* Qualification badge */}
                   <div className="inline-block mt-2 px-2.5 py-0.5 bg-white/10 backdrop-blur-sm rounded-full border border-white/20">
-                    <span className="text-white/80 text-xs xs:text-xs sm:text-sm">Masters</span>
+                    <span className="text-white/80 text-xs xs:text-xs sm:text-sm">M.Phil./PhD. Scholar</span>
                   </div>
                 </div>
               </div>
