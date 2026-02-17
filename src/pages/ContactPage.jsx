@@ -36,8 +36,8 @@ const ContactPage = () => {
   const contactDetails = {
     name: "Kathmandu National School",
     address: "Old Baneshwor-34, Kathmandu, Nepal",
-    telephone: "+977 4490821",
-    fax: "+977 4490821",
+    telephone: "+9774590821",
+    fax: "+9774590821",
     email: "info@kns.edu.np",
     officeHours: "Sunday-Friday: 9:00 AM - 4:00 PM",
     principalOffice: "For Principal's Office: 10:00 AM - 12:00 PM"
@@ -48,28 +48,28 @@ const ContactPage = () => {
       id: 'principal',
       name: "Principal's Office",
       email: "principal@kns.edu.np",
-      phone: "+977 4490821 Ext. 101",
+      phone: "+9774590821 Ext. 101",
       hours: "10:00 AM - 12:00 PM"
     },
     {
       id: 'admissions',
       name: "Admissions Office",
       email: "admissions@kns.edu.np",
-      phone: "+977 4490821 Ext. 102",
+      phone: "+9774590821 Ext. 102",
       hours: "9:00 AM - 3:00 PM"
     },
     {
       id: 'accounts',
       name: "Accounts Department",
       email: "accounts@kns.edu.np",
-      phone: "+977 4490821 Ext. 103",
+      phone: "+9774590821 Ext. 103",
       hours: "9:00 AM - 3:00 PM"
     },
     {
       id: 'academic',
       name: "Academic Office",
       email: "academic@kns.edu.np",
-      phone: "+977 4490821 Ext. 104",
+      phone: "+9774590821 Ext. 104",
       hours: "9:00 AM - 4:00 PM"
     }
   ];
