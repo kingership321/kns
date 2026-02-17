@@ -979,11 +979,11 @@ const VideoGalleryPage = () => {
                     </div>
                   )}
                 </motion.div>
-                <QuickLinksSection />
               </div>
             </>
           )}
         </div>
+                        <QuickLinksSection />
 
         {/* Background Pattern */}
         <div className="absolute inset-0 -z-10 opacity-3 sm:opacity-5">

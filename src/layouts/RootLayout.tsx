@@ -149,10 +149,10 @@ export default function RootLayout() {
   // Scrolling messages for notice bar
   const scrollingMessages = [
     "🎓 Admissions Open for Academic Year 2024-25",
-    "📅 Winter Vacation: School closed from Dec 20 to Jan 5",
-    "📚 SEE Exam Preparation Classes start from Jan 10, 2024",
-    "🏆 Annual Sports Day on Jan 25 - All parents invited!",
-    "📢 PTA Meeting on Jan 15 at 10 AM in School Auditorium"
+    // "📅 Winter Vacation: School closed from Dec 20 to Jan 5",
+    // "📚 SEE Exam Preparation Classes start from Jan 10, 2024",
+    // "🏆 Annual Sports Day on Jan 25 - All parents invited!",
+    // "📢 PTA Meeting on Jan 15 at 10 AM in School Auditorium"
   ];
 
   const isAboutPageActive = location.pathname.startsWith('/about-us/');
