@@ -102,7 +102,7 @@ const Chairperson = () => {
   <h3 className="text-lg sm:text-xl font-bold text-gray-900 font-display mb-1">
     Arjun Kumar Khadka
   </h3>
-  <p className="text-primary font-semibold text-xs sm:text-sm mb-3">Executive Chairman</p>
+  <p className="text-primary font-semibold text-xs sm:text-sm mb-3">Executive Chairman / Founder</p>
   <div className="h-px w-16 sm:w-20 bg-red-500/50 mx-auto mb-4"></div>
 </div>
                 
@@ -137,7 +137,7 @@ const Chairperson = () => {
                   <div className="font-display text-gray-800 text-sm font-bold">
                     Arjun Kumar Khadka
                   </div>
-                  <div className="text-gray-500 text-xs">Executive Chairman</div>
+                  <div className="text-gray-500 text-xs">Executive Chairman / Founder</div>
                 </div>
               </div>
             </motion.div>
@@ -178,7 +178,7 @@ const Chairperson = () => {
   <h3 className="text-2xl font-bold text-gray-900 font-display mb-1">
     Arjun Kumar Khadka
   </h3>
-  <p className="text-primary font-semibold text-base mb-4">Executive Chairman</p>
+  <p className="text-primary font-semibold text-base mb-4">Executive Chairman / Founder</p>
   <div className="h-px w-24 bg-red-500/50 mx-auto mb-6"></div>
 </div>
                 
@@ -218,7 +218,7 @@ const Chairperson = () => {
                     <div className="font-display text-gray-800 text-lg font-bold">
                       Arjun Kumar Khadka
                     </div>
-                    <div className="text-gray-500 text-sm mb-4">Executive Chairman</div>
+                    <div className="text-gray-500 text-sm mb-4">Executive Chairman / Founder</div>
                     <div className="pt-4 border-t border-gray-200">
                       <p className="text-gray-600 text-sm">
                         Kathmandu National School

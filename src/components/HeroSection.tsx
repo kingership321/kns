@@ -99,7 +99,7 @@ const HeroSection = () => {
                 </p>
                 <div className="pt-3 xs:pt-3 sm:pt-4 border-t border-white/20">
                   <h3 className="text-base xs:text-base sm:text-lg md:text-xl font-bold text-white font-serif mb-0.5 xs:mb-0.5 sm:mb-1">Arjun Kumar Khadka</h3>
-                  <p className="text-white/80 text-xs xs:text-xs sm:text-sm md:text-base">Executive Chairman</p>
+                  <p className="text-white/80 text-xs xs:text-xs sm:text-sm md:text-base">Executive Chairman / Founder</p>
                 </div>
               </div>
             </div>
@@ -324,7 +324,7 @@ const HeroSection = () => {
                   {/* Badge positioned at bottom */}
                   <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2">
                     <span className="px-3 xs:px-3 sm:px-3.5 py-1 bg-red-500 text-white text-xs xs:text-xs sm:text-sm font-semibold rounded-full whitespace-nowrap shadow-lg">
-                      Executive Chairman
+                      Executive Chairman / Founder
                     </span>
                   </div>
                 </div>

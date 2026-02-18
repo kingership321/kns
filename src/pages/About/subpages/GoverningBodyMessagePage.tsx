@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import QuickLinksSection from '../../../components/LinksSection';
 
 // Import governing body image
-import governingBodyImage from '../../../assets/governing-body/governing-1.jpg';
+import governingBodyImage from '../../../assets/governing-body/governing-2.jpg';
 
 const GoverningBodyMessagePage = () => {
 
@@ -80,7 +80,7 @@ const GoverningBodyMessagePage = () => {
             >
               <div className="bg-white rounded-lg p-4 sm:p-5 border border-gray-200 shadow-sm">
                 {/* Governing Body Image */}
-                <div className="w-full h-48 sm:h-56 rounded-lg overflow-hidden border border-primary/30 mb-4">
+                <div className="w-full h-40 sm:h-56 md:h-76 rounded-lg overflow-hidden border border-primary/30 mb-4">
                   <img 
                     src={governingBodyImage} 
                     alt="Governing Body" 
@@ -125,7 +125,7 @@ const GoverningBodyMessagePage = () => {
               {/* Welcome Message Card */}
               <div className="bg-white rounded-lg p-6 border border-gray-200 shadow-md">
                 {/* Governing Body Image */}
-                <div className="w-full h-64 rounded-lg overflow-hidden border border-primary/30 mb-4">
+                <div className="w-auto h-128 rounded-lg overflow-hidden border border-primary/30 mb-4">
                   <img 
                     src={governingBodyImage} 
                     alt="Governing Body" 
