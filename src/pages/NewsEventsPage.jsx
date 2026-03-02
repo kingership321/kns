@@ -5,6 +5,7 @@ import QuickLinksSection from '../components/LinksSection';
 
 // Import banner image
 import newsBanner from '../assets/annual-day/annual-day4.jpg';
+import admission from '../assets/admission.png'
 
 const NewsEventsPage = () => {
   const [activeTab, setActiveTab] = useState('news');
@@ -15,162 +16,101 @@ const NewsEventsPage = () => {
   const newsArticles = [
     {
       id: 'olympiad',
-      title: "KNS Students Excel in National Science Olympiad 2023",
-      excerpt: "Our students secured top positions in the National Science Olympiad, bringing pride to the school with 3 gold medals and 5 silver medals.",
-      content: "Kathmandu National School students demonstrated exceptional talent in the National Science Olympiad 2023 held in Kathmandu. Out of 15 participating students, 8 secured positions in the top 10. Rohan Sharma (Grade 10) secured first position in Physics, while Sita Gurung (Grade 11) topped in Chemistry. The winners received their awards at a ceremony attended by the Minister of Education.",
-      date: "2023-12-15",
-      category: "Achievement",
+      title: "Kathmandu National School announces Admissions Open from Play Group to Grade IX for the Academic Year 2082(2026/2027).",
+      excerpt: "Admission form can be collected from the school Reception between 9:00 am to 4:00 pm on weekdays.",
+      content: "",
+      date: "2026",
+      category: "Academic",
       author: "Academic Department",
-      readTime: "3 min read",
-      image: "https://images.unsplash.com/photo-1532094349884-543bc11b234d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+      readTime: "",
+      image: admission,
       featured: true,
-      tags: ["Science", "Olympiad", "Achievement"]
-    },
-    {
-      id: 'lab',
-      title: "New Computer Lab Inaugurated with Modern Equipment",
-      excerpt: "School inaugurated a state-of-the-art computer lab with 50 new systems and advanced software for enhanced digital learning.",
-      content: "The newly established computer lab at Kathmandu National School was inaugurated by Principal Anju Thapa. The lab features 50 high-performance computers, interactive smart boards, and the latest educational software. This initiative aims to enhance digital literacy among students and prepare them for the technology-driven future. The lab will be used for computer science classes, coding workshops, and digital research projects.",
-      date: "2023-12-10",
-      category: "Infrastructure",
-      author: "IT Department",
-      readTime: "2 min read",
-      image: "https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
-      featured: true,
-      tags: ["Technology", "Infrastructure", "Digital Learning"]
-    },
-    {
-      id: 'pta',
-      title: "Annual Parents-Teachers Meeting Concluded Successfully",
-      excerpt: "The annual PTA meeting saw record participation with constructive discussions on student progress and school development.",
-      content: "The Annual Parents-Teachers Association meeting was held on December 5, 2023, with over 85% parent participation. The meeting focused on student academic progress, behavioral development, and future school initiatives. Parents provided valuable feedback and suggestions for improvement. A new committee was formed to strengthen home-school collaboration and enhance student support systems.",
-      date: "2023-12-05",
-      category: "Meeting",
-      author: "PTA Committee",
-      readTime: "4 min read",
-      image: "https://images.unsplash.com/photo-1577896851231-70ef18881754?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
-      tags: ["PTA", "Parents", "Collaboration"]
-    },
-    {
-      id: 'environment',
-      title: "Environmental Club Organizes Tree Plantation Drive",
-      excerpt: "Students planted over 200 saplings in school premises as part of environmental conservation initiative.",
-      content: "The KNS Environmental Club organized a successful tree plantation drive on World Environment Day. Students, teachers, and staff participated in planting 200+ saplings of various native species in the school campus. The initiative aims to create awareness about environmental conservation and promote sustainable practices among students. The club also conducted workshops on waste management and recycling.",
-      date: "2023-12-01",
-      category: "Environment",
-      author: "Environmental Club",
-      readTime: "2 min read",
-      image: "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
-      tags: ["Environment", "Club", "Sustainability"]
-    },
-    {
-      id: 'library',
-      title: "School Library Receives 500 New Books",
-      excerpt: "Library collection expanded with new books covering various subjects and genres for enhanced reading culture.",
-      content: "The school library has been enriched with 500 new books covering fiction, non-fiction, reference materials, and academic journals. This addition was made possible through donations from alumni and the school management. The new collection includes award-winning literature, scientific journals, and career guidance books. Students are encouraged to make the most of these resources for their academic and personal development.",
-      date: "2023-11-28",
-      category: "Resources",
-      author: "Library Department",
-      readTime: "2 min read",
-      image: "https://images.unsplash.com/photo-1507842217343-583bb7270b66?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
-      tags: ["Library", "Books", "Resources"]
-    },
-    {
-      id: 'art',
-      title: "Art Exhibition Showcases Student Creativity",
-      excerpt: "Annual art exhibition displayed 150+ artworks created by students across all grades.",
-      content: "The Annual Art Exhibition 'Colors of Imagination' featured 150+ artworks including paintings, sculptures, and digital art created by KNS students. The exhibition was open to parents and visitors for three days. Many artworks were sold, with proceeds going to charity. Special recognition was given to innovative pieces that addressed social issues through art.",
-      date: "2023-11-25",
-      category: "Arts",
-      author: "Art Department",
-      readTime: "3 min read",
-      image: "https://images.unsplash.com/photo-1541961017774-22349e4a1262?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
-      tags: ["Art", "Exhibition", "Creativity"]
+      tags: ["Admissions", "Academic", "Enrollment"]
     }
   ];
 
   // Events data
   const upcomingEvents = [
-    {
-      id: 'science-fair',
-      title: "Winter Science Fair 2024",
-      description: "Annual science fair showcasing innovative projects and experiments by students",
-      date: "2024-01-20",
-      time: "9:00 AM - 3:00 PM",
-      location: "Science Block",
-      category: "Academic",
-      type: "Fair",
-      participants: "Classes 6-12",
-      registration: "Open until Jan 15",
-      featured: true,
-      icon: Award
-    },
-    {
-      id: 'basketball',
-      title: "Inter-School Basketball Tournament",
-      description: "Annual basketball competition featuring teams from schools across Kathmandu Valley",
-      date: "2024-01-25",
-      time: "8:00 AM - 5:00 PM",
-      location: "School Basketball Court",
-      category: "Sports",
-      type: "Tournament",
-      participants: "School Teams",
-      registration: "Closed",
-      featured: true,
-      icon: Trophy
-    },
-    {
-      id: 'career',
-      title: "Career Counseling Session",
-      description: "Interactive session with industry professionals for career guidance",
-      date: "2024-01-30",
-      time: "11:00 AM - 1:00 PM",
-      location: "Auditorium",
-      category: "Academic",
-      type: "Workshop",
-      participants: "Grade 10-12 Students",
-      registration: "Open",
-      icon: BookOpen
-    },
-    {
-      id: 'cultural',
-      title: "Cultural Diversity Day",
-      description: "Celebration of Nepal's cultural diversity through performances and exhibitions",
-      date: "2024-02-05",
-      time: "10:00 AM - 4:00 PM",
-      location: "School Ground",
-      category: "Cultural",
-      type: "Celebration",
-      participants: "All Students",
-      registration: "Not Required",
-      icon: Heart
-    },
-    {
-      id: 'parents',
-      title: "Parents Orientation Program",
-      description: "Orientation for new parents about school policies and academic programs",
-      date: "2024-02-10",
-      time: "10:00 AM - 12:00 PM",
-      location: "Conference Hall",
-      category: "Meeting",
-      type: "Orientation",
-      participants: "Parents",
-      registration: "Required",
-      icon: Users
-    },
-    {
-      id: 'math',
-      title: "Mathematics Quiz Competition",
-      description: "Inter-house mathematics quiz to promote analytical thinking",
-      date: "2024-02-15",
-      time: "2:00 PM - 4:00 PM",
-      location: "Classroom Block",
-      category: "Academic",
-      type: "Competition",
-      participants: "Classes 8-10",
-      registration: "Open",
-      icon: Award
-    }
+    // {
+    //   id: 'science-fair',
+    //   title: "Winter Science Fair 2024",
+    //   description: "Annual science fair showcasing innovative projects and experiments by students",
+    //   date: "2024-01-20",
+    //   time: "9:00 AM - 3:00 PM",
+    //   location: "Science Block",
+    //   category: "Academic",
+    //   type: "Fair",
+    //   participants: "Classes 6-12",
+    //   registration: "Open until Jan 15",
+    //   featured: true,
+    //   icon: Award
+    // },
+    // {
+    //   id: 'basketball',
+    //   title: "Inter-School Basketball Tournament",
+    //   description: "Annual basketball competition featuring teams from schools across Kathmandu Valley",
+    //   date: "2024-01-25",
+    //   time: "8:00 AM - 5:00 PM",
+    //   location: "School Basketball Court",
+    //   category: "Sports",
+    //   type: "Tournament",
+    //   participants: "School Teams",
+    //   registration: "Closed",
+    //   featured: true,
+    //   icon: Trophy
+    // },
+    // {
+    //   id: 'career',
+    //   title: "Career Counseling Session",
+    //   description: "Interactive session with industry professionals for career guidance",
+    //   date: "2024-01-30",
+    //   time: "11:00 AM - 1:00 PM",
+    //   location: "Auditorium",
+    //   category: "Academic",
+    //   type: "Workshop",
+    //   participants: "Grade 10-12 Students",
+    //   registration: "Open",
+    //   icon: BookOpen
+    // },
+    // {
+    //   id: 'cultural',
+    //   title: "Cultural Diversity Day",
+    //   description: "Celebration of Nepal's cultural diversity through performances and exhibitions",
+    //   date: "2024-02-05",
+    //   time: "10:00 AM - 4:00 PM",
+    //   location: "School Ground",
+    //   category: "Cultural",
+    //   type: "Celebration",
+    //   participants: "All Students",
+    //   registration: "Not Required",
+    //   icon: Heart
+    // },
+    // {
+    //   id: 'parents',
+    //   title: "Parents Orientation Program",
+    //   description: "Orientation for new parents about school policies and academic programs",
+    //   date: "2024-02-10",
+    //   time: "10:00 AM - 12:00 PM",
+    //   location: "Conference Hall",
+    //   category: "Meeting",
+    //   type: "Orientation",
+    //   participants: "Parents",
+    //   registration: "Required",
+    //   icon: Users
+    // },
+    // {
+    //   id: 'math',
+    //   title: "Mathematics Quiz Competition",
+    //   description: "Inter-house mathematics quiz to promote analytical thinking",
+    //   date: "2024-02-15",
+    //   time: "2:00 PM - 4:00 PM",
+    //   location: "Classroom Block",
+    //   category: "Academic",
+    //   type: "Competition",
+    //   participants: "Classes 8-10",
+    //   registration: "Open",
+    //   icon: Award
+    // }
   ];
 
   const formatDate = (dateString) => {

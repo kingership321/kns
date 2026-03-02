@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import QuickLinksSection from '../../../components/LinksSection';
 
 // Import vice principal image
-import vicePrincipalImage from '../../../assets/kamal-adhikari-principal.jpeg';
+import vicePrincipalImage from '../../../assets/kamal-adhikari-principal1.jpeg';
 
 const VicePrincipalMessagePage = () => {
 
@@ -121,10 +121,19 @@ const VicePrincipalMessagePage = () => {
                   <p>
                     <span className="font-semibold text-primary">We aspire to value everyone irrespective of age, position, race, gender, background or ability</span> and teach the same to our students. We motivate, support and inspire personal, spiritual, emotional and educational growth in a safe and secure environment.
                   </p>
+                  <p>
+                    We have a broad and balanced curriculum, which our children are able to access. With the aim that the students receive the highest standard of education, we've fully included the creative and physical areas of the National curriculum.
+                  </p>
+                  <p>
+                    Along with the academic programmes, we seek to develop and nurture the different facets of a child with the ECAs like dance, theatre, music, fine arts and a variety of sports. We focus on developing both the mental and physical abilities of a student. Thus, providing holistic grooming to the students, where the child can explore his/her true potential.
+                  </p>
+                  <p>
+                    Besides the usual procedural teaching, we persistently upgrade and update our teaching tools and techniques, and we foster a healthy teacher-student relationship where we work around making studies as effortless as possible.
+                  </p>
                   
                   <div className="bg-primary/5 rounded-lg p-3 sm:p-4 border border-primary/20 mt-3">
                     <p className="font-serif italic text-gray-700 text-xs sm:text-sm">
-                      "As such we want all those who become part of our school family, whether a child or an adult, to feel valued, happy, respected and recognize their role in continuing to make our school outstanding."
+"We look forward to welcoming you and your children to our school."
                     </p>
                   </div>
                 </div>
@@ -197,10 +206,19 @@ const VicePrincipalMessagePage = () => {
                   <p>
                     <span className="font-semibold text-primary">We aspire to value everyone irrespective of age, position, race, gender, background or ability</span> and teach the same to our students. We motivate, support and inspire personal, spiritual, emotional and educational growth in a safe and secure environment.
                   </p>
+                  <p>
+                    We have a broad and balanced curriculum, which our children are able to access. With the aim that the students receive the highest standard of education, we've fully included the creative and physical areas of the National curriculum.
+                  </p>
+                  <p>
+                    Along with the academic programmes, we seek to develop and nurture the different facets of a child with the ECAs like dance, theatre, music, fine arts and a variety of sports. We focus on developing both the mental and physical abilities of a student. Thus, providing holistic grooming to the students, where the child can explore his/her true potential.
+                  </p>
+                  <p>
+                    Besides the usual procedural teaching, we persistently upgrade and update our teaching tools and techniques, and we foster a healthy teacher-student relationship where we work around making studies as effortless as possible.
+                  </p>
                   
-                  <div className="bg-primary/5 rounded-lg p-4 border border-primary/20 mt-4">
-                    <p className="font-serif italic text-gray-700 text-base">
-                      "As such we want all those who become part of our school family, whether a child or an adult, to feel valued, happy, respected and recognize their role in continuing to make our school outstanding."
+                  <div className="bg-primary/5 rounded-lg p-3 sm:p-4 border border-primary/20 mt-3 mx-auto max-w-md">
+                    <p className="font-serif italic text-gray-700 text-xs sm:text-sm">
+"We look forward to welcoming you and your children to our school."
                     </p>
                   </div>
                 </div>

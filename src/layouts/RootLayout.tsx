@@ -43,9 +43,8 @@ export default function RootLayout() {
 
   const contactDetails = {
     name: "Kathmandu National School",
-    address: "Old Baneshwor-34, Kathmandu, Nepal",
-    telephone: "+9774590821",
-    fax: "+9774590821",
+    address: "Old Baneshwor-31, Kathmandu, Nepal",
+    telephone: "01-4590821",
     email: "info@kns.edu.np",
     officeHours: "Sunday-Friday: 9:00 AM - 4:00 PM"
   };
@@ -148,7 +147,7 @@ export default function RootLayout() {
 
   // Scrolling messages for notice bar
   const scrollingMessages = [
-    "🎓 Admissions Open for Academic Year 2024-25",
+    "🎓 Admissions Open for Academic Year 2082/83",
     // "📅 Winter Vacation: School closed from Dec 20 to Jan 5",
     // "📚 SEE Exam Preparation Classes start from Jan 10, 2024",
     // "🏆 Annual Sports Day on Jan 25 - All parents invited!",
@@ -663,8 +662,8 @@ export default function RootLayout() {
             initial={{ opacity: 0, y: -5 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -5 }}
-            className="lg:hidden fixed top-0 left-0 right-0 z-40" // Changed from sticky to fixed
-            style={{ top: '44px' }} // Position below navbar
+            className="lg:hidden fixed top-0 left-0 right-0 z-50" // Changed from sticky to fixed
+            style={{top: '48px'}} // Position below navbar for medium and small screen
           >
             <div className="bg-gradient-to-r from-primary/95 to-primary/90 backdrop-blur-sm border-b border-white/20">
               <div className="px-2 py-0.5">
@@ -846,11 +845,10 @@ export default function RootLayout() {
                     <Phone className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-white" />
                   </div>
                   <div className="flex-1">
-                    <div className="font-medium text-white mb-0.5 sm:mb-1 text-xs sm:text-sm">Phone & Fax</div>
+                    <div className="font-medium text-white mb-0.5 sm:mb-1 text-xs sm:text-sm">Phone</div>
                     <a href={`tel:${contactDetails.telephone}`} className="text-white/80 hover:text-white text-xs sm:text-sm transition-colors block mb-0.5">
                       Telephone: {contactDetails.telephone}
                     </a>
-                    <div className="text-white/80 text-xs sm:text-sm">FAX: {contactDetails.fax}</div>
                   </div>
                 </div>
                 

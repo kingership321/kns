@@ -10,10 +10,9 @@ import extracurricularCalendarImage from '../assets/annual-day/annual-day3.jpg';
 import examScheduleImage from '../assets/annual-day/annual-day4.jpg';
 
 // Import PDF files - You need to add these PDFs to your assets folder
-import academicCalendarPDF from '../assets/pdf/Network ch 5and 6.pdf';
-import examSchedulePDF from '../assets/pdf/bsccsit_syllabus.pdf';
-import cocurricularCalendarPDF from '../assets/pdf/microsyllabus-CG.pdf';
-import holidayListPDF from '../assets/pdf/pdf.pdf';
+import academicCalendarPDF2082 from '../pdfs/Kathmandu calendar 2082.pdf';
+import academicCalendarPDF2081 from '../pdfs/Kathmandu calendar 2081.pdf';
+
 
 const CalendarPage = () => {
   const [selectedYear, setSelectedYear] = useState('2024-2025');
@@ -21,82 +20,32 @@ const CalendarPage = () => {
   const [expandedDownloads, setExpandedDownloads] = useState({});
 
   const academicYears = [
-    { year: '2024-2025', active: true },
-    { year: '2023-2024', active: false },
-    { year: '2022-2023', active: false },
+    { year: '2082', active: true },
+    { year: '2081', active: false },
   ];
 
   const calendarDownloads = [
     {
       id: 'academic',
-      title: "Academic Calendar 2024-2025",
+      title: "Academic Calendar 2082",
       description: "Complete annual academic schedule with all important dates",
-      fileSize: "2.4 MB",
-      pages: "12 pages",
+      fileSize: "1.23 MB",
+      pages: "6 pages",
       icon: FileText,
       color: "bg-blue-500",
-      pdfFile: academicCalendarPDF,
-      fileName: "KNS_Academic_Calendar_2024_2025.pdf"
+      pdfFile: academicCalendarPDF2082,
+      fileName: "KNS_Academic_Calendar_2082.pdf"
     },
     {
-      id: 'exams',
-      title: "Examination Schedule 2024-2025",
-      description: "Detailed examination dates for all classes and subjects",
-      fileSize: "1.8 MB",
-      pages: "8 pages",
-      icon: FileText,
-      color: "bg-red-500",
-      pdfFile: examSchedulePDF,
-      fileName: "KNS_Examination_Schedule_2024_2025.pdf"
-    },
-    {
-      id: 'cocurricular',
-      title: "Co-curricular Activities Calendar",
-      description: "Schedule for sports, cultural and extracurricular activities",
-      fileSize: "1.5 MB",
+      id: 'academic',
+      title: "Academic Calendar 2081",
+      description: "Complete annual academic schedule with all important dates",
+      fileSize: "12.8 MB",
       pages: "6 pages",
-      icon: Calendar,
-      color: "bg-green-500",
-      pdfFile: cocurricularCalendarPDF,
-      fileName: "KNS_Co-curricular_Calendar_2024_2025.pdf"
-    },
-    {
-      id: 'holidays',
-      title: "Holiday List 2024-2025",
-      description: "Official holiday schedule for the academic year",
-      fileSize: "0.8 MB",
-      pages: "3 pages",
-      icon: Star,
-      color: "bg-yellow-500",
-      pdfFile: holidayListPDF,
-      fileName: "KNS_Holiday_List_2024_2025.pdf"
-    }
-  ];
-
-  const importantDates = [
-    {
-      title: "New Session Begins",
-      date: "April 15, 2024",
-      icon: BookOpen,
-      importance: "High Priority"
-    },
-    {
-      title: "Annual Examinations",
-      date: "February 1-15, 2025",
       icon: FileText,
-      importance: "Critical"
-    },
-    {
-      title: "Sports Day",
-      date: "November 15, 2024",
-      icon: Trophy,
-      importance: "Major Event"
-    },
-    {
-      title: "Result Declaration",
-      date: "March 10, 2025",
-      icon: Star,
-      importance: "Important"
+      color: "bg-blue-500",
+      pdfFile: academicCalendarPDF2081,
+      fileName: "KNS_Academic_Calendar_2081.pdf"
     }
   ];
 
@@ -346,37 +295,6 @@ const CalendarPage = () => {
                 </motion.div>
               ))}
             </div>
-
-            {/* Mobile Important Dates */}
-            <motion.div
-              initial={{ opacity: 0, y: 10 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-50px" }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="mt-6 sm:mt-8"
-            >
-              <div className="bg-gradient-to-r from-primary/90 to-primary/80 rounded-lg p-4 sm:p-5 border border-white/20 backdrop-blur-sm">
-                <div className="flex items-center gap-2 mb-3">
-                  <Calendar className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
-                  <h3 className="text-base sm:text-lg font-bold text-white font-display">
-                    Key Academic Dates
-                  </h3>
-                </div>
-                
-                <div className="space-y-3 text-white/90 text-xs sm:text-sm">
-                  <div className="grid grid-cols-2 gap-2 sm:gap-3 mt-3">
-                    <div className="bg-white/10 backdrop-blur-sm rounded-lg p-2 sm:p-3 border border-white/20">
-                      <div className="text-white text-lg sm:text-xl font-bold mb-0.5">4</div>
-                      <div className="text-white/80 text-xs">Key Dates</div>
-                    </div>
-                    <div className="bg-white/10 backdrop-blur-sm rounded-lg p-2 sm:p-3 border border-white/20">
-                      <div className="text-white text-lg sm:text-xl font-bold mb-0.5">2024-25</div>
-                      <div className="text-white/80 text-xs">Academic Year</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </motion.div>
           </div>
 
           {/* Desktop: Two Column Layout */}
@@ -428,27 +346,6 @@ const CalendarPage = () => {
                     <p className="font-serif italic text-gray-700 text-sm">
                       "Proper planning ensures thorough preparation for all examinations and academic requirements."
                     </p>
-                  </div>
-                </div>
-              </div>
-
-              {/* Important Dates */}
-              <div className="bg-gradient-to-r from-primary/90 to-primary/80 rounded-lg p-6 border border-white/20 backdrop-blur-sm">
-                <div className="flex items-center gap-2 mb-4">
-                  <Calendar className="w-5 h-5 text-white" />
-                  <h3 className="text-xl font-bold text-white font-display">
-                    Key Academic Dates
-                  </h3>
-                </div>
-                
-                <div className="grid grid-cols-2 gap-3">
-                  <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
-                    <div className="text-white font-bold text-lg mb-0.5">4</div>
-                    <div className="text-white/80 text-sm">Key Dates</div>
-                  </div>
-                  <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
-                    <div className="text-white font-bold text-lg mb-0.5">2024-25</div>
-                    <div className="text-white/80 text-sm">Academic Year</div>
                   </div>
                 </div>
               </div>

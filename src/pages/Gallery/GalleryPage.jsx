@@ -11,15 +11,93 @@ import annualDay3 from '../../assets/annual-day/annual-day3.jpg';
 import annualDay4 from '../../assets/annual-day/annual-day4.jpg';
 import annualDay5 from '../../assets/annual-day/annual-day5.jpg';
 import annualDay6 from '../../assets/annual-day/annual-day6.jpg';
+import annualDay7 from '../../assets/annual-day/annual-day7.jpg';
+import annualDay8 from '../../assets/annual-day/annual-day8.jpg';
+import annualDay9 from '../../assets/annual-day/annual-day9.jpg';
+import annualDay10 from '../../assets/annual-day/annual-day10.jpg';
+import annualDay11 from '../../assets/annual-day/annual-day11.jpg';
+import annualDay12 from '../../assets/annual-day/annual-day12.jpg';
+import annualDay13 from '../../assets/annual-day/annual-day13.jpg';
+import annualDay14 from '../../assets/annual-day/annual-day14.jpg';
+import annualDay15 from '../../assets/annual-day/annual-day15.jpg';
+import annualDay16 from '../../assets/annual-day/annual-day16.jpg';
+import annualDay17 from '../../assets/annual-day/annual-day17.jpg';
+import annualDay18 from '../../assets/annual-day/annual-day18.jpg';
+import annualDay19 from '../../assets/annual-day/annual-day19.jpg';
+import annualDay20 from '../../assets/annual-day/annual-day20.jpg';
+import annualDay21 from '../../assets/annual-day/annual-day21.jpg';
+import annualDay22 from '../../assets/annual-day/annual-day22.jpg';
+import annualDay23 from '../../assets/annual-day/annual-day23.jpg';
+import annualDay24 from '../../assets/annual-day/annual-day24.jpg';
+import annualDay25 from '../../assets/annual-day/annual-day25.jpg';
+import annualDay26 from '../../assets/annual-day/annual-day26.jpg';
+import annualDay27 from '../../assets/annual-day/annual-day27.jpg';
+import annualDay28 from '../../assets/annual-day/annual-day28.jpg';
+import annualDay29 from '../../assets/annual-day/annual-day29.jpg';
+import annualDay30 from '../../assets/annual-day/annual-day30.jpg';
+import annualDay31 from '../../assets/annual-day/annual-day31.jpg';
+import annualDay32 from '../../assets/annual-day/annual-day32.jpg';
+import annualDay33 from '../../assets/annual-day/annual-day33.jpg';
+import annualDay34 from '../../assets/annual-day/annual-day34.jpg';
+import annualDay35 from '../../assets/annual-day/annual-day35.jpg';
+import annualDay36 from '../../assets/annual-day/annual-day36.jpg';
+
+import sport1 from '../../assets/sports-meet-2025/sm1.jpg';
+import sport2 from '../../assets/sports-meet-2025/sm2.jpg';
+import sport3 from '../../assets/sports-meet-2025/sm3.jpg';
+import sport4 from '../../assets/sports-meet-2025/sm4.jpg';
+import sport5 from '../../assets/sports-meet-2025/sm5.jpg';
+import sport6 from '../../assets/sports-meet-2025/sm6.jpg';
+import sport7 from '../../assets/sports-meet-2025/sm7.jpg';
+import sport8 from '../../assets/sports-meet-2025/sm8.jpg';
+import sport9 from '../../assets/sports-meet-2025/sm9.jpg';
+import sport10 from '../../assets/sports-meet-2025/sm10.jpg';
+import sport11 from '../../assets/sports-meet-2025/sm11.jpg';
+
+//import 10 picnic pictures
+import picnic1 from '../../assets/picnic-2082/pic1.jpg';
+import picnic2 from '../../assets/picnic-2082/pic2.jpg';
+import picnic3 from '../../assets/picnic-2082/pic3.jpg';
+import picnic4 from '../../assets/picnic-2082/pic4.jpg';
+import picnic5 from '../../assets/picnic-2082/pic5.jpg';
+import picnic6 from '../../assets/picnic-2082/pic6.jpg';
+import picnic7 from '../../assets/picnic-2082/pic7.jpg';
+import picnic8 from '../../assets/picnic-2082/pic8.jpg';
+import picnic9 from '../../assets/picnic-2082/pic9.jpg';
+import picnic10 from '../../assets/picnic-2082/pic10.jpg';
+
 import event6Image from '../../assets/Montessori/prize1.jpg';
 
 //saraswati-pooja images imports
-import saraswatiPooja1 from '../../assets/saraswati-puja/Saraswati-Puja1.jpg';
-import saraswatiPooja2 from '../../assets/saraswati-puja/Saraswati-Puja2.jpg';
-import saraswatiPooja3 from '../../assets/saraswati-puja/Saraswati-Puja3.jpg';
-import saraswatiPooja4 from '../../assets/saraswati-puja/Saraswati-Puja4.jpg';
-import saraswatiPooja5 from '../../assets/saraswati-puja/Saraswati-Puja5.jpg';
-import saraswatiPooja7 from '../../assets/saraswati-puja/Saraswati-Puja7.jpg';
+import saraswatiPooja1 from '../../assets/saraswati_2082/saras1.jpg';
+import saraswatiPooja2 from '../../assets/saraswati_2082/saras2.jpg';
+import saraswatiPooja3 from '../../assets/saraswati_2082/saras3.jpg';
+import saraswatiPooja4 from '../../assets/saraswati_2082/saras4.jpg';
+import saraswatiPooja5 from '../../assets/saraswati_2082/saras5.jpg';
+import saraswatiPooja6 from '../../assets/saraswati_2082/saras6.jpg';
+import saraswatiPooja7 from '../../assets/saraswati_2082/saras7.jpg';
+
+//import 8 pictures of investiture ceremony
+import investiture1 from '../../assets/investiture_2082/inv1.jpg';
+import investiture2 from '../../assets/investiture_2082/inv2.jpg';
+import investiture3 from '../../assets/investiture_2082/inv3.jpg';
+import investiture4 from '../../assets/investiture_2082/inv4.jpg';
+import investiture5 from '../../assets/investiture_2082/inv5.jpg';
+import investiture6 from '../../assets/investiture_2082/inv6.jpg';
+import investiture7 from '../../assets/investiture_2082/inv7.jpg';
+import investiture8 from '../../assets/investiture_2082/inv8.jpg';
+
+//import 10 images for teej dance competition
+import teej1 from '../../assets/dance_comp_2082/7dance4.jpg';
+import teej2 from '../../assets/dance_comp_2082/dance1.jpg';
+import teej3 from '../../assets/dance_comp_2082/dance2.jpg';
+import teej4 from '../../assets/dance_comp_2082/dance3.jpg';
+import teej5 from '../../assets/dance_comp_2082/dance4.jpg';
+import teej6 from '../../assets/dance_comp_2082/dance5.jpg';
+import teej7 from '../../assets/dance_comp_2082/dance6.jpg';
+import teej8 from '../../assets/dance_comp_2082/teej1.jpg';
+import teej9 from '../../assets/dance_comp_2082/teej2.jpg';
+import teej10 from '../../assets/dance_comp_2082/teej3.jpg';
 
 //
 // Sample event images for gallery display
@@ -59,109 +137,83 @@ const GalleryPage = () => {
   const events = [
     {
       id: 1,
-      title: "Annual Day Celebration 2023",
+      title: "Annual Day Celebration 2025",
       description: "The grand celebration of our school's foundation with cultural performances and award ceremonies",
-      date: "2023-11-15",
-      time: "4:00 PM - 7:00 PM",
+      date: "2025-12-15",
+      time: "10:00 AM - 5:00 PM",
       location: "School Auditorium",
       category: "celebration",
-      images: [annualDay1, annualDay2, annualDay3, annualDay4, annualDay5, annualDay6],
-      coverImage: annualDay1,
+      images: [annualDay34, annualDay35, annualDay36, annualDay1, annualDay2, annualDay3, annualDay4, annualDay5, annualDay6, annualDay7, annualDay8, annualDay9, annualDay10, annualDay11, annualDay12, annualDay13, annualDay14, annualDay15, annualDay16, annualDay17, annualDay18, annualDay19, annualDay20, annualDay21, annualDay22, annualDay23, annualDay24, annualDay25, annualDay26, annualDay27, annualDay28, annualDay29, annualDay30, annualDay31, annualDay32, annualDay33],
+      coverImage: annualDay32,
       featured: true,
-      photoCount: 6,
-      participants: "All students and staff"
+      photoCount: 36,
+      participants: "All students, parents, staff, and BODs."
     },
     {
       id: 2,
-      title: "Sports Day Competition",
+      title: "Annual Sports Meet 2025",
       description: "Annual inter-house sports competition showcasing athletic talents of our students",
-      date: "2023-10-05",
+      date: "2025-10-05",
       time: "9:00 AM - 4:00 PM",
       location: "School Ground",
       category: "sports",
-      images: sampleEventImages.slice(2, 10),
-      coverImage: sampleEventImages[2],
+      images: [sport1, sport2, sport3, sport4, sport5, sport6, sport7, sport8, sport9, sport10, sport11],
+      coverImage: sport5,
       featured: true,
-      photoCount: 18,
-      participants: "Classes 6-12"
+      photoCount: 11,
+      participants: "All Grades, divided into four houses: Red, Blue, Green, and Yellow"
     },
     {
       id: 3,
       title: "Saraswati Pooja Celebration",
       description: "Honoring the goddess of knowledge with traditional rituals, music, and dance performances",
-      date: "2023-09-20",
-      time: "3:00 PM - 6:00 PM",
-      location: "School Cultural Hall",
+      date: "2026-09-20",
+      time: "10:00 AM - 4:00 PM",
+      location: "School Premises",
       category: "cultural",
-      images: [saraswatiPooja1, saraswatiPooja2, saraswatiPooja3, saraswatiPooja4, saraswatiPooja5, saraswatiPooja7],
-      coverImage: saraswatiPooja1,
-      photoCount: 6,
+      images: [saraswatiPooja1, saraswatiPooja2, saraswatiPooja3, saraswatiPooja4, saraswatiPooja5, saraswatiPooja6, saraswatiPooja7],
+      coverImage: saraswatiPooja3,
+      photoCount: 7,
       participants: "All grades"
     },
     {
-      id: 4,
-      title: "Science Exhibition",
-      description: "Innovative projects and experiments presented by our young scientists",
-      date: "2023-08-18",
-      time: "10:00 AM - 3:00 PM",
-      location: "Science Block",
-      category: "academic",
-      images: sampleEventImages.slice(3, 11),
-      coverImage: annualDay3,
-      photoCount: 21,
-      participants: "Science Club Members"
-    },
-    {
       id: 5,
-      title: "Graduation Ceremony",
-      description: "Farewell ceremony for our graduating class with honors and awards",
-      date: "2023-07-30",
-      time: "2:00 PM - 5:00 PM",
-      location: "Main Hall",
-      category: "celebration",
-      images: sampleEventImages.slice(0, 8),
-      coverImage: annualDay5,
-      photoCount: 28,
-      participants: "Grade 12 Students"
+      title: "Picnic-2025",
+      description: "Annual school picnic for all students and staff to relax and enjoy outdoor activities together",
+      date: "2025-12-15",
+      time: "8:00 AM - 5:00 PM",
+      location: "",
+      category: "field",
+      images: [picnic1, picnic2, picnic3, picnic4, picnic5, picnic6, picnic7, picnic8, picnic9, picnic10],
+      coverImage: picnic2,
+      photoCount: 10,
+      participants: "Secondary and Primary students, teachers, and staff"
     },
     {
       id: 6,
-      title: "Educational Field Trip",
-      description: "Visit to historical sites and museums for practical learning experience",
-      date: "2023-06-12",
+      title: "Investiture Ceremony 2082",
+      description: "The formal ceremony where student leaders are appointed and take their oaths of office",
+      date: "2025-01-12",
       time: "8:00 AM - 4:00 PM",
-      location: "Patan Museum",
-      category: "field",
-      images: sampleEventImages.slice(4, 12),
-      coverImage: event6Image,
-      photoCount: 15,
-      participants: "Class 9 Students"
-    },
-    {
-      id: 7,
-      title: "Teachers' Day Celebration",
-      description: "Students expressing gratitude to teachers through performances and gifts",
-      date: "2023-05-28",
-      time: "11:00 AM - 2:00 PM",
-      location: "School Auditorium",
-      category: "celebration",
-      images: sampleEventImages.slice(2, 10),
-      coverImage: annualDay2,
-      photoCount: 19,
-      participants: "All teachers and students"
+      location: "School Premises",
+      category: "academic",
+      images: [investiture1, investiture2, investiture3, investiture4, investiture5, investiture6, investiture7, investiture8],
+      coverImage: investiture5,
+      photoCount: 8,
+      participants: "All Grades"
     },
     {
       id: 8,
-      title: "Math Olympiad Winners",
-      description: "Celebrating our students' achievements in national mathematics competition",
-      date: "2023-04-10",
-      time: "10:00 AM - 12:00 PM",
-      location: "Principal's Office",
-      category: "academic",
-      images: sampleEventImages.slice(1, 7),
-      coverImage: annualDay4,
-      photoCount: 12,
-      participants: "Math Club"
+      title: "Dance Competition during Teej 2082",
+      description: "Students showcasing their dance talents in celebration of the Teej festival with traditional and contemporary performances",
+      date: "2025-04-10",
+      time: "10:00 AM - 04:00 PM",
+      location: "School Auditorium",
+      category: "cultural",
+      images: [teej1, teej2, teej3, teej4, teej5, teej6, teej7, teej8, teej9, teej10],
+      coverImage: teej4,
+      photoCount: 10,
+      participants: "All Grades"
     }
   ];
 
@@ -721,33 +773,6 @@ const GalleryPage = () => {
                           {events.reduce((acc, event) => acc + event.images.length, 0)}
                         </div>
                         <div className="text-gray-600 text-xs">Total Photos</div>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Info Section */}
-                  <div className="bg-gradient-to-r from-primary/90 to-primary/80 rounded-lg p-6 border border-white/20 backdrop-blur-sm">
-                    <div className="flex items-center gap-2 mb-3">
-                      <ImageIcon className="w-5 h-5 text-white" />
-                      <h3 className="text-xl font-bold text-white font-display">
-                        Preserving School Memories
-                      </h3>
-                    </div>
-                    
-                    <p className="text-white/90 text-sm mb-3">
-                      Our gallery captures the vibrant life at Kathmandu National School - from academic achievements to cultural celebrations, sports events to field trips. Each photo tells a story of learning, growth, and community.
-                    </p>
-                    
-                    <div className="grid grid-cols-2 gap-3 mt-4">
-                      <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3 border border-white/20">
-                        <div className="text-white font-bold text-base mb-0.5">{events.length}</div>
-                        <div className="text-white/80 text-xs">School Events</div>
-                      </div>
-                      <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3 border border-white/20">
-                        <div className="text-white font-bold text-base mb-0.5">
-                          {events.reduce((acc, event) => acc + event.images.length, 0)}
-                        </div>
-                        <div className="text-white/80 text-xs">Total Photos</div>
                       </div>
                     </div>
                   </div>

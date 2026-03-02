@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router';
 import fac1 from '../assets/teachers/assembly.jpg';
 import principalPhoto from '../assets/director.jpeg';
 import chairmanPhoto from '../assets/founding-principal.jpeg';
+import logo from '../assets/schoollogo-1.png';
 
 const HeroSection = () => {
   const navigate = useNavigate();
@@ -60,7 +61,7 @@ const HeroSection = () => {
       
       {/* Main Content */}
       <div className="container mx-auto px-3 xs:px-4 sm:px-5 md:px-6 lg:px-8 relative z-10">
-        <div className="flex flex-col lg:flex-row items-center justify-between gap-4 xs:gap-5 sm:gap-6 md:gap-8 lg:gap-10 xl:gap-12 2xl:gap-14 py-4 xs:py-5 sm:py-6 md:py-8 lg:py-8">
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-4 xs:gap-5 sm:gap-6 md:gap-8 lg:gap-10 xl:gap-12 2xl:gap-14 py-4 xs:py-5 sm:py-6 md:py-8 lg:py-6">
           
           {/* Left Column - Chairman's Message (Desktop) */}
           <motion.div
@@ -99,7 +100,7 @@ const HeroSection = () => {
                 </p>
                 <div className="pt-3 xs:pt-3 sm:pt-4 border-t border-white/20">
                   <h3 className="text-base xs:text-base sm:text-lg md:text-xl font-bold text-white font-serif mb-0.5 xs:mb-0.5 sm:mb-1">Arjun Kumar Khadka</h3>
-                  <p className="text-white/80 text-xs xs:text-xs sm:text-sm md:text-base">Executive Chairman / Founder</p>
+                  <p className="text-white/80 text-xs xs:text-xs sm:text-sm md:text-base">Executive Chairman & Founder</p>
                 </div>
               </div>
             </div>
@@ -117,13 +118,13 @@ const HeroSection = () => {
   initial={{ opacity: 0 }}
   animate={{ opacity: 1 }}
   transition={{ delay: 0.3, duration: 0.8 }}
-  className="mb-0 xs:mb-0 sm:mb-0 md:mb-0 lg:mb-0 xl:mb-0 flex justify-center mt-6 lg:-mt-20 xl:-mt-24"
+  className="-mb-2 xs:sm-0 sm:mb-0 md:mb-0 lg:-mb-0 xl:-mb-8 flex justify-center mt-2 lg:mt-1 xl:mt-1 2xl:mt-2"
 >
   <div className="relative inline-block">
     {/* SVG with curved path */}
     <svg 
       viewBox="0 0 300 80" 
-      className="w-48 xs:w-48 sm:w-56 md:w-64 lg:w-72 xl:w-80 h-auto"
+      className="w-55 xs:w-44 sm:w-56 md:w-64 lg:w-80 xl:w-100 h-auto"
       preserveAspectRatio="xMidYMid meet"
     >
       {/* Define the curved path */}
@@ -184,8 +185,17 @@ const HeroSection = () => {
   </div>
 </motion.div>
 
+            {/*KNS LOGO*/}
+                <div className="w-48 h-48 sm:w-50 sm:h-50 lg:w-50 lg:h-50 border-2 border-white/20 flex items-center justify-center bg-white/10 backdrop-blur-sm group-hover:bg-white/20 mx-auto overflow-hidden mb-2">
+                  <img
+                    src={logo}
+                    alt="Kathmandu National School Logo"
+                    className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+                  />
+                </div>
+
             {/* School Name - Larger on mobile, original sizes on desktop */}
-            <div className="mb-3 xs:mb-3 sm:mb-4 md:mb-5 lg:mb-6 xl:mb-8">
+            <div className="mb-3 xs:mb-2 sm:mb-1 md:mb-2 lg:mb-3 xl:mb-4">
               <h1 className="font-bold leading-none tracking-tight">
                 {/* KATHMANDU - Larger on mobile, original sizes on desktop */}
                 <span className="block text-4xl xs:text-4xl sm:text-5xl md:text-5xl lg:text-5xl xl:text-6xl 2xl:text-7xl text-red-600 font-serif 
@@ -213,14 +223,12 @@ const HeroSection = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.5, duration: 1 }}
-              className="mb-4 xs:mb-4 sm:mb-5 md:mb-6 lg:mb-8 xl:mb-10"
+              className="mb-4 xs:mb-4 sm:mb-5 md:mb-6 lg:mb-8 xl:mb-8"
             >
               <div className="flex items-center justify-center gap-2 xs:gap-2 sm:gap-3 md:gap-4 lg:gap-4 xl:gap-6">
-                <div className="h-px w-4 xs:w-4 sm:w-6 md:w-8 lg:w-10 xl:w-12 bg-gradient-to-r from-transparent to-white/30" />
-                <p className="text-xs xs:text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl text-white/95 italic tracking-wide font-serif leading-relaxed px-1 xs:px-1 sm:px-2 md:px-2">
+                <p className="text-xs xs:text-xs sm:text-xs md:text-sm lg:text-md xl:text-lg 2xl:text-xl text-white/95 italic tracking-wide font-serif leading-relaxed px-1 xs:px-1 sm:px-2 md:px-2">
                   Education · Civilization · Humanization
                 </p>
-                <div className="h-px w-4 xs:w-4 sm:w-6 md:w-8 lg:w-10 xl:w-12 bg-gradient-to-l from-transparent to-white/30" />
               </div>
             </motion.div>
 
@@ -256,7 +264,7 @@ const HeroSection = () => {
             className="hidden lg:block lg:w-1/4 xl:w-1/3 2xl:w-2/5"
             onClick={handleFounderCardClick}
           >
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 xs:p-4 sm:p-5 md:p-6 border border-white/20 shadow-xl">
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 xs:p-4 sm:p-5 md:p-6 border border-white/20 shadow-xl lg:py-12 xl:py-9">
               {/* Principal Photo */}
               <div className="relative mb-4 xs:mb-4 sm:mb-5 md:mb-6">
                 {/* Image Container with Two Rings */}
@@ -324,7 +332,7 @@ const HeroSection = () => {
                   {/* Badge positioned at bottom */}
                   <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2">
                     <span className="px-3 xs:px-3 sm:px-3.5 py-1 bg-red-500 text-white text-xs xs:text-xs sm:text-sm font-semibold rounded-full whitespace-nowrap shadow-lg">
-                      Executive Chairman / Founder
+                      Executive Chairman & Founder
                     </span>
                   </div>
                 </div>

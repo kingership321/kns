@@ -13,27 +13,27 @@ const TestimonialSection = () => {
   const testimonials = [
     {
       id: 1,
-      name: "Rajesh Kumar",
-      role: "Parent of Grade 10 Student",
-      content: "Kathmandu National School has provided my child with an exceptional educational experience. The teachers are dedicated, and the holistic approach truly prepares students for real-world challenges.",
+      name: "Kalpana Mahat",
+      role: "Housewife and Parent",
+      content: "I would like to express my appreciation and extend my thanks to the teacher for their efforts spent on my kids during their time at the School. I would like to take this opportunity to all Teachers for their extra efforts and extra patience in helping the development of my kids. Thank you",
       rating: 5,
       image: person1,
       year: "2023"
     },
     {
       id: 2,
-      name: "Dr. Sunita Sharma",
-      role: "Alumni (Batch 2015)",
-      content: "The foundation I received at KNS has been instrumental in my medical career. The school's emphasis on critical thinking and character building goes beyond textbooks.",
+      name: "Uttam Thapa",
+      role: "General Manager, Operations,Vayodha Hospitals Pvt. Ltd.",
+      content: "I am impressed by the overall setting and design of Learning Vision centres, which I find provide a nurturing environment for children to learn and interact with one another.",
       rating: 5,
       image: person2,
       year: "2015"
     },
     {
       id: 3,
-      name: "Priya Gurung",
-      role: "Parent of Two Students",
-      content: "Both my children have flourished at KNS. The balance between academics, sports, and extracurricular activities is remarkable. Teachers genuinely care about each student's development.",
+      name: "Balkrishna Karki",
+      role: "Colonel of Nepal Army",
+      content: "Our children have been fortunate enough to have spent the Kathmandu National School. We feel that Kathmandu National School has given them the opportunity to experience that learning is fun at an early age. This is important as a baseline for their success as they continue their academic careers. We thank everyone again at Kathmandu National School for the memories and taking care of our children.",
       rating: 5,
       image: person3,
       year: "Present"

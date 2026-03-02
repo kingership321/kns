@@ -120,7 +120,13 @@ const FounderPrincipalMessagePage = () => {
                   </p>
                   
                   <p>
-                    <span className="font-semibold text-primary">Our students say that KNS is not only a school for them but it is also their home away from parental home.</span> In this sense it is an academic shrine where our students are found to be so happy and confident to lead them to be the future leaders of the country.
+                    <span className="font-semibold text-primary">Our students say that KNS is not only a school for them but it is also their home away from parental home.</span> In this sense, it is an academic shrine where our students are found to be so happy and confident, leading them to be the future leaders of the country. We attempt our level best to model our young angels to stand for the country by endeavouring with perseverance and overcoming challenges around the globe. We receive supreme satisfaction from our products. We believe in our products as they are the ones who think spiritually, speak truly and perform kindly towards those who deserve the doctrine of perfect human beings.
+                  </p>
+                  <p>
+                    At the KNS, we take our responsibility to find what is exceptional in students very seriously. The experience that we have prepared for them here gives every student an all-round education built on a foundation of service, adventure, sports, creative arts and academics.
+                  </p>
+                  <p>
+                    Now, we have been advancing in the delivery system of education with modern mechanisms and tools at KNS, where every child is valued. We always maintain our services sophisticated with an affordable cost. That's why it's KNS, where once guardians visit, they then feel the difference.
                   </p>
                   
                   <div className="bg-primary/5 rounded-lg p-3 sm:p-4 border border-primary/20 mt-3">
@@ -179,7 +185,7 @@ const FounderPrincipalMessagePage = () => {
   <h3 className="text-2xl font-bold text-gray-900 font-display mb-1">
     Anju Thapa (Khadka)
   </h3>
-  <p className="text-primary font-semibold text-base mb-4">Founding Principal</p>
+  <p className="text-primary font-semibold text-base mb-4">Founder Principal</p>
   <div className="h-px w-24 bg-red-500/50 mx-auto mb-6"></div>
 </div>
                 
@@ -196,13 +202,16 @@ const FounderPrincipalMessagePage = () => {
                   </p>
                   
                   <p>
-                    <span className="font-semibold text-primary">Our students say that KNS is not only a school for them but it is also their home away from parental home.</span> In this sense it is an academic shrine where our students are found to be so happy and confident to lead them to be the future leaders of the country.
+                    <span className="font-semibold text-primary">Our students say that KNS is not only a school for them but it is also their home away from parental home.</span> In this sense, it is an academic shrine where our students are found to be so happy and confident, leading them to be the future leaders of the country. We attempt our level best to model our young angels to stand for the country by endeavouring with perseverance and overcoming challenges around the globe. We receive supreme satisfaction from our products. We believe in our products as they are the ones who think spiritually, speak truly and perform kindly towards those who deserve the doctrine of perfect human beings.
                   </p>
                   
                   <p>
-                    We attempt our level best to model our young angles to stand for the country by endeavoring with perseverance and overcoming challenges in the globe. We receive supreme satisfaction from our products.
+At the KNS, we take our responsibility to find what is exceptional in students very seriously. The experience that we have prepared for them here gives every student an all-round education built on a foundation of service, adventure, sports, creative arts and academics.                  
                   </p>
-                  
+
+                  <p>
+Now, we have been advancing in the delivery system of education with modern mechanisms and tools at KNS, where every child is valued. We always maintain our services sophisticated with an affordable cost. That's why it's KNS, where once guardians visit, they then feel the difference.
+                  </p>                  
                   <div className="bg-primary/5 rounded-lg p-4 border border-primary/20 mt-4">
                     <p className="font-serif italic text-gray-700 text-base">
                       "We believe in our products as they are the ones who think spiritually, speak truly and perform kindly towards those who deserve the doctrine of perfect human beings."

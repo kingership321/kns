@@ -21,8 +21,7 @@ const ExtraCurricularPage = () => {
       image: sportsImage,
       color: "bg-red-500",
       activities: [
-        "Basketball", "Football", "Table Tennis", "Badminton", 
-        "Martial Arts", "Swimming", "Cricket", "Chess"
+        "Basketball", "Football", "Table Tennis", "Badminton", "Taekwondo", "Swimming", "Cricket", "Chess"
       ],
       description: "Physical development and team spirit through various sports"
     },
@@ -47,7 +46,8 @@ const ExtraCurricularPage = () => {
       activities: [
         "Quiz Competitions", "Science Fairs", 
         "Math Olympiad", "Spelling Bee",
-        "Debate Competitions", "Model UN"
+        "Debate Competitions", "Model UN",
+        "Elocution Contests", "Coding Challenges"
       ],
       description: "Intellectual development and academic excellence"
     },
@@ -529,8 +529,8 @@ const ExtraCurricularPage = () => {
                         {category.description}
                       </p>
                       
-                      <div className="grid grid-cols-2 gap-2 ml-13">
-                        {category.activities.slice(0, 4).map((activity, activityIndex) => (
+                      <div className="grid grid-cols-1 gap-2 ml-13">
+                        {category.activities.slice(0, 8).map((activity, activityIndex) => (
                           <div key={activityIndex} className="flex items-center gap-1.5">
                             <div className={`w-1.5 h-1.5 ${category.color} rounded-full flex-shrink-0`}></div>
                             <span className="text-gray-700 text-xs">{activity}</span>
@@ -633,9 +633,9 @@ const ExtraCurricularPage = () => {
                 </div>
               </div>
             </motion.div>
-            <QuickLinksSection />
           </div>
         </div>
+                    <QuickLinksSection />
 
         {/* Background Pattern */}
         <div className="absolute inset-0 -z-10 opacity-3 sm:opacity-5">

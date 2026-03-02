@@ -35,9 +35,8 @@ const ContactPage = () => {
 
   const contactDetails = {
     name: "Kathmandu National School",
-    address: "Old Baneshwor-34, Kathmandu, Nepal",
-    telephone: "+9774590821",
-    fax: "+9774590821",
+    address: "Old Baneshwor-31, Kathmandu, Nepal",
+    telephone: "01-4590821",
     email: "info@kns.edu.np",
     officeHours: "Sunday-Friday: 9:00 AM - 4:00 PM",
     principalOffice: "For Principal's Office: 10:00 AM - 12:00 PM"
@@ -262,7 +261,6 @@ const ContactPage = () => {
                     <Phone className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
                     <div>
                       <p className="text-gray-700 text-xs sm:text-sm">Tel: {contactDetails.telephone}</p>
-                      <p className="text-gray-700 text-xs sm:text-sm">Fax: {contactDetails.fax}</p>
                     </div>
                   </div>
                   
@@ -456,9 +454,8 @@ const ContactPage = () => {
                       <Phone className="w-5 h-5 text-primary" />
                     </div>
                     <div>
-                      <h3 className="font-bold text-gray-900 text-base mb-1">Phone & Fax</h3>
+                      <h3 className="font-bold text-gray-900 text-base mb-1">Phone</h3>
                       <p className="text-gray-700 text-sm">Telephone: {contactDetails.telephone}</p>
-                      <p className="text-gray-700 text-sm">FAX: {contactDetails.fax}</p>
                     </div>
                   </div>
                   

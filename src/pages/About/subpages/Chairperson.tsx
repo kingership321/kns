@@ -102,7 +102,7 @@ const Chairperson = () => {
   <h3 className="text-lg sm:text-xl font-bold text-gray-900 font-display mb-1">
     Arjun Kumar Khadka
   </h3>
-  <p className="text-primary font-semibold text-xs sm:text-sm mb-3">Executive Chairman / Founder</p>
+  <p className="text-primary font-semibold text-xs sm:text-sm mb-3">Executive Chairman & Founder</p>
   <div className="h-px w-16 sm:w-20 bg-red-500/50 mx-auto mb-4"></div>
 </div>
                 
@@ -115,16 +115,21 @@ const Chairperson = () => {
                 
                 <div className="space-y-2.5 text-gray-700 text-xs sm:text-sm leading-relaxed">
                   <p className="text-sm font-serif italic text-primary border-l-4 border-primary pl-3 py-1.5 mb-2">
-                    "It's my fortune to welcome you to Kathmandu National School (KNS)."
+                    "It's my great pleasure to welcome you to Kathmandu National School (KNS). "
                   </p>
                   
                   <p>
-                    <span className="font-semibold text-primary">Our students say that KNS is not only a school for them but it is also their home away from parental home.</span> In this sense it is an academic shrine where our students are found to be so happy and confident to lead them to be the future leaders of the country.
+                    <span className="font-semibold text-primary">KNS is a hub of qualified teachers, professionals, and students. </span> Since its establishment, it has been providing quality education that supports our young children's overall development. We have been preparing versatile, dynamic, and energetic individuals to meet the challenges of the twenty-first century.
                   </p>
-                  
+                  <p>
+                    We have been striding ahead with huge academic success. Our tireless effort to impart quality education has been mounting higher ever since we laid our foundation in 1980 AD (2036 BS), which was the beginning of early childhood education at KNS. The tripartite relationships among school, parents and students that promote exchange of critical feedback and suggestions from all parties and particularly the parents, have helped us to continuously improve the quality of our education and services. We have been developing infrastructures to upgrade this institution to higher-level studies and we are optimistic about offering promising higher education in the near future.
+                  </p>                  
+                  <p>
+                    Our approach is interdisciplinary, experimental and progressive. Our students are encouraged not only to focus on textbooks but also to enhance their creativity analvtical skills, and pursue their extra-curricular interests. We toil to create an environment where good education and values are cultivated in our students to enable them to become responsible individuals. 
+                  </p>
                   <div className="bg-primary/5 rounded-lg p-3 sm:p-4 border border-primary/20 mt-3">
                     <p className="font-serif italic text-gray-700 text-xs sm:text-sm">
-                      "We believe in our products as they are the ones who think spiritually, speak truly and perform kindly towards those who deserve the doctrine of perfect human beings."
+                      "We are happy about the growth we have managed to achieve over the years and look forward to continuing our collaboration with the parents, students and others in academia to progressively upgrade our institution."
                     </p>
                   </div>
                 </div>
@@ -137,7 +142,7 @@ const Chairperson = () => {
                   <div className="font-display text-gray-800 text-sm font-bold">
                     Arjun Kumar Khadka
                   </div>
-                  <div className="text-gray-500 text-xs">Executive Chairman / Founder</div>
+                  <div className="text-gray-500 text-xs">Executive Chairman & Founder</div>
                 </div>
               </div>
             </motion.div>
@@ -178,7 +183,7 @@ const Chairperson = () => {
   <h3 className="text-2xl font-bold text-gray-900 font-display mb-1">
     Arjun Kumar Khadka
   </h3>
-  <p className="text-primary font-semibold text-base mb-4">Executive Chairman / Founder</p>
+  <p className="text-primary font-semibold text-base mb-4">Executive Chairman & Founder</p>
   <div className="h-px w-24 bg-red-500/50 mx-auto mb-6"></div>
 </div>
                 
@@ -191,20 +196,23 @@ const Chairperson = () => {
                 
                 <div className="space-y-3 text-gray-700 text-base leading-relaxed">
                   <p className="text-lg font-serif italic text-primary border-l-4 border-primary pl-4 py-2 mb-2">
-                    "It's my fortune to welcome you to Kathmandu National School (KNS)."
+                    "It's my great pleasure to welcome you to Kathmandu National School (KNS)."
                   </p>
                   
                   <p>
-                    <span className="font-semibold text-primary">Our students say that KNS is not only a school for them but it is also their home away from parental home.</span> In this sense it is an academic shrine where our students are found to be so happy and confident to lead them to be the future leaders of the country.
+                    <span className="font-semibold text-primary">KNS is a hub of qualified teachers, professionals, and students.</span> Since its establishment, it has been providing quality education that supports our young children's overall development. We have been preparing versatile, dynamic, and energetic individuals to meet the challenges of the twenty-first century.
                   </p>
                   
                   <p>
-                    We attempt our level best to model our young angles to stand for the country by endeavoring with perseverance and overcoming challenges in the globe. We receive supreme satisfaction from our products.
+                    We have been striding ahead with huge academic success. Our tireless effort to impart quality education has been mounting higher ever since we laid our foundation in 1980 AD (2036 BS), which was the beginning of early childhood education at KNS. The tripartite relationships among school, parents and students that promote exchange of critical feedback and suggestions from all parties and particularly the parents, have helped us to continuously improve the quality of our education and services. We have been developing infrastructures to upgrade this institution to higher-level studies and we are optimistic about offering promising higher education in the near future.
+                  </p>
+                  <p>
+                    Our approach is interdisciplinary, experimental and progressive. Our students are encouraged not only to focus on textbooks but also to enhance their creativity analvtical skills, and pursue their extra-curricular interests. We toil to create an environment where good education and values are cultivated in our students to enable them to become responsible individuals. 
                   </p>
                   
                   <div className="bg-primary/5 rounded-lg p-4 border border-primary/20 mt-4">
                     <p className="font-serif italic text-gray-700 text-base">
-                      "We believe in our products as they are the ones who think spiritually, speak truly and perform kindly towards those who deserve the doctrine of perfect human beings."
+                      "We are happy about the growth we have managed to achieve over the years and look forward to continuing our collaboration with the parents, students and others in academia to progressively upgrade our institution."
                     </p>
                   </div>
                 </div>
@@ -218,7 +226,7 @@ const Chairperson = () => {
                     <div className="font-display text-gray-800 text-lg font-bold">
                       Arjun Kumar Khadka
                     </div>
-                    <div className="text-gray-500 text-sm mb-4">Executive Chairman / Founder</div>
+                    <div className="text-gray-500 text-sm mb-4">Executive Chairman & Founder</div>
                     <div className="pt-4 border-t border-gray-200">
                       <p className="text-gray-600 text-sm">
                         Kathmandu National School

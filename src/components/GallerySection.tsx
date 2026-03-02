@@ -1,7 +1,7 @@
-import sara1 from '../assets/saraswati-puja/Saraswati-Puja1.jpg';
-import sara2 from '../assets/saraswati-puja/Saraswati-Puja2.jpg';
-import sara3 from '../assets/saraswati-puja/Saraswati-Puja3.jpg';
-import ann1 from '../assets/annual-day/annual-day1.jpg';
+import sara1 from '../assets/annual_day_2025.jpg';
+import sara2 from '../assets/excurion.jpg';
+import sara3 from '../assets/cultural_dress.jpg';
+import ann1 from '../assets/sports-meet-2025.jpg';
 
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link, useNavigate } from 'react-router';
@@ -27,17 +27,17 @@ const GallerySection = () => {
     {
       id: 1,
       image: sara1,
-      title: "Annual Sports Day",
-      description: "Students showcasing their athletic talents and team spirit",
+      title: "Annual Day",
+      description: "School's grand celebration of achievements and talents on the annual day",
       category: "Events",
       eventId: 1
     },
     {
       id: 2,
       image: sara2,
-      title: "Science Exhibition",
-      description: "Young innovators presenting their scientific projects",
-      category: "Academics",
+      title: "School Excursion",
+      description: "Students exploring nature and learning through hands-on experiences",
+      category: "Excursion",
       eventId: 2
     },
     {
@@ -51,9 +51,9 @@ const GallerySection = () => {
     {
       id: 4,
       image: ann1,
-      title: "Campus Facilities",
-      description: "Modern infrastructure for holistic learning environment",
-      category: "Campus",
+      title: "Sports Meet",
+      description: "Students showcasing their athletic talents and team spirit",
+      category: "Sports",
       eventId: 4
     }
   ];

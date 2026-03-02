@@ -33,7 +33,6 @@ const RulesDisciplinePage = () => {
         "Attend Parents-Teacher Association (PTA) meetings",
         "Ensure children attend school punctually",
         "Ensure pickup at dismissal hour",
-        "Get Report Cards signed within 5 days",
         "Ensure uniform adherence",
         "Cooperate with school disciplinary actions"
       ]
@@ -45,7 +44,7 @@ const RulesDisciplinePage = () => {
       rules: [
         "Damage to school property must be remedied at offender's cost",
         "School not responsible for lost goods",
-        "No valuables allowed (watches, mobiles, cameras, etc.)",
+        "No valuables allowed (watches, mobiles, cameras, ornaments, etc.)",
         "Confiscation of unauthorized valuables",
         "Maintain cleanliness of school premises",
         "Protect school infrastructure and resources"
@@ -73,7 +72,6 @@ const RulesDisciplinePage = () => {
         "Bullying and foul language are punishable offences",
         "Violation may lead to suspension/expulsion",
         "Confiscation of prohibited items",
-        "Fine for lost Report Cards",
         "Good behavior essential for continuance",
         "Restriction for repeated offences"
       ]
@@ -661,9 +659,9 @@ const RulesDisciplinePage = () => {
                 </div>
               </div>
             </motion.div>
-            <QuickLinksSection />
           </div>
         </div>
+            <QuickLinksSection />
 
         {/* Background Pattern */}
         <div className="absolute inset-0 -z-10 opacity-3 sm:opacity-5">

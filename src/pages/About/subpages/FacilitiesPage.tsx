@@ -86,9 +86,9 @@ const FacilitiesPage = () => {
       title: 'Hostel',
       icon: Home,
       image: hostelImage,
-      description: 'Well managed boarding facility for both boys and girls. Good environment for studies. Provides hygienic living, healthy food and good care to the students.',
+      description: 'Well managed boarding facility for boys. Good environment for studies. Provides hygienic living, healthy food and good care to the students.',
       features: [
-        'Separate boys and girls hostel',
+        'Boys Hostel',
         'Conducive study environment',
         'Hygienic living conditions',
         'Healthy and balanced meals',
@@ -151,8 +151,8 @@ const FacilitiesPage = () => {
     {
       id: 'wifi',
       icon: Wifi,
-      title: 'Wi-Fi Campus',
-      description: 'High-speed internet connectivity throughout the campus'
+      title: 'High Speed Wi-Fi',
+      description: 'High-speed internet connectivity throughout the school premises'
     },
     {
       id: 'security',
@@ -212,7 +212,7 @@ const FacilitiesPage = () => {
             className="text-center max-w-4xl mx-auto"
           >
             <h1 className="text-xl xs:text-2xl sm:text-3xl lg:text-4xl font-bold text-white font-display mb-3 sm:mb-4">
-              Our Facilities
+              Facilities
             </h1>
             
             {/* Divider like home page */}
@@ -627,9 +627,9 @@ const FacilitiesPage = () => {
                 </div>
               </div>
             </motion.div>
-            <QuickLinksSection />
           </div>
         </div>
+            <QuickLinksSection />
 
         {/* Background Pattern */}
         <div className="absolute inset-0 -z-10 opacity-3 sm:opacity-5">

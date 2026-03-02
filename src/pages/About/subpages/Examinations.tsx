@@ -100,10 +100,8 @@ const ExaminationsPage = () => {
   ];
 
   const examSchedule = [
-    { id: 'unit', month: "Unit Tests", timeline: "Throughout the year", weightage: "20%" },
-    { id: 'monthly', month: "Monthly Tests", timeline: "Regular intervals", weightage: "15%" },
-    { id: 'terminal', month: "Terminal Tests", timeline: "March, June, September", weightage: "25%" },
-    { id: 'annual', month: "Annual Exam", timeline: "November-December", weightage: "40%" }
+    { id: 'terminal', month: "Terminal Tests", timeline: "March, June, September", weightage: "20%" },
+    { id: 'annual', month: "Annual Exam", timeline: "November-December", weightage: "80%" }
   ];
 
   const toggleSection = (id: string) => {
@@ -599,9 +597,9 @@ const ExaminationsPage = () => {
                 </div>
               </div>
             </motion.div>
-            <QuickLinksSection />
           </div>
         </div>
+                    <QuickLinksSection />
 
         {/* Background Pattern */}
         <div className="absolute inset-0 -z-10 opacity-3 sm:opacity-5">

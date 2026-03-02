@@ -282,7 +282,7 @@ const IntroductionPage = () => {
                   </p>
                   
                   <p>
-                    And later it was extended from Elementary to Secondary Level so as to fulfill the demand of quality education with culture.
+                    Later it was extended from Elementary to Secondary Level so as to fulfill the demand of quality education with culture.
                   </p>
                   
                   <p>

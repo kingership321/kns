@@ -55,7 +55,8 @@ const CoCurricularAchievementsPage = () => {
         "Table Tennis",
         "Badminton",
         "Swimming",
-        "Martial Arts"
+        "Taekwondo",
+        "Elocution Contests"
       ],
       achievements: [
         "District level basketball champions",
