@@ -201,14 +201,14 @@ export default function RootLayout() {
               
               {/* School Name - Desktop */}
               <div className="hidden lg:block">
-                <div className="font-bold text-red-500 mb-0 text-lg lg:text-xl xl:text-2xl font-serif">KATHMANDU <span className="text-blue-900">NATIONAL SCHOOL</span></div>
+                <div className="font-bold text-red-500 mb-0 text-lg lg:text-2xl xl:text-3xl font-serif">KATHMANDU <span className="text-blue-900">NATIONAL SCHOOL</span></div>
                 <div className="font-bold text-red-500 mb-0 text-lg lg:text-xl xl:text-2xl font-serif"></div>
                 <div className="font-bold text-blue-900 text-sm lg:text-md xl:text-lg mb-0.5 font-serif">"A Grade Coeducational School"</div>
               </div>
               
               {/* School Name - Mobile */}
               <div className="lg:hidden">
-                <div className="font-bold font-serif text-red-500 text-xl">Kathmandu <span className="font-bold font-serif text-blue-900 text-xl">National School</span></div>
+                <div className="font-bold font-serif text-red-500 text-lg sm:text-md">Kathmandu <span className="font-bold font-serif text-blue-900 text-lg sm:text-md">National School</span></div>
               </div>
             </Link>
 
