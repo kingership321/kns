@@ -351,7 +351,8 @@ It’s my fortune to welcome you to Kathmandu National School (KNS). Our student
               <div className="text-center">
                 <Quote className="w-4 h-4 xs:w-4 xs:h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 text-white/60 mx-auto mb-3 xs:mb-3 sm:mb-4" />
                 <p className="text-white/95 text-sm xs:text-sm sm:text-base md:text-lg leading-relaxed italic font-serif">
-It's my great pleasure to welcome you to Kathmandu National School (KNS). KNS is a hub of qualified teachers, professionals, and students. Since its establishment, it has been providing quality education that supports our young children's overall development. We have been preparing versatile, dynamic, and energetic individuals to meet the challenges of the twenty-first century.                </p>
+It's my great pleasure to welcome you to Kathmandu National School (KNS). KNS is a hub of qualified teachers, professionals, and students. Since its establishment, it has been providing quality education that supports our young children's overall development. We have been preparing versatile, dynamic, and energetic individuals to meet the challenges of the twenty-first century.                
+                </p>
               </div>
               
               {/* Decorative divider */}
