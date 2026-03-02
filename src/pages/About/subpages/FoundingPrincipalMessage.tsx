@@ -104,6 +104,9 @@ const FounderPrincipalMessagePage = () => {
     Anju Thapa (Khadka)
   </h3>
   <p className="text-primary font-semibold text-xs sm:text-sm mb-3">Founder Principal</p>
+  <div className="inline-block px-2.5 py-0.5 bg-primary/80 backdrop-blur-sm rounded-full border border-white/20 mb-3">
+    <span className="text-white text-xs xs:text-xs sm:text-xs mb-3">Ph.D. Scholar</span>
+  </div>
   <div className="h-px w-16 sm:w-20 bg-red-500/50 mx-auto mb-4"></div>
 </div>
                 
@@ -145,6 +148,7 @@ const FounderPrincipalMessagePage = () => {
                     Anju Thapa (Khadka)
                   </div>
                   <div className="text-gray-500 text-xs">Founder Principal</div>
+
                 </div>
               </div>
             </motion.div>
@@ -185,7 +189,10 @@ const FounderPrincipalMessagePage = () => {
   <h3 className="text-2xl font-bold text-gray-900 font-display mb-1">
     Anju Thapa (Khadka)
   </h3>
-  <p className="text-primary font-semibold text-base mb-4">Founder Principal</p>
+  <p className="text-primary font-semibold text-base mb-3">Founder Principal</p>
+  <div className="inline-block px-2.5 py-0.5 bg-primary/80 backdrop-blur-sm rounded-full border border-white/20 mb-3">
+    <span className="text-white text-xs xs:text-xs sm:text-xs mb-3">Ph.D. Scholar</span>
+  </div>
   <div className="h-px w-24 bg-red-500/50 mx-auto mb-6"></div>
 </div>
                 

@@ -96,7 +96,7 @@ const HeroSection = () => {
               <div className="text-center">
                 <Quote className="w-5 h-5 xs:w-5 xs:h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 text-white/60 mx-auto mb-2 xs:mb-2 sm:mb-3 md:mb-4" />
                 <p className="text-white/90 text-xs xs:text-xs sm:text-sm md:text-base leading-relaxed mb-2 xs:mb-2 sm:mb-3 md:mb-4 italic">
-                  It's my fortune to welcome you in Kathmandu National School (KNS). Our students say that KNS is not only a school for them but it is also their home away from parental home. In this sense it is an academic shrine where our students are found to be so happy and confident to lead them to be the future leaders of the country.
+                    It's my great pleasure to welcome you to Kathmandu National School (KNS). KNS is a hub of qualified teachers, professionals, and students. We have been striding ahead with huge academic success. Our tireless effort to impart quality education has been mounting higher ever since we laid our foundation in 1980 AD (2036 BS).
                 </p>
                 <div className="pt-3 xs:pt-3 sm:pt-4 border-t border-white/20">
                   <h3 className="text-base xs:text-base sm:text-lg md:text-xl font-bold text-white font-serif mb-0.5 xs:mb-0.5 sm:mb-1">Arjun Kumar Khadka</h3>
@@ -290,8 +290,7 @@ const HeroSection = () => {
               <div className="text-center">
                 <Quote className="w-5 h-5 xs:w-5 xs:h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 text-white/60 mx-auto mb-2 xs:mb-2 sm:mb-3 md:mb-4" />
                 <p className="text-white/90 text-xs xs:text-xs sm:text-sm md:text-base leading-relaxed mb-2 xs:mb-2 sm:mb-3 md:mb-4 italic">
-                  It's our immense pleasure to welcome you in Kathmandu National School (KNS). KNS is the junction of qualified teachers, professionals and students. Since its foundation, it has been imparting quality education that benefits our young children's overall development.
-                </p>
+It’s my fortune to welcome you to Kathmandu National School (KNS). Our students say that KNS is not only a school for them, but it is also their home away from their parental home. In this sense, it is an academic shrine where our students are found to be so happy and confident, leading them to be the future leaders of the country.                 </p>
                 <div className="pt-3 xs:pt-3 sm:pt-4 border-t border-white/20">
                   <h3 className="text-base xs:text-base sm:text-lg md:text-xl font-bold text-white font-serif mb-0.5 xs:mb-0.5 sm:mb-1">Anju Thapa (Khadka)</h3>
                   <p className="text-white/80 text-xs xs:text-xs sm:text-sm md:text-base">Founder Principal</p>
@@ -343,7 +342,7 @@ const HeroSection = () => {
                   
                   {/* Experience badge */}
                   <div className="inline-block mt-2 px-2.5 py-0.5 bg-white/10 backdrop-blur-sm rounded-full border border-white/20">
-                    <span className="text-white/80 text-xs xs:text-xs sm:text-sm">M.Phil./PhD. Scholar</span>
+                    <span className="text-white/80 text-xs xs:text-xs sm:text-sm">M.Phil./Ph.D. Scholar</span>
                   </div>
                 </div>
               </div>
@@ -352,11 +351,7 @@ const HeroSection = () => {
               <div className="text-center">
                 <Quote className="w-4 h-4 xs:w-4 xs:h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 text-white/60 mx-auto mb-3 xs:mb-3 sm:mb-4" />
                 <p className="text-white/95 text-sm xs:text-sm sm:text-base md:text-lg leading-relaxed italic font-serif">
-                  It's my fortune to welcome you in Kathmandu National School (KNS). Our students say that KNS is not only a school for them but it is also their home away from parental home. In this sense it is an academic shrine where our students are found to be so happy and confident to lead them to be the future leaders of the country.
-                </p>
-                <p className="text-white/95 text-sm xs:text-sm sm:text-base md:text-lg leading-relaxed italic font-serif">
-                At the KNS we take our responsibility to find what is exceptional in students very seriously. The experience that we have prepared for them here gives every student an all-round education built on a foundation of service, adventure, sports, creative arts and academics.
-                </p>
+It's my great pleasure to welcome you to Kathmandu National School (KNS). KNS is a hub of qualified teachers, professionals, and students. Since its establishment, it has been providing quality education that supports our young children's overall development. We have been preparing versatile, dynamic, and energetic individuals to meet the challenges of the twenty-first century.                </p>
               </div>
               
               {/* Decorative divider */}
@@ -403,7 +398,7 @@ const HeroSection = () => {
                   
                   {/* Qualification badge */}
                   <div className="inline-block mt-2 px-2.5 py-0.5 bg-white/10 backdrop-blur-sm rounded-full border border-white/20">
-                    <span className="text-white/80 text-xs xs:text-xs sm:text-sm">M.Phil./PhD. Scholar</span>
+                    <span className="text-white/80 text-xs xs:text-xs sm:text-sm">Ph.D. Scholar</span>
                   </div>
                 </div>
               </div>
@@ -412,10 +407,7 @@ const HeroSection = () => {
               <div className="text-center">
                 <Quote className="w-4 h-4 xs:w-4 xs:h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 text-white/60 mx-auto mb-3 xs:mb-3 sm:mb-4" />
                 <p className="text-white/95 text-sm xs:text-sm sm:text-base md:text-lg leading-relaxed italic font-serif">
-                  It's our immense pleasure to welcome you in Kathmandu National School (KNS). KNS is the junction of qualified teachers, professionals and students. Since its foundation, it has been imparting quality education that benefits our young children's overall development.
-                </p>
-                <p className="text-white/95 text-sm xs:text-sm sm:text-base md:text-lg leading-relaxed italic font-serif">
-                  Our approach is interdisciplinary, experimental and progressive. Our students are encouraged not only to focus on textbooks but also to enhance their creativity, analytical skills, and pursue their extra-curricular interest.
+It’s my fortune to welcome you to Kathmandu National School (KNS). Our students say that KNS is not only a school for them, but it is also their home away from their parental home. In this sense, it is an academic shrine where our students are found to be so happy and confident, leading them to be the future leaders of the country.                 
                 </p>
               </div>
               
@@ -438,7 +430,7 @@ const HeroSection = () => {
               <h2 className="text-base xs:text-base sm:text-lg md:text-xl font-bold text-white font-serif">About Our School</h2>
             </div>
             <p className="text-white/90 text-sm xs:text-sm sm:text-base md:text-lg leading-relaxed mb-3 xs:mb-3 sm:mb-4 md:mb-5">
-              Established in 1995, Kathmandu National School has been a beacon of quality education with state-of-the-art facilities and holistic development approach.
+              Established in 1980, Kathmandu National School has been a beacon of quality education with state-of-the-art facilities and holistic development approach.
             </p>
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 xs:gap-2 sm:gap-3 md:gap-4">
               {[

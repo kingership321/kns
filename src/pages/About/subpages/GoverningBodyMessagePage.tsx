@@ -97,17 +97,21 @@ const GoverningBodyMessagePage = () => {
                 
                 <div className="space-y-2.5 text-gray-700 text-xs sm:text-sm leading-relaxed">
                   <p className="text-sm font-serif italic text-primary border-l-4 border-primary pl-3 py-1.5 mb-2">
-                    "It's our immense pleasure to welcome you to Kathmandu National School (KNS)."
+                    "Dear Parents, Students, Teachers, and Well-Wishers,"
                   </p>
                   
                   <p>
-                    <span className="font-semibold text-primary">KNS is the junction of qualified teachers, professionals and students.</span> Since its foundation, it has been imparting quality education that benefits our young children's overall development.
+                    <span className="font-semibold text-primary">The Board of Directors extends its sincere greetings to the entire school community.</span> We take great pride in the steady progress of the institution and remain committed to ensuring quality education, strong values, and the holistic development of our students.
                   </p>
                   
                   <p>
-                    We have been striding ahead with huge academic success. Our tireless effort to impart quality education has been mounting higher ever since we laid our foundation in 1980 AD (2036 BS).
+The continued dedication of our teachers, the trust of our parents, and the enthusiasm of our learners are the pillars of our success. We will persist in strengthening academic excellence, upgrading facilities, and fostering an environment that prepares responsible and capable citizens for the future.                  
+                  </p>
+                  <p>
+We express our heartfelt gratitude for your unwavering support and look forward to your continued cooperation in our shared journey toward excellence.
                   </p>
                 </div>
+
               </div>
             </motion.div>
           </div>
@@ -142,19 +146,19 @@ const GoverningBodyMessagePage = () => {
                 
                 <div className="space-y-3 text-gray-700 text-base leading-relaxed">
                   <p className="text-lg font-serif italic text-primary border-l-4 border-primary pl-4 py-2 mb-2">
-                    "It's our immense pleasure to welcome you to Kathmandu National School (KNS)."
+                    "Dear Parents, Students, Teachers, and Well-Wishers,"
                   </p>
                   
                   <p>
-                    <span className="font-semibold text-primary">KNS is the junction of qualified teachers, professionals and students.</span> Since its foundation, it has been imparting quality education that benefits our young children's overall development. We have been preparing versatile, dynamic and energetic human resource to cope up with the challenges of twenty first century.
+                    <span className="font-semibold text-primary">The Board of Directors extends its sincere greetings to the entire school community.</span> We take great pride in the steady progress of the institution and remain committed to ensuring quality education, strong values, and the holistic development of our students.
                   </p>
                   
                   <p>
-                    We have been striding ahead with huge academic success. Our tireless effort to impart quality education has been mounting higher ever since we laid our foundation in 1980 AD (2036 BS) which was the beginning of early childhood education at KNS.
+The continued dedication of our teachers, the trust of our parents, and the enthusiasm of our learners are the pillars of our success. We will persist in strengthening academic excellence, upgrading facilities, and fostering an environment that prepares responsible and capable citizens for the future.                  
                   </p>
                   
                   <p>
-                    The tripartite relationships among school, parents and students that promote exchange of critical feedbacks and suggestions from all parties and particularly the parents have helped us to continuously improve the quality of our education and services.
+We express our heartfelt gratitude for your unwavering support and look forward to your continued cooperation in our shared journey toward excellence.
                   </p>
                 </div>
               </div>

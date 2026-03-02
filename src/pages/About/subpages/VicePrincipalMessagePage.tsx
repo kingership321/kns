@@ -102,7 +102,10 @@ const VicePrincipalMessagePage = () => {
   <h3 className="text-lg sm:text-xl font-bold text-gray-900 font-display mb-1">
     Kamal Prasad Adhikari
   </h3>
-  <p className="text-primary font-semibold text-xs sm:text-sm mb-3">Vice Principal</p>
+  <p className="text-primary font-semibold text-sm sm:text-sm mb-2">Vice Principal</p>
+  <div className="inline-block px-2.5 py-0.5 bg-primary/80 backdrop-blur-sm rounded-full border border-white/20 mb-3">
+    <span className="text-white text-xs xs:text-xs sm:text-xs mb-3">M.Phil. Graduate</span>
+  </div>
   <div className="h-px w-16 sm:w-20 bg-red-500/50 mx-auto mb-4"></div>
 </div>
                 
@@ -187,7 +190,10 @@ const VicePrincipalMessagePage = () => {
   <h3 className="text-2xl font-bold text-gray-900 font-display mb-1">
     Kamal Prasad Adhikari
   </h3>
-  <p className="text-primary font-semibold text-base mb-4">Vice Principal</p>
+  <p className="text-primary font-semibold text-base mb-3">Vice Principal</p>
+  <div className="inline-block px-2.5 py-0.5 bg-primary/80 backdrop-blur-sm rounded-full border border-white/20 mb-3">
+    <span className="text-white text-xs xs:text-xs sm:text-xs mb-3">M.Phil. Graduate</span>
+  </div>
   <div className="h-px w-24 bg-red-500/50 mx-auto mb-6"></div>
 </div>
                 

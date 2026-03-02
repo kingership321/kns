@@ -103,6 +103,9 @@ const Chairperson = () => {
     Arjun Kumar Khadka
   </h3>
   <p className="text-primary font-semibold text-xs sm:text-sm mb-3">Executive Chairman & Founder</p>
+  <div className="inline-block px-2.5 py-0.5 bg-primary/80 backdrop-blur-sm rounded-full border border-white/20 mb-3">
+    <span className="text-white text-xs xs:text-xs sm:text-xs mb-3">M.Phil./Ph.D. Scholar</span>
+  </div>
   <div className="h-px w-16 sm:w-20 bg-red-500/50 mx-auto mb-4"></div>
 </div>
                 
@@ -115,7 +118,7 @@ const Chairperson = () => {
                 
                 <div className="space-y-2.5 text-gray-700 text-xs sm:text-sm leading-relaxed">
                   <p className="text-sm font-serif italic text-primary border-l-4 border-primary pl-3 py-1.5 mb-2">
-                    "It's my great pleasure to welcome you to Kathmandu National School (KNS). "
+                    "It's my great pleasure to welcome you to Kathmandu National School (KNS)."
                   </p>
                   
                   <p>
@@ -183,7 +186,10 @@ const Chairperson = () => {
   <h3 className="text-2xl font-bold text-gray-900 font-display mb-1">
     Arjun Kumar Khadka
   </h3>
-  <p className="text-primary font-semibold text-base mb-4">Executive Chairman & Founder</p>
+  <p className="text-primary font-semibold text-base mb-3">Executive Chairman & Founder</p>
+  <div className="inline-block px-2.5 py-0.5 bg-primary/80 backdrop-blur-sm rounded-full border border-white/20 mb-3">
+    <span className="text-white text-xs xs:text-xs sm:text-xs mb-3">M.Phil./Ph.D. Scholar</span>
+  </div>
   <div className="h-px w-24 bg-red-500/50 mx-auto mb-6"></div>
 </div>
                 
