@@ -748,7 +748,7 @@ export default function RootLayout() {
                     <Facebook className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-white" />
                   </a>
                   <a 
-                    href="https://instagram.com" 
+                    href="https://www.instagram.com/kathmandunationalschool/" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="w-8 h-8 sm:w-9 sm:h-9 lg:w-10 lg:h-10 rounded-md bg-white/10 backdrop-blur-sm flex items-center justify-center hover:bg-white/20 transition-all duration-300 border border-white/20 hover:border-white/40"
@@ -757,7 +757,7 @@ export default function RootLayout() {
                     <Instagram className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-white" />
                   </a>
                   <a 
-                    href="https://youtube.com" 
+                    href="https://www.youtube.com/@knsschool2036" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="w-8 h-8 sm:w-9 sm:h-9 lg:w-10 lg:h-10 rounded-md bg-white/10 backdrop-blur-sm flex items-center justify-center hover:bg-white/20 transition-all duration-300 border border-white/20 hover:border-white/40"
