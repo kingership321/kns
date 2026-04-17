@@ -2,6 +2,7 @@ import sara1 from '../assets/annual_day_2025.jpg';
 import sara2 from '../assets/excurion.jpg';
 import sara3 from '../assets/cultural_dress.jpg';
 import ann1 from '../assets/sports-meet-2025.jpg';
+import parent1 from '../assets/parents-day-2026/3.jpeg';
 
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link, useNavigate } from 'react-router';
@@ -26,35 +27,43 @@ const GallerySection = () => {
   const galleryItems = [
     {
       id: 1,
-      image: sara1,
-      title: "Annual Day",
-      description: "School's grand celebration of achievements and talents on the annual day",
+      image: parent1,
+      title: "Parents Day Celebration-2026",
+      description: "A heartwarming event where parents and students come together to celebrate the bond of family and education",
       category: "Events",
       eventId: 1
     },
     {
       id: 2,
-      image: sara2,
-      title: "School Excursion",
-      description: "Students exploring nature and learning through hands-on experiences",
-      category: "Excursion",
+      image: sara1,
+      title: "Annual Day",
+      description: "School's grand celebration of achievements and talents on the annual day",
+      category: "Events",
       eventId: 2
     },
     {
       id: 3,
-      image: sara3,
-      title: "Cultural Program",
-      description: "Celebrating diversity through dance and music performances",
-      category: "Cultural",
+      image: sara2,
+      title: "School Excursion",
+      description: "Students exploring nature and learning through hands-on experiences",
+      category: "Excursion",
       eventId: 3
     },
     {
       id: 4,
+      image: sara3,
+      title: "Cultural Program",
+      description: "Celebrating diversity through dance and music performances",
+      category: "Cultural",
+      eventId: 4
+    },
+    {
+      id: 5,
       image: ann1,
       title: "Sports Meet",
       description: "Students showcasing their athletic talents and team spirit",
       category: "Sports",
-      eventId: 4
+      eventId: 5
     }
   ];
 

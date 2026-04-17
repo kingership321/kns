@@ -4,6 +4,42 @@ import { useState, useRef } from 'react';
 import { Link, useNavigate } from 'react-router'; // Import useNavigate
 import QuickLinksSection from '../../components/LinksSection';
 
+import annua1 from '../../assets/parents-day-2026/1.jpeg';
+import annua2 from '../../assets/parents-day-2026/2.jpeg';
+import annua3 from '../../assets/parents-day-2026/3.jpeg';
+import annua4 from '../../assets/parents-day-2026/4.jpeg';
+import annua5 from '../../assets/parents-day-2026/5.jpeg';
+import annua6 from '../../assets/parents-day-2026/6.jpeg';
+import annua7 from '../../assets/parents-day-2026/7.jpeg';
+import annua8 from '../../assets/parents-day-2026/8.jpeg';
+import annua9 from '../../assets/parents-day-2026/9.jpeg';
+import annua10 from '../../assets/parents-day-2026/10.jpg';
+import annua11 from '../../assets/parents-day-2026/11.jpg';
+import annua12 from '../../assets/parents-day-2026/12.jpg';
+import annua13 from '../../assets/parents-day-2026/13.jpg';
+import annua14 from '../../assets/parents-day-2026/14.jpg';
+import annua15 from '../../assets/parents-day-2026/15.jpg';
+import annua16 from '../../assets/parents-day-2026/16.jpg';
+import annua17 from '../../assets/parents-day-2026/17.jpg';
+import annua18 from '../../assets/parents-day-2026/18.jpg';
+import annua19 from '../../assets/parents-day-2026/19.jpg';
+import annua20 from '../../assets/parents-day-2026/20.jpg';
+import annua21 from '../../assets/parents-day-2026/21.jpg';
+import annua22 from '../../assets/parents-day-2026/22.jpg';
+import annua23 from '../../assets/parents-day-2026/23.jpg';
+import annua24 from '../../assets/parents-day-2026/24.jpg';
+import annua25 from '../../assets/parents-day-2026/25.jpg';
+import annua26 from '../../assets/parents-day-2026/26.jpg';
+import annua27 from '../../assets/parents-day-2026/27.jpg';
+import annua28 from '../../assets/parents-day-2026/28.jpg';
+import annua29 from '../../assets/parents-day-2026/29.jpg';
+import annua30 from '../../assets/parents-day-2026/30.jpg';
+import annua31 from '../../assets/parents-day-2026/31.jpg';
+import annua32 from '../../assets/parents-day-2026/32.jpg';
+import annua33 from '../../assets/parents-day-2026/33.jpg';
+import annua34 from '../../assets/parents-day-2026/34.jpg';
+import annua35 from '../../assets/parents-day-2026/35.jpg';
+
 // Import gallery images (you'll replace these with your actual images)
 import annualDay1 from '../../assets/annual-day/annual-day1.jpg';
 import annualDay2 from '../../assets/annual-day/annual-day2.jpg';
@@ -137,6 +173,20 @@ const GalleryPage = () => {
   const events = [
     {
       id: 1,
+      title: "Parents Day Celebration-2026",
+      description: "The grand celebration of our school's foundation with cultural performances and award ceremonies",
+      date: "2026-12-15",
+      time: "10:00 AM - 5:00 PM",
+      location: "Police Club, Bhrikuti Mandap",
+      category: "celebration",
+      images: [annua1, annua2, annua3, annua4, annua5, annua6, annua7, annua8, annua9, annua20, annua21, annua22, annua23, annua24, annua25, annua26, annua27, annua28, annua29, annua30, annua31, annua32, annua33, annua34, annua35, annua10, annua11, annua12, annua13, annua14, annua15, annua16, annua17, annua18, annua19],
+      coverImage: annua25,
+      featured: true,
+      photoCount: 35,
+      participants: "All students, parents, staff, and BODs."
+    },
+    {
+      id: 2,
       title: "Annual Day Celebration 2025",
       description: "The grand celebration of our school's foundation with cultural performances and award ceremonies",
       date: "2025-12-15",
@@ -150,7 +200,7 @@ const GalleryPage = () => {
       participants: "All students, parents, staff, and BODs."
     },
     {
-      id: 2,
+      id: 3,
       title: "Annual Sports Meet 2025",
       description: "Annual inter-house sports competition showcasing athletic talents of our students",
       date: "2025-10-05",
@@ -164,7 +214,7 @@ const GalleryPage = () => {
       participants: "All Grades, divided into four houses: Red, Blue, Green, and Yellow"
     },
     {
-      id: 3,
+      id: 4,
       title: "Saraswati Pooja Celebration",
       description: "Honoring the goddess of knowledge with traditional rituals, music, and dance performances",
       date: "2026-09-20",
@@ -203,7 +253,7 @@ const GalleryPage = () => {
       participants: "All Grades"
     },
     {
-      id: 8,
+      id: 7,
       title: "Dance Competition during Teej 2082",
       description: "Students showcasing their dance talents in celebration of the Teej festival with traditional and contemporary performances",
       date: "2025-04-10",

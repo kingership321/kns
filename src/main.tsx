@@ -1,5 +1,5 @@
 import { StrictMode } from 'react';
-import { createRoot } from 'react-dom/client';
+import { createRoot, hydrateRoot } from 'react-dom/client'; // Added hydrateRoot
 import { createBrowserRouter, RouterProvider } from 'react-router';
 import { ErrorBoundary } from 'react-error-boundary';
 
@@ -24,18 +24,19 @@ import ExaminationsPage from '../src/pages/About/subpages/Examinations';
 import RulesDisciplinePage from '../src/pages/About/subpages/RulesDisciplinePage';
 import FacilitiesPage from '../src/pages/About/subpages/FacilitiesPage';
 import ExtraCurricularPage from '../src/pages/About/subpages/ExtraCurricularPage';
+
 // Achievements Pages
 import RecentAchievementsPage from '../src/pages/Achievements/subpages/RecentAchievementsPage';
 import CoCurricularAchievementsPage from '../src/pages/Achievements/subpages/CoCurricularAchievementsPage';
 import DisciplinaryActionPage from '../src/pages/Achievements/subpages/DisciplinaryActionPage';
 import RecommendationsPage from '../src/pages/Achievements/subpages/RecommendationsPage';
+
 // Gallery Pages
 import GalleryPage from '../src/pages/Gallery/GalleryPage';
 import VideoGalleryPage from '../src/pages/Gallery/VideoPage';
 
 // Error Fallback Component
 import type { FallbackProps } from 'react-error-boundary';
-
 
 function ErrorFallback({ error, resetErrorBoundary }: FallbackProps) {
   return (
@@ -143,7 +144,7 @@ const router = createBrowserRouter([
         path: 'gallery/photos/',
         element: <GalleryPage />,
       },
-        {
+      {
         path: 'gallery/videos/',
         element: <VideoGalleryPage />,
       },
@@ -177,7 +178,6 @@ function App() {
     <ErrorBoundary
       FallbackComponent={ErrorFallback}
       onReset={() => {
-        // Reset the state of your app here
         window.location.href = '/';
       }}
     >
@@ -191,10 +191,21 @@ if (!rootElement) {
   throw new Error('Failed to find the root element');
 }
 
-const root = createRoot(rootElement);
-root.render(
-  <StrictMode>
-    <App />
-  </StrictMode>
-);
-
+// Updated Logic for react-snap compatibility
+if (rootElement.hasChildNodes()) {
+  // If there's already content (pre-rendered by react-snap), hydrate it
+  hydrateRoot(
+    rootElement,
+    <StrictMode>
+      <App />
+    </StrictMode>
+  );
+} else {
+  // Otherwise, render normally (development mode or first build)
+  const root = createRoot(rootElement);
+  root.render(
+    <StrictMode>
+      <App />
+    </StrictMode>
+  );
+}

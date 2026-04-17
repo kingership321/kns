@@ -10,21 +10,34 @@ import extracurricularCalendarImage from '../assets/annual-day/annual-day3.jpg';
 import examScheduleImage from '../assets/annual-day/annual-day4.jpg';
 
 // Import PDF files - You need to add these PDFs to your assets folder
+import academicCalendarPDF2083 from '../pdfs/Kathmandu calendar 2083.pdf';
 import academicCalendarPDF2082 from '../pdfs/Kathmandu calendar 2082.pdf';
 import academicCalendarPDF2081 from '../pdfs/Kathmandu calendar 2081.pdf';
 
 
 const CalendarPage = () => {
-  const [selectedYear, setSelectedYear] = useState('2024-2025');
+  const [selectedYear, setSelectedYear] = useState('2081-2083');
   const [downloading, setDownloading] = useState(null);
   const [expandedDownloads, setExpandedDownloads] = useState({});
 
   const academicYears = [
-    { year: '2082', active: true },
+    { year: '2083', active: true },
+    { year: '2082', active: false },
     { year: '2081', active: false },
   ];
 
   const calendarDownloads = [
+    {
+      id: 'academic',
+      title: "Academic Calendar 2083",
+      description: "Complete annual academic schedule with all important dates",
+      fileSize: "22.7 MB",
+      pages: "6 pages",
+      icon: FileText,
+      color: "bg-blue-500",
+      pdfFile: academicCalendarPDF2083,
+      fileName: "KNS_Academic_Calendar_2083.pdf"
+    },
     {
       id: 'academic',
       title: "Academic Calendar 2082",

@@ -705,6 +705,7 @@ const CoCurricularAchievementsPage = () => {
               </div>
             </div>
           </motion.div>
+          
           <QuickLinksSection />
         </div>
 

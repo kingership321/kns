@@ -192,6 +192,70 @@ const generateVideoThumbnails = (collections: VideoCollection[]): VideoCollectio
 const videoCollections: VideoCollection[] = [
   {
     id: 1,
+    title: "Parents Day 2026",
+    description: "Highlights from the annual parents day featuring parent-teacher interactions and school updates",
+    date: "2026-03-18",
+    location: "Police Club, Bhrikuti Mandap",
+    category: "event",
+    featured: true,
+    videoCount: 5,
+    participants: "All students and staff",
+    views: 500,
+    videos: [
+      {
+        id: "1-1",
+        title: "Parents’ Day 2082: Principal Ma’am Invites Special Guest",
+        description: "A heartwarming moment from Parents’ Day 2082 as our beloved Principal Ma’am warmly invites a special guest to the stage, creating a memorable highlight of the event.",
+        url: "https://www.youtube.com/watch?v=9INbWQuDuDs",
+        platform: "youtube",
+        duration: "01:43",
+        date: "2026-03-18",
+        views: 100
+      },
+      {
+        id: "1-2",
+        title: "Parents Day 2026 - Grade Four Performances",
+        description: "Our Grade Four students lit up the stage with their graceful dance, soulful lyrical ballad, and heartfelt welcome song—making the 46th Parents’ Day truly unforgettable.",
+        url: "https://www.facebook.com/share/v/1Fpfc6SEkf/",
+        platform: "facebook",
+        duration: "01:00",
+        date: "2026-03-18",
+        views: 3000
+      },
+      {
+        id: "1-3",
+        title: "Students Singing School Song",
+        description: "Our students passionately singing the school song, showcasing their love and pride for Kathmandu National School during the annual parents day event.",
+        url: "https://www.youtube.com/watch?v=sD-oGc7tWzM",
+        platform: "youtube",
+        duration: "06:38",
+        date: "2026-03-18",
+        views: 100
+      },
+      {
+        id: "1-4",
+        title: "Welcome Song Performance",
+        description: "Our students passionately singing the welcome song, setting a warm and inviting tone for the annual parents day event at Kathmandu National School.",
+        url: "https://www.youtube.com/watch?v=cxzAsu6HPik",
+        platform: "youtube",
+        duration: "02:04",
+        date: "2026-03-18",
+        views: 100
+      },
+      {
+        id: "1-5",
+        title: "School Scout Team Performance",
+        description: "Our dedicated school scout team showcasing their skills and teamwork in a captivating performance during the annual parents day event at Kathmandu National School.",
+        url: "https://www.youtube.com/watch?v=0h5Ch-i2fgg",
+        platform: "youtube",
+        duration: "02:03",
+        date: "2026-03-18",
+        views: 100
+      },
+    ]
+  },
+  {
+    id: 1,
     title: "Picnic",
     description: "Fun moments from the annual picnic at the local park",
     date: "2026-01-19",
@@ -266,6 +330,74 @@ const videoCollections: VideoCollection[] = [
         date: "2026-02-15",
         views: 1000
       },
+    ]
+  },
+  {
+    id: 3,
+    title: "Introductory Videos",
+    description: "Introductory videos for new students and parents, showcasing the school's facilities, values, and community",
+    date: "",
+    location: "Old Baneshwor - 31, Kathmandu",
+    category: "academy",
+    featured: true,
+    videoCount: 2,
+    participants: "",
+    views: 2000,
+    videos: [
+      {
+        id: "3-1",
+        title: "Introductory Video - School Overview",
+        description: "An overview of Kathmandu National School's facilities and values",
+        url: "https://www.youtube.com/watch?v=EKPRfFgpK3Y",
+        platform: "youtube",
+        duration: "23:48",
+        date: "2024",
+        views: 1400
+      },
+      {
+        id: "3-2",
+        title: "Introductory Video - KNS",
+        description: "Short introductory video about Kathmandu National School for new students and parents",
+        url: "https://www.youtube.com/watch?v=IFedCOMCXh4",
+        platform: "youtube",
+        duration: "02:54",
+        date: "2026",
+        views: 350
+      }
+    ]
+  },
+  {
+    id: 4,
+    title: "Parents Day",
+    description: "Highlights from the annual parents day featuring parent-teacher interactions and school updates",
+    date: "2081",
+    location: "Old Baneshwor - 31, Kathmandu",
+    category: "event",
+    featured: true,
+    videoCount: 2,
+    participants: "",
+    views: 2000,
+    videos: [
+      {
+        id: "4-1",
+        title: "Parents Day - Short Length Program Video",
+        description: "A comprehensive video covering the entire parents day program, including speeches, performances, and interactions",
+        url: "https://www.youtube.com/watch?v=OtmYrXIeRFs",
+        platform: "youtube",
+        duration: "38:27",
+        date: "2025",
+        views: 1000
+      },
+      {
+        id: "4-2",
+        title: "Parents Day - Full Length Program Video",
+        description: "Full length program video of the annual parents day event, showcasing all activities and interactions",
+        url: "https://www.youtube.com/watch?v=eNJv-JRDn4w",
+        platform: "youtube",
+        duration: "03:23:55",
+        date: "2025",
+        views: 1000
+      }
     ]
   },
 ];
