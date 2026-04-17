@@ -2,7 +2,6 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import Sitemap from 'vite-plugin-sitemap';
 import tailwindcss from '@tailwindcss/vite'; // Vite plugin for Tailwind
-import legacy from '@vitejs/plugin-legacy';
 
 // List of all routes based on your provided paths
 const routes = [
@@ -33,9 +32,6 @@ export default defineConfig({
   plugins: [
     react(),
     tailwindcss(),
-    legacy({
-      targets: ['defaults', 'not IE 11'], // transpile modern features like optional chaining for older browsers
-    }),
     Sitemap({ 
       hostname: 'https://kns.edu.np', // Use your official school domain here
       dynamicRoutes: routes,
